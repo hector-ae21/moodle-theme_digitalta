@@ -1,0 +1,123 @@
+// Post SCSS for the theme.
+
+
+body.pagelayout-login {
+    background: rgb(237,246,255);
+    background: linear-gradient(320deg, rgba(237,246,255,0) 0%, rgba(92,171,255,1) 87%, rgba(0,123,255,1) 100%);
+}
+body.pagelayout-frontpage {
+    background: hsl(210, 100%, 96%);
+    background: linear-gradient(320deg, rgba(237,246,255,0) 0%, rgba(92,171,255,1) 87%, rgba(0,123,255,1) 100%);  
+}
+body.pagelayout-mydashboard {
+    background: rgb(237,246,255);
+    background: linear-gradient(320deg, rgba(237,246,255,0) 0%, rgba(92,171,255,1) 87%, rgba(0,123,255,1) 100%);
+}
+body.pagelayout-course,
+body.pagelayout-incourse {
+    background: rgb(237,246,255);
+    background: linear-gradient(320deg, rgba(237,246,255,0) 0%, rgba(92,171,255,1) 87%, rgba(0,123,255,1) 100%);
+}
+body.pagelayout-embedded,
+body.pagelayout-popup,
+body.pagelayout-secure,
+body.pagelayout-print {
+    background-image: none;
+}
+body {
+    background: rgb(237,246,255);
+    background: linear-gradient(320deg, rgba(237,246,255,0) 0%, rgba(92,171,255,1) 87%, rgba(0,123,255,1) 100%);
+}
+
+.editmode-switch-form,
+.drawer-toggler,
+.icon-no-margin {
+    display: none !important;
+}
+
+.main-inner {
+  margin: 0 !important;
+  max-width: 1000px !important;
+}
+
+.logo {
+    border-radius: 50px;
+    margin-left: -.9rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fffff02 !important;
+    padding: 20px;
+    margin: 1rem 2rem;
+    transition: 0.5s;
+    border-radius: 50px;
+    width: 95%;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.navbar li a {
+  --b: 0.1em;   /* the thickness of the line */
+  --c: #007bff; /* the color */
+  
+  color: #062f4a;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#062f4a 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+.navbar li a:hover {
+  --_p: 100%;
+  --_s: .3s;
+}
+
+.navbar li a:focus {
+  color: #007bff !important;
+}
+
+
+// SCROLLBAR //
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+    scrollbar-width: thin;
+    scrollbar-color: #004997 #DFE9EB;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #DFE9EB;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #004997;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #007BFF;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #007BFF;
+  }
+
+
