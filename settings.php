@@ -13,7 +13,51 @@ if ($ADMIN->fulltree) {
     $settings = new theme_boost_admin_settingspage_tabs('themesettingdta', get_string('configtitle', 'theme_dta'));             
                                                                                                                                     
     // Each page is a tab - the first is the "General" tab.                                                                         
-    $page = new admin_settingpage('theme_dta_general', get_string('generalsettings', 'theme_dta'));                             
+    $page = new admin_settingpage('theme_dta_general', get_string('generalsettings', 'theme_dta'));   
+    
+    // Favicon
+    $name='theme_dta/favicon';
+    $title = get_string('favicon', 'theme_dta');
+    $description = get_string('favicon_desc', 'theme_dta');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'favicon');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $settings->add($page);
+
+    // Logo settings
+    $page = new admin_settingpage('theme_dta_logo', get_string('logo_settings', 'theme_dta'));
+
+    // Header logos
+    $page->add(new admin_setting_heading('theme_dta/header_logos', get_string('header_logos', 'theme_dta'), NULL));
+
+    // Logotype
+    $setting = new admin_setting_configselect('theme_dta/logotype',
+        get_string('logotype', 'theme_dta'),
+        get_string('logotype_desc', 'theme_dta'), null,
+                array('0' => 'Visible',
+                      '1' => 'Hidden'
+                    ));
+    $page->add($setting);
+
+    // Logo image
+    $setting = new admin_setting_configselect('theme_dta/logo_image',
+        get_string('logo_image', 'theme_dta'),
+        get_string('logo_image_desc', 'theme_dta'), null,
+                array('0' => 'Visible',
+                      '1' => 'Hidden'
+                    ));
+    $page->add($setting);
+
+    // Logo Image Width
+    $setting = new admin_setting_configtext('theme_dta/logo_image_width', get_string('logo_image_width','theme_dta'), get_string('logo_image_width_desc', 'theme_dta'), '', PARAM_NOTAGS, 50);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Logo Image Height
+    $setting = new admin_setting_configtext('theme_dta/logo_image_height', get_string('logo_image_height','theme_dta'), get_string('logo_image_height_desc', 'theme_dta'), '', PARAM_NOTAGS, 50);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
                                                                                                                                     
     // Replicate the preset setting from boost.                                                                                     
     $name = 'theme_dta/preset';                                                                                                   
