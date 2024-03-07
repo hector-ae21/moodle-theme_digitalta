@@ -10,7 +10,7 @@ defined('MOODLE_INTERNAL') || die();
 if ($ADMIN->fulltree) {                                                                                                             
                                                                                                                                     
     // Boost provides a nice setting page which splits settings onto separate tabs. We want to use it here.                         
-    $settings = new theme_boost_admin_settingspage_tabs('themesettingphoto', get_string('configtitle', 'theme_dta'));             
+    $settings = new theme_boost_admin_settingspage_tabs('themesettingdta', get_string('configtitle', 'theme_dta'));             
                                                                                                                                     
     // Each page is a tab - the first is the "General" tab.                                                                         
     $page = new admin_settingpage('theme_dta_general', get_string('generalsettings', 'theme_dta'));                             

@@ -30,6 +30,8 @@ $plugin->version = '2024012401';
 
 $plugin->component = 'theme_dta';
 
+$plugin ->requires = '2016052300'; // Requires this Moodle version
+
 // This is a list of plugins, this plugin depends on (and their versions).
 $plugin->dependencies = [
     'theme_boost' => '2016102100'
