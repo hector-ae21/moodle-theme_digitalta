@@ -152,8 +152,8 @@ a.dropdown-toggle:focus {
   padding: .5rem .75rem;
   margin: 0 auto;
   border-radius: 10px; 
-  border: 1px outset #007BFF;
-  background-color: hsl(0, 0%, 81%) !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  background-color: #e5e6e6 !important;
   width: fit-content;
   // background-color: rgba(88, 89, 91, 0.15) !important;
 }
@@ -173,6 +173,10 @@ li[data-key=myhome] {
 .container {
   justify-content: center;
   margin: auto 0;
+}
+
+.card-container{
+  display: inline-block;
 }
 
 .card {
@@ -395,10 +399,21 @@ li[data-key=myhome] {
     width: 100%;
 }
 
-.row {
-  div {
-    height: fit-content !important;
-    align-self: start;
+.masonry {
+  column-count: 3;
+  column-gap: 1em;
+}
+
+@media screen and (max-width: 1080px) {
+  .masonry {
+    column-count: 2;
+  }
+  
+}
+
+@media screen and (max-width: 550px) {
+  .masonry {
+    column-count: 1;
   }
 }
 
@@ -453,20 +468,20 @@ svg text {
 
 .post-button {
     position: relative;
-    background-color: #365FA0;
+    background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: hand;
+    cursor: pointer;
     transition: 0.3s;
     border: 1px solid #fff;
 }
 
 .post-button:hover {
-    color: #365FA0;
-    background-color: #fff;
-    border: 1px solid #365FA0;
+    color: #fff;
+    background-color: #0063cc;
+    border: 1px solid #0063cc;
 }
 
 .input {
@@ -490,7 +505,7 @@ svg text {
 }
 
 .input::placeholder {
-	color: #DDDDDD;
+	color: #737373;
 }
 
 .svg-icon {
