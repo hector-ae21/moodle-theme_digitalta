@@ -75,5 +75,54 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
     $page->add($setting);                                                                                                           
                                                                                                                                     
-    $settings->add($page);                                                                                                          
+    $settings->add($page);
+    
+    $page = new admin_settingpage('theme_dta_navbar', get_string('config::navbar_page', 'theme_dta'));
+
+    $page->add(new admin_setting_configcheckbox('theme_dta/enabled_navbar', get_string('config::custom_navbar', 'theme_dta'), '', 1));
+
+    $page->add(new admin_setting_configtext('theme_dta/navbar_myexperience_url',
+    get_string('config::navbar_myexperience_url', 'theme_dta'),
+    '',
+    "$CFG->wwwroot/local/pages/myexperience/dashboard.php",
+    PARAM_URL));
+
+    $settings->hide_if('theme_dta/navbar_myexperience_url', 'theme_dta/enabled_navbar');
+
+    $page->add(new admin_setting_configtext('theme_dta/navbar_learningcommunity_url',
+    get_string('config::navbar_learningcommunity_url', 'theme_dta'),
+    '',
+    "$CFG->wwwroot/local/pages/community/dashboard.php",
+    PARAM_URL));
+
+    $settings->hide_if('theme_dta/navbar_learningcommunity_url', 'theme_dta/enabled_navbar');
+
+
+    $page->add(new admin_setting_configtext('theme_dta/navbar_mytutoring_url',
+    get_string('config::navbar_mytutoring_url', 'theme_dta'),
+    '',
+    '',
+    PARAM_URL));
+
+    $settings->hide_if('theme_dta/navbar_mytutoring_url', 'theme_dta/enabled_navbar');
+
+
+    $page->add(new admin_setting_configtext('theme_dta/navbar_ourcases_url',
+    get_string('config::navbar_ourcases_url', 'theme_dta'),
+    '',
+    "$CFG->wwwroot/local/pages/ourcases/repository.php",
+    PARAM_URL));
+
+    $settings->hide_if('theme_dta/navbar_ourcases_url', 'theme_dta/enabled_navbar');
+
+    $page->add(new admin_setting_configtext('theme_dta/navbar_resourcerepository_url',
+    get_string('config::navbar_resourcerepository_url', 'theme_dta'),
+    '',
+    '' ,
+    PARAM_URL));
+
+    $settings->hide_if('theme_dta/navbar_resourcerepository_url', 'theme_dta/enabled_navbar');
+    
+
+    $settings->add($page);
 }

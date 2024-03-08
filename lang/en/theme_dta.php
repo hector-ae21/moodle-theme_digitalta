@@ -43,3 +43,11 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 // We need to include a lang string for each block region.                                                                          
 $string['region-side-pre'] = 'Right';
+
+$string['config::navbar_page'] = 'Custom navbar settings';
+$string['config::custom_navbar'] = 'Active custom navigation';
+$string['config::navbar_myexperience_url'] = 'My experience URL';
+$string['config::navbar_learningcommunity_url'] = 'Learning community URL';
+$string['config::navbar_mytutoring_url'] = 'My tutoring URL';
+$string['config::navbar_ourcases_url'] = 'Our cases URL';
+$string['config::navbar_resourcerepository_url'] = 'Resource repository URL';

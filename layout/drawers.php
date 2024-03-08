@@ -82,6 +82,19 @@ $buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_action
 // If the settings menu will be included in the header then don't add it here.
 $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settings_menu() : false;
 
+$navbar_urls = [];
+$custom_navbar = get_config('theme_dta', 'enabled_navbar');
+if($custom_navbar) {
+    $navbar_urls = [
+        'myexperience' => get_config('theme_dta', 'navbar_myexperience_url'),
+        'learningcommunity' => get_config('theme_dta', 'navbar_learningcommunity_url'),
+        'mytutoring' => get_config('theme_dta', 'navbar_mytutoring_url'),
+        'ourcases' => get_config('theme_dta', 'navbar_ourcases_url'),
+        'resourcerepository' => get_config('theme_dta', 'navbar_resourcerepository_url')
+    ];
+}
+
+
 $header = $PAGE->activityheader;
 $headercontent = $header->export_for_template($renderer);
 
@@ -96,6 +109,8 @@ $templatecontext = [
     'courseindex' => $courseindex,
     'primarymoremenu' => $primarymenu['moremenu'],
     'secondarymoremenu' => $secondarynavigation ?: false,
+    'enabledcustomnavbar' => $custom_navbar,
+    'mainmoremenu' => $navbar_urls,
     'mobileprimarynav' => $primarymenu['mobileprimarynav'],
     'usermenu' => $primarymenu['user'],
     'langmenu' => $primarymenu['lang'],
