@@ -30,6 +30,14 @@
   font-display: swap;
 }
 
+#page{
+  margin-top: 0px!important;
+}
+
+[id^="page-admin"] #region-main {
+  width: 75%;
+}
+
 
 body.pagelayout-login {
     background: #f8f9fb;
@@ -161,14 +169,6 @@ a.dropdown-toggle:focus {
 
 div[role=main] {
     background-color: transparent;
-}
-
-li[data-key=mycourses] {
-  display: none;
-}
-
-li[data-key=myhome] {
-  display: none;
 }
 
 .container {

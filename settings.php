@@ -84,7 +84,7 @@ if ($ADMIN->fulltree) {
     $page->add(new admin_setting_configtext('theme_dta/navbar_myexperience_url',
     get_string('config::navbar_myexperience_url', 'theme_dta'),
     '',
-    "$CFG->wwwroot/local/pages/myexperience/dashboard.php",
+    "$CFG->wwwroot/local/dta/pages/myexperience/dashboard.php",
     PARAM_URL));
 
     $settings->hide_if('theme_dta/navbar_myexperience_url', 'theme_dta/enabled_navbar');
@@ -92,7 +92,7 @@ if ($ADMIN->fulltree) {
     $page->add(new admin_setting_configtext('theme_dta/navbar_learningcommunity_url',
     get_string('config::navbar_learningcommunity_url', 'theme_dta'),
     '',
-    "$CFG->wwwroot/local/pages/community/dashboard.php",
+    "$CFG->wwwroot/local/dta/pages/community/dashboard.php",
     PARAM_URL));
 
     $settings->hide_if('theme_dta/navbar_learningcommunity_url', 'theme_dta/enabled_navbar');
@@ -110,7 +110,7 @@ if ($ADMIN->fulltree) {
     $page->add(new admin_setting_configtext('theme_dta/navbar_ourcases_url',
     get_string('config::navbar_ourcases_url', 'theme_dta'),
     '',
-    "$CFG->wwwroot/local/pages/ourcases/repository.php",
+    "$CFG->wwwroot/local/dta/pages/ourcases/repository.php",
     PARAM_URL));
 
     $settings->hide_if('theme_dta/navbar_ourcases_url', 'theme_dta/enabled_navbar');
