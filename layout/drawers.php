@@ -74,7 +74,11 @@ if ($PAGE->has_secondary_navigation()) {
         $overflow = $overflowdata->export_for_template($OUTPUT);
     }
 }
+
+// Set the default primary navigation sections.
 set_default_primarynav_sections();
+set_aditional_primarynav_sections();
+
 $primary = new core\navigation\output\primary($PAGE);
 $renderer = $PAGE->get_renderer('core');
 $primarymenu = $primary->export_for_template($renderer);

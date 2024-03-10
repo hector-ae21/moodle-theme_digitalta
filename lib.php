@@ -57,3 +57,75 @@ function set_default_primarynav_sections()
             $node->icon = new pix_icon($icon, '');
     }
 }
+
+function set_aditional_primarynav_sections()
+{
+    global $PAGE;
+
+    if (isloggedin() && !isguestuser() && get_config('theme_dta', 'enabled_navbar')) {
+        $payload = get_sections_details();
+        foreach ($payload as $key => $content) {
+            if (!empty($content['link'])) {
+                $node = create_navigation_node(
+                    $content['label'],
+                    new moodle_url($content['link']),
+                    $content['node_key'],
+                    new pix_icon($content['icon'], '')
+                );
+                $PAGE->primarynav->add_node($node, $content['before_key']);
+            }
+        }
+    }
+}
+function create_navigation_node($str_title, $redirect_url, $node_key, $pix_icon)
+{
+    return navigation_node::create(
+        $str_title,
+        $redirect_url,
+        navigation_node::TYPE_SETTING,
+        null,
+        $node_key,
+        $pix_icon
+    );
+}
+
+function get_sections_details()
+{
+    return [
+        'learningcommunity' => [
+            'label' => get_string('navbar::learningcommunity', 'theme_dta'),
+            'icon' => 'i/group',
+            'node_key' => 'learningcommunity',
+            'link' => get_config('theme_dta', 'navbar_learningcommunity_url'),
+            'before_key' => "siteadminnode",
+        ],
+        'myexperience' => [
+            'label' => get_string('navbar::myexperience', 'theme_dta'),
+            'icon' => 'i/stats',
+            'node_key' => 'myexperience',
+            'link' => get_config('theme_dta', 'navbar_myexperience_url'),
+            'before_key' => "siteadminnode",
+        ],
+        'ourcases' => [
+            'label' => get_string('navbar::ourcases', 'theme_dta'),
+            'icon' => 'i/open',
+            'node_key' => 'ourcases',
+            'link' => get_config('theme_dta', 'navbar_ourcases_url'),
+            'before_key' => "siteadminnode",
+        ],
+        'mytutoring' => [
+            'label' => get_string('navbar::mytutoring', 'theme_dta'),
+            'icon' => 'i/tutoring',
+            'node_key' => 'mytutoring',
+            'link' => get_config('theme_dta', 'navbar_mytutoring_url'),
+            'before_key' => "siteadminnode",
+        ],
+        'resourcerepository' => [
+            'label' => get_string('navbar::resourcerepository', 'theme_dta'),
+            'icon' => 'i/repository',
+            'node_key' => 'resourcerepository',
+            'link' => get_config('theme_dta', 'navbar_resourcerepository_url'),
+            'before_key' => "siteadminnode",
+        ],
+    ];
+}

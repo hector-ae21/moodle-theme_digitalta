@@ -169,7 +169,7 @@
 </html>
 {{#js}}
 M.util.js_pending('theme_dta/loader');
-require(['theme_dta/loader', 'theme_dta/drawer', 'theme_dta/custommenu'], function(Loader, Drawer, CustomMenu) {
+require(['theme_dta/loader', 'theme_dta/drawer'], function(Loader, Drawer) {
     Drawer.init();
     M.util.js_complete('theme_dta/loader');
 });
