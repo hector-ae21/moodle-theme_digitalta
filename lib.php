@@ -45,9 +45,6 @@ function set_default_primarynav_sections()
     $sections = [
         'siteadminnode' => 'i/settings',
     ];
-    $PAGE->primarynav->get('mycourses')->remove();
-    $PAGE->primarynav->get('myhome')->remove();
-
     foreach ($sections as $section => $icon) {
         /**
          * @var $node navigation_node

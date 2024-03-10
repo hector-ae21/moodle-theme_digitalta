@@ -110,12 +110,3 @@
         {{/istablist}}
     </li>
 {{/haschildren}}
-{{#js}}
-    // reference to sections defined in the function: get_sections_details on the file: theme/vle/lib.php
-    var selectedCodes = ['library', 'academic_record'];
-    $('.primary-navigation>.navigation>.more-nav.navbar-nav>.nav-item').filter(function() {
-        var index = selectedCodes.indexOf($(this).data("key"));
-        if (index > -1)
-            $(this).children().first().prop("target", "_blank");
-    });
-{{/js}}

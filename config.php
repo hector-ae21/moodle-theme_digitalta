@@ -78,8 +78,8 @@ $THEME->scss = function($theme) {
 
 
 
-$THEME->removedprimarynavitems = ['home'];
+$THEME->removedprimarynavitems = ['home', 'myhome', 'courses'];
 $THEME->iconsystem = \core\output\icon_system::FONTAWESOME;
-//$THEME->sheets = ['fontawsome'];
+$THEME->sheets = ['fontawsome'];
 $THEME->haseditswitch = true;
 $THEME->usescourseindex = true;

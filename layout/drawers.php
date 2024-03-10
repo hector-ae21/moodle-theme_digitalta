@@ -86,34 +86,6 @@ $buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_action
 // If the settings menu will be included in the header then don't add it here.
 $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settings_menu() : false;
 
-// Add custom navbar elements.
-$navbar_elements = [];
-$is_custom_navbar = get_config('theme_dta', 'enabled_navbar');
-if($is_custom_navbar) {
-    $navbar_elements = [
-        'myexperience' => [
-            "url" => get_config('theme_dta', 'navbar_myexperience_url'),
-            "label" => get_string('navbar::myexperience', 'theme_dta')
-        ],
-        'learningcommunity' => [
-            "url" => get_config('theme_dta', 'navbar_learningcommunity_url'), 
-            "label" => get_string('navbar::learningcommunity', 'theme_dta')
-        ],
-        'mytutoring' => [
-            "url" => get_config('theme_dta', 'navbar_mytutoring_url'),
-            "label" => get_string('navbar::mytutoring', 'theme_dta')
-        ],
-        'ourcases' => [
-            "url" => get_config('theme_dta', 'navbar_ourcases_url'),
-            "label" => get_string('navbar::ourcases', 'theme_dta')
-        ],
-        'resourcerepository' => [
-            "url" => get_config('theme_dta', 'navbar_resourcerepository_url'),
-            "label" => get_string('navbar::resourcerepository', 'theme_dta')
-        ],
-    ];
-}
-
 $header = $PAGE->activityheader;
 $headercontent = $header->export_for_template($renderer);
 
@@ -128,8 +100,6 @@ $templatecontext = [
     'courseindex' => $courseindex,
     'primarymoremenu' => $primarymenu['moremenu'],
     'secondarymoremenu' => $secondarynavigation ?: false,
-    'enabledcustomnavbar' => $is_custom_navbar,
-    'mainmoremenu' => json_encode($navbar_elements),
     'mobileprimarynav' => $primarymenu['mobileprimarynav'],
     'usermenu' => $primarymenu['user'],
     'langmenu' => $primarymenu['lang'],
@@ -138,7 +108,8 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'overflow' => $overflow,
     'headercontent' => $headercontent,
-    'addblockbutton' => $addblockbutton
+    'addblockbutton' => $addblockbutton,
+    'homeurl' => get_config('theme_dta', 'navbar_learningcommunity_url'),
 ];
 
 echo $OUTPUT->render_from_template('theme_dta/drawers', $templatecontext);

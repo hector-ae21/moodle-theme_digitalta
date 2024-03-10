@@ -62,7 +62,7 @@
         <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
     </button>
 
-    <a href="{{{ config.homeurl }}}" class="navbar-brand d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+    <a href="{{#homeurl}}{{.}}{{/homeurl}}{{^homeurl}}{{{config.homeurl}}}{{/homeurl}}" class="navbar-brand d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
 
         {{# output.should_display_navbar_logo }}
             <img src="{{output.get_compact_logo_url}}" class="logo mr-1 rounded-circle" alt="{{sitename}}">
@@ -91,13 +91,11 @@
             {{> theme_dta/language_menu }}
             <div class="divider border-left h-75 align-self-center mx-1"></div>
         {{/langmenu}}
-        {{{ output.navbar_plugin_output }}}
         <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
             {{#usermenu}}
                 {{> core/user_menu }}
             {{/usermenu}}
         </div>
-        {{{ output.edit_switch }}}
     </div>
 </nav>
 
