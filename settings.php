@@ -48,15 +48,43 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));                                                               
     $page->add($setting);     
 
-    // Variable $brand-color.                                                                                                       
+    // Variable $primary-color.                                                                                                       
     // We use an empty default value because the default colour should come from the preset.                                        
-    $name = 'theme_dta/brandcolor';                                                                                               
-    $title = get_string('brandcolor', 'theme_dta');                                                                               
-    $description = get_string('brandcolor_desc', 'theme_dta');                                                                    
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');                                               
+    $name = 'theme_dta/primarycolor';                                                                                               
+    $title = get_string('settings::primarycolor', 'theme_dta');                                                                               
+    $description = get_string('settings::primarycolor_desc', 'theme_dta');                                                                    
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#1382c5');                                               
     $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
-    $page->add($setting);                                                                                                           
-                                                                                                                                    
+    $page->add($setting);
+    
+    $name = 'theme_dta/secondarycolor';                                                                                               
+    $title = get_string('settings::secondarycolor', 'theme_dta');                                                                               
+    $description = get_string('settings::secondarycolor_desc', 'theme_dta');                                                                    
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#062f4a');                                               
+    $setting->set_updatedcallback('theme_reset_all_caches');                                                                        
+    $page->add($setting);
+
+    $name = 'theme_dta/tertiarycolor';
+    $title = get_string('settings::tertiarycolor', 'theme_dta');
+    $description = get_string('settings::tertiarycolor_desc', 'theme_dta');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#58595b');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_dta/accentcolor';
+    $title = get_string('settings::accentcolor', 'theme_dta');
+    $description = get_string('settings::accentcolor_desc', 'theme_dta');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#f27b10');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);   
+
+    $name = 'theme_dta/accentcoloralt';
+    $title = get_string('settings::accentcoloralt', 'theme_dta');
+    $description = get_string('settings::accentcoloralt_desc', 'theme_dta');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#d5490c');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     // Must add the page after definiting all the settings!                                                                         
     $settings->add($page);                                                                                                          
                                                                                                                                     

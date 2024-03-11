@@ -16,6 +16,25 @@ function theme_dta_get_main_scss_content($theme)
     $fs = get_file_storage();
 
     $context = context_system::instance();
+    
+    // Get all colors from the settings
+    $colors = [
+        'primarycolor' => get_config('theme_dta', 'primarycolor'),
+        'secondarycolor' => get_config('theme_dta', 'secondarycolor'),
+        'tertiarycolor' => get_config('theme_dta', 'tertiarycolor'),
+        'accentcolor' => get_config('theme_dta', 'accentcolor'),
+        'accentcoloralt' => get_config('theme_dta', 'accentcoloralt'),
+    ];
+
+    if (!empty($colors)) {
+        foreach ($colors as $key => $color) {
+            if (!empty($color)) {
+                $scss .= '$' . $key . ': ' . $color . ";\n";
+            }
+        }
+    }
+
+
     if ($filename == 'default.scss') {
         // We still load the default preset files directly from the boost theme. No sense in duplicating them.                      
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
