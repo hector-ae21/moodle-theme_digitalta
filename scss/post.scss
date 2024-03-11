@@ -158,13 +158,7 @@ a.dropdown-toggle:focus {
 }
 
 #region-main {
-  padding: .5rem .75rem;
-  margin: 0 auto;
-  border-radius: 10px; 
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
-  background-color: #e5e6e6 !important;
-  width: 75%;
-  // background-color: rgba(88, 89, 91, 0.15) !important;
+  background-color: transparent;
 }
 
 div[role=main] {
@@ -420,26 +414,9 @@ div[role=main] {
   }
 }
 
-
-svg {
-  color: #365FA0;
-	width: 100%; 
-  height: 10vh;
-}
-
-svg text {
-  margin-top: -100px;
-  font-family: 'Amiri', serif;
-  font-weight: bold;
-  font-style: italic;
-	font-size: 65px;
-  text-shadow: #365FA0;
-  fill: #365FA0;
-}
-
 .wrapper {
     height: fit-content;
-    margin-top: -70px;
+    margin-top: -30px;
     margin-bottom: 37px;
 }
 
@@ -623,4 +600,51 @@ form {
   }
 
 
+  #page-local-dta-pages-myexperience-manage{
+    #page-header .header-actions-container{
+      display: none;
+    }
+    #page-header .d-flex.align-items-center{
+      justify-content: center;
+      .mr-auto{
+        margin: 0 !important;
+      }
+    }
+  }
+  #page-local-dta-pages-myexperience-manage .mform .form-group.row{
+    display: flex;
+    flex-direction: column;
+    .filemanager-toolbar, .fp-pathbar{
+      display: none;
+    }
+    .tox-statusbar, .tox-menubar{
+      display: none;
+    }
+  }
+
+  #page-local-dta-pages-myexperience-manage .mform .form-group.row > * {
+    max-width: 100%;
+  }
+
+  #page-local-dta-pages-myexperience-manage .mform .form-group.row > .felement > input{
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .experience-card-body{
+    border-bottom: 1px solid black;
+    padding: 1.25rem 0;
+    .experience-card-title{
+      border-bottom: 1px solid black;
+      padding: 1.5rem 0;
+      border-top: 1px solid black;
+    }
+    a{
+      color: #000 !important;
+      box-shadow: none !important;
+      text-decoration: none !important;
+      background-color: transparent !important;
+      outline: none !important;
+    }
+  }
 
