@@ -50,8 +50,10 @@ function set_default_primarynav_sections()
          * @var $node navigation_node
          */
         $node = $PAGE->primarynav->get($section);
-        if (!empty($node))
+        if (!empty($node)){
             $node->icon = new pix_icon($icon, '');
+            $node->text = get_string('navbar::siteadmin', 'theme_dta');
+        }
     }
 }
 
@@ -98,7 +100,7 @@ function get_sections_details()
         ],
         'myexperience' => [
             'label' => get_string('navbar::myexperience', 'theme_dta'),
-            'icon' => 'i/stats',
+            'icon' => 'i/rsssitelogo',
             'node_key' => 'myexperience',
             'link' => get_config('theme_dta', 'navbar_myexperience_url'),
             'before_key' => "siteadminnode",

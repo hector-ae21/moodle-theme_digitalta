@@ -42,3 +42,4 @@ $string['navbar::learningcommunity'] = 'Learning community';
 $string['navbar::mytutoring'] = 'My tutoring';
 $string['navbar::ourcases'] = 'Our cases';
 $string['navbar::resourcerepository'] = 'Resource repository';
+$string['navbar::siteadmin'] = 'Administration';

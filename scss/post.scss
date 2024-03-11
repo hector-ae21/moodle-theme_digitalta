@@ -197,6 +197,8 @@ div[role=main] {
 .card:hover {
     .experience-card-img {
         transform: scale(1.2);
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
     } 
 }
 
@@ -351,7 +353,7 @@ div[role=main] {
   user-select: none !important;
   -webkit-user-select: none !important;
   touch-action: manipulation !important;
-  width: fit-content !important;
+  width: 75% !important;
   word-break: break-word !important;
   border: 0 !important;
 }
