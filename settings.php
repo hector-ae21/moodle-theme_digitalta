@@ -107,7 +107,17 @@ if ($ADMIN->fulltree) {
     
     $page = new admin_settingpage('theme_dta_navbar', get_string('config::navbar_page', 'theme_dta'));
 
+    $settings->hide_if('theme_dta/navbar_learningcommunity_url', 'theme_dta/enabled_navbar');
+
     $page->add(new admin_setting_configcheckbox('theme_dta/enabled_navbar', get_string('config::custom_navbar', 'theme_dta'), '', 1));
+
+    $page->add(new admin_setting_configtext('theme_dta/navbar_home_url',
+    get_string('config::navbar_home_url', 'theme_dta'),
+    '',
+    "$CFG->wwwroot/local/dta/pages/home/dashboard.php",
+    PARAM_URL));
+
+    $settings->hide_if('theme_dta/navbar_home_url', 'theme_dta/enabled_navbar');
 
     $page->add(new admin_setting_configtext('theme_dta/navbar_myexperience_url',
     get_string('config::navbar_myexperience_url', 'theme_dta'),

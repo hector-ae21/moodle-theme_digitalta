@@ -110,6 +110,13 @@ function create_navigation_node($str_title, $redirect_url, $node_key, $pix_icon)
 function get_sections_details()
 {
     return [
+        'home' => [
+            'label' => get_string('navbar::home', 'theme_dta'),
+            'icon' => 'i/home',
+            'node_key' => 'home',
+            'link' => get_config('theme_dta', 'navbar_home_url'),
+            'before_key' => "siteadminnode",
+        ],
         'learningcommunity' => [
             'label' => get_string('navbar::learningcommunity', 'theme_dta'),
             'icon' => 'i/group',
