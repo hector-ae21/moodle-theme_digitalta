@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body {
+  background-color: #fff;
+  font-family: Montserrat;
+  overflow-x: hidden;
+}
+
+article,
+aside,
+details,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  width: 80%;
+}
+
+*:focus {
+  outline: none;
+}
+
+svg {
+  position: absolute;
+  display: block;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bg-illustration {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  width: 1194px;
+  background: url("https://www.sadhanazaragoza.es/wp-content/uploads/2017/08/grey-background-07.jpg") no-repeat center center scroll;
+  background-size: cover;
+  float: left;
+  -webkit-animation: bgslide 2.3s forwards;
+          animation: bgslide 2.3s forwards;
+  border-radius: 0 2em 2em 0;
+}
+.bg-illustration img {
+  width: 248px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: auto;
+  margin: auto;
+}
+
+
+.login {
+  max-height: 100vh;
+  overflow-Y: auto;
+  float: left;
+  margin: 0 auto;
+  width: calc(100% - 1194px);
+}
+.login .container {
+  width: 505px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.login .logo {
+  margin-top: 75px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.login .container h3 {
+  margin-top: 60px;
+  font-size: 35px;
+  font-weight: bolder;
+}
+.login .container .login-form {
+  margin-top: 10px;
+}
+.login .container .login-form form {
+  display: -ms-grid;
+  display: grid;
+}
+.login .container .login-form form input {
+  font-size: 16px;
+  font-weight: normal;
+  background: rgba(57, 57, 57, 0.07);
+  margin: 12.5px 0;
+  height: 68px;
+  border: none;
+  padding: 0 30px;
+  border-radius: 10px;
+}
+.login .container .login-form form button[type=submit] {
+  background: -webkit-linear-gradient(110deg, #223E5C 0%, #416280 100%);
+  background: -o-linear-gradient(110deg, #223E5C 0%, #416280 100%);
+  background: linear-gradient(-20deg, #223E5C 0%, #416280 100%);
+  border: none;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 241px;
+  height: 58px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 20px;
+}
+.login .container .login-form form button[type=submit]:hover::after {
+  opacity: 1;
+}
+.login .container .login-form form button[type=submit]::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#09203f), to(#537895));
+  background: -webkit-linear-gradient(bottom, #09203f 0%, #537895 100%);
+  background: -o-linear-gradient(bottom, #09203f 0%, #537895 100%);
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+.login .container .remember-form {
+  position: relative;
+  margin-top: -30px;
+}
+.login .container .remember-form input[type=checkbox] {
+  margin-top: 9px;
+}
+.login .container .remember-form span {
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  top: 32px;
+  color: #3B3B3B;
+  margin-left: 15px;
+}
+.login .container .forget-pass {
+  position: absolute;
+  right: 0;
+  margin-top: 189px;
+}
+.login .container .forget-pass a {
+  font-size: 16px;
+  position: relative;
+  font-weight: normal;
+  color: #918F8F;
+}
+.login .container .forget-pass a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 100px;
+  background: -webkit-linear-gradient(110deg, #223E5C 0%, #416280 100%);
+  background: -o-linear-gradient(110deg, #223E5C 0%, #416280 100%);
+  background: linear-gradient(-20deg, #223E5C 0%, #416280 100%);
+  bottom: -4px;
+  left: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  right: 0;
+}
+.login .container .forget-pass a:hover::after {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1680px) {
+  .bg-illustration {
+    width: 50%;
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .login {
+    width: 50%;
+  }
+}
+
+
+.custom-carousel {
+  border-radius: 1em 2em 2em 1em;
+}
+
+.carousel .slide {
+  height: fit-content;
+  max-height: 10vh;
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+blockquote {
+  max-width: 45vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-illustration {
+    border-radius: 0 0 2em 2em;
+  }
+  .custom-carousel {
+    border-radius: 0 0 2em 2em;
+    width: 100%;
+    height: 100% !important;
+    animation: mymove 5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  .blockquote {
+    max-width: 100%;
+    max-height: 100%;
+    max-height: 10%;
+
+    p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .blockquote-footer {
+    display: none;
+  }
+}
+
+/* Display 12", iPad PRO Portrait, iPad landscape */
+@media only screen and (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  @-webkit-keyframes slideIn {
+    from {
+      left: -100%;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      left: -100%;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  .bg-illustration {
+    float: none;
+    background: url("https://www.sadhanazaragoza.es/wp-content/uploads/2017/08/grey-background-07.jpg") center center;
+    background-size: cover;
+    -webkit-animation: slideIn 0.8s ease-in-out forwards;
+            animation: slideIn 0.8s ease-in-out forwards;
+    width: 100%;
+    height: 190px;
+    text-align: center;
+  }
+  .bg-illustration img {
+    width: 100px;
+    height: auto;
+    margin: 20px auto !important;
+    text-align: center;
+  }
+
+  .login {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .login .container {
+    -webkit-animation: slideIn 0.8s ease-in-out forwards;
+            animation: slideIn 0.8s ease-in-out forwards;
+    width: 85%;
+    float: none;
+  }
+  .login .container h1 {
+    font-size: 25px;
+    margin-top: 40px;
+  }
+  .login .container .login-form {
+    margin-top: 90px;
+  }
+  .login .container .login-form form input {
+    height: 45px;
+  }
+  .login .container .login-form form button[type=submit] {
+    height: 45px;
+    margin-top: 100px;
+  }
+  .login .container .login-form .remember-form {
+    position: relative;
+    margin-top: -14px;
+  }
+  .login .container .login-form .remember-form span {
+    font-size: 16px;
+    margin-top: 22px;
+    top: inherit;
+  }
+
+  .forget-pass {
+    position: absolute;
+    right: inherit;
+    left: 0;
+    bottom: -40px;
+    margin: 0 !important;
+  }
+  .forget-pass a {
+    font-size: 16px;
+    position: relative;
+    font-weight: normal;
+    color: #918F8F;
+  }
+  .forget-pass a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 100px;
+    background: -webkit-linear-gradient(110deg, #223E5C 0%, #416280 100%);
+    background: -o-linear-gradient(110deg, #223E5C 0%, #416280 100%);
+    background: linear-gradient(-20deg, #223E5C 0%, #416280 100%);
+    bottom: -4px;
+    left: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    right: 0;
+  }
+  .forget-pass a:hover::after {
+    opacity: 1;
+  }
+}
+

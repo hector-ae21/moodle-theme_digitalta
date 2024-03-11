@@ -29,6 +29,11 @@ $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS co
 $string['region-side-pre'] = 'Right';
 $string['showfooter'] = 'Show footer';
 
+$string['login::username'] = 'Username';
+$string['login::usernameemail'] = 'Email';
+$string['login::forgotpassword'] = 'Forgot your password?';
+$string['login::login'] = 'Login';
+
 $string['config::navbar_page'] = 'Custom navbar settings';
 $string['config::custom_navbar'] = 'Active custom navigation';
 $string['config::navbar_myexperience_url'] = 'My experience URL';
