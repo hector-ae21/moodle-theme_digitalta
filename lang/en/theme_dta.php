@@ -28,6 +28,18 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';                                                                        
 $string['region-side-pre'] = 'Right';
 $string['showfooter'] = 'Show footer';
+$string['settings::primarycolor'] = 'Primary Color';
+$string['settings::primarycolor_desc'] = 'Select the primary color for the theme.';
+$string['settings::secondarycolor'] = 'Secondary Color';
+$string['settings::secondarycolor_desc'] = 'Select the secondary color for the theme.';
+$string['settings::tertiarycolor'] = 'Tertiary Color';
+$string['settings::tertiarycolor_desc'] = 'Select the tertiary color for the theme.';
+$string['settings::accentcolor'] = 'Accent Color';
+$string['settings::accentcolor_desc'] = 'Select the accent color for the theme.';
+$string['settings::accentcoloralt'] = 'Alternative Accent Color';
+$string['settings::accentcoloralt_desc'] = 'Select the alternative accent color for the theme.';
+
+
 
 $string['login::username'] = 'Username';
 $string['login::usernameemail'] = 'Email';
@@ -36,12 +48,14 @@ $string['login::login'] = 'Login';
 
 $string['config::navbar_page'] = 'Custom navbar settings';
 $string['config::custom_navbar'] = 'Active custom navigation';
+$string['config::navbar_home_url'] = 'Home URL';
 $string['config::navbar_myexperience_url'] = 'My experience URL';
 $string['config::navbar_learningcommunity_url'] = 'Learning community URL';
 $string['config::navbar_mytutoring_url'] = 'My tutoring URL';
 $string['config::navbar_ourcases_url'] = 'Our cases URL';
 $string['config::navbar_resourcerepository_url'] = 'Resource repository URL';
 
+$string['navbar::home'] = 'Home';
 $string['navbar::myexperience'] = 'My experience';
 $string['navbar::learningcommunity'] = 'Learning community';
 $string['navbar::mytutoring'] = 'My tutoring';
