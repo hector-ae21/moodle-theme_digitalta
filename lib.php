@@ -194,8 +194,7 @@ function redirect_is_not_allowed_page()
 
     $no_redirect_page_types = [
         'admin-',
-        'local-dta',
-        'user-profile'
+        'local-dta'
     ];
 
     foreach ($no_redirect_page_types as $type) {
