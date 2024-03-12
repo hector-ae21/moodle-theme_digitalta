@@ -628,9 +628,9 @@ form {
     }
   }
   @media screen and (min-width: 1200px){
-    .experience-card-module{
+    .experience-card-module .card-body{
       overflow: auto;
-      max-height: 500px;
+      max-height: 380px;
     }
   }
 }
