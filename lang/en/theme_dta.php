@@ -48,17 +48,15 @@ $string['login::login'] = 'Login';
 
 $string['config::navbar_page'] = 'Custom navbar settings';
 $string['config::custom_navbar'] = 'Active custom navigation';
-$string['config::navbar_home_url'] = 'Home URL';
-$string['config::navbar_myexperience_url'] = 'My experience URL';
-$string['config::navbar_learningcommunity_url'] = 'Learning community URL';
-$string['config::navbar_mytutoring_url'] = 'My tutoring URL';
+$string['config::navbar_teacheracademy_url'] = 'Teacher Academy URL';
+$string['config::themes_url'] = 'Themes URL';
+$string['config::navbar_experiences_url'] = 'Experiences URL';
 $string['config::navbar_ourcases_url'] = 'Our cases URL';
 $string['config::navbar_resourcerepository_url'] = 'Resource repository URL';
 
-$string['navbar::home'] = 'Home';
-$string['navbar::myexperience'] = 'My experience';
-$string['navbar::learningcommunity'] = 'Learning community';
-$string['navbar::mytutoring'] = 'My tutoring';
+$string['navbar::teacheracademy'] = 'Teacher Academy';
+$string['navbar::themes'] = 'Themes';
+$string['navbar::experiences'] = 'Experiences';
 $string['navbar::ourcases'] = 'Our cases';
-$string['navbar::resourcerepository'] = 'Resource repository';
+$string['navbar::resourcerepository'] = 'Resources';
 $string['navbar::siteadmin'] = 'Administration';

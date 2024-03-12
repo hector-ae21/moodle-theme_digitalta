@@ -109,7 +109,7 @@ $templatecontext = [
     'overflow' => $overflow,
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
-    'homeurl' => get_config('theme_dta', 'navbar_home_url'),
+    'homeurl' => get_config('theme_dta', 'navbar_teacheracademy_url'),
 ];
 
 echo $OUTPUT->render_from_template('theme_dta/drawers', $templatecontext);
