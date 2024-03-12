@@ -82,10 +82,19 @@ function set_default_primarynav_sections()
     }
 }
 
+function set_default_primarynav_usermenu()
+{
+    global $PAGE;
+    $usermenu = $PAGE->primarynav->get('user');
+    if (!empty($usermenu)) {
+        $usermenu->text = get_string('login::login', 'theme_dta');
+    }
+}
+
+
 function set_aditional_primarynav_sections()
 {
     global $PAGE;
-
     if (isloggedin() && !isguestuser() && get_config('theme_dta', 'enabled_navbar')) {
         $payload = get_sections_details();
         foreach ($payload as $key => $content) {
@@ -154,7 +163,8 @@ function get_sections_details()
     ];
 }
 
-function redirect_login_is_not_loggedin(){
+function redirect_login_is_not_loggedin()
+{
     global $PAGE;
 
     if ($PAGE->pagetype === 'login-index' || $PAGE->pagetype === 'login-logout' || defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
@@ -167,8 +177,9 @@ function redirect_login_is_not_loggedin(){
     }
 }
 
-function redirect_is_not_allowed_page() {
-    global $PAGE, $USER;
+function redirect_is_not_allowed_page()
+{
+    global $PAGE;
 
     $homeUrl = get_config('theme_dta', "navbar_teacheracademy_url");
 

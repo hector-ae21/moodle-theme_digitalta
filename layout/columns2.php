@@ -25,6 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/behat/lib.php');
+require_once(__DIR__ . '/../classes/navigation/output/primary.php');
 
 // Add block button in editing mode.
 $addblockbutton = $OUTPUT->addblockbutton();
@@ -46,7 +47,7 @@ if ($PAGE->has_secondary_navigation()) {
     }
 }
 
-$primary = new core\navigation\output\primary($PAGE);
+$primary = new theme_dta\navigation\output\primary($PAGE);
 $renderer = $PAGE->get_renderer('core');
 $primarymenu = $primary->export_for_template($renderer);
 $buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_actions()  && !$PAGE->has_secondary_navigation();

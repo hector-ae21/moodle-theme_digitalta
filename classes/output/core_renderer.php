@@ -1,4 +1,6 @@
 <?php
+
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -15,24 +17,25 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * dta theme
+ * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
  * @package    theme_dta
  * @copyright  2024 ADSDR-FUNIBER Scepter Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// This line protects the file from being accessed by a URL directly.
-defined('MOODLE_INTERNAL') || die();
+namespace theme_dta\output;
 
-// This is the version of the plugin.
-$plugin->version = '2024012407';
+defined('MOODLE_INTERNAL') || die;
 
-$plugin->component = 'theme_dta';
+class core_renderer extends \theme_boost\output\core_renderer {
 
-$plugin ->requires = '2016052300'; // Requires this Moodle version
-
-// This is a list of plugins, this plugin depends on (and their versions).
-$plugin->dependencies = [
-    'theme_boost' => '2016102100'
-];
+    /**
+     * Renders the "breadcrumb" for all pages in boost.
+     *
+     * @return string the HTML for the navbar.
+     */
+    public function navbar(): string {
+        return "";
+    }
+}
