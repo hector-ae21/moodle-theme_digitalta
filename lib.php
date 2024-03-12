@@ -178,6 +178,7 @@ function redirect_is_not_allowed_page() {
     global $PAGE, $USER;
 
     $homeUrl = get_config('theme_dta', "navbar_home_url");
+    
     if (empty($homeUrl)) {
         return;
     }
@@ -187,12 +188,12 @@ function redirect_is_not_allowed_page() {
         return;
     }
 
-    $noRedirectPageTypes = [
+    $no_redirect_page_types = [
         'admin-',
         'local-dta',
     ];
 
-    foreach ($noRedirectPageTypes as $type) {
+    foreach ($no_redirect_page_types as $type) {
         if (strpos($PAGE->pagetype, $type) === 0) {
             return;
         }
