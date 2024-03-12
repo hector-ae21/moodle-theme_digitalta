@@ -117,38 +117,31 @@ function get_sections_details()
 {
     return [
         'home' => [
-            'label' => get_string('navbar::home', 'theme_dta'),
+            'label' => get_string('navbar::teacheracademy', 'theme_dta'),
             'icon' => 'i/home',
             'node_key' => 'home',
-            'link' => get_config('theme_dta', 'navbar_home_url'),
+            'link' => get_config('theme_dta', 'navbar_teacheracademy_url'),
             'before_key' => "siteadminnode",
         ],
-        'learningcommunity' => [
-            'label' => get_string('navbar::learningcommunity', 'theme_dta'),
-            'icon' => 'i/group',
-            'node_key' => 'learningcommunity',
-            'link' => get_config('theme_dta', 'navbar_learningcommunity_url'),
+        'themes' => [
+            'label' => get_string('navbar::themes', 'theme_dta'),
+            'icon' => 't/tags',
+            'node_key' => 'themes',
+            'link' => get_config('theme_dta', 'navbar_themes_url'),
             'before_key' => "siteadminnode",
         ],
-        'myexperience' => [
-            'label' => get_string('navbar::myexperience', 'theme_dta'),
-            'icon' => 'i/rsssitelogo',
-            'node_key' => 'myexperience',
-            'link' => get_config('theme_dta', 'navbar_myexperience_url'),
+        'experiences' => [
+            'label' => get_string('navbar::experiences', 'theme_dta'),
+            'icon' => 'i/courseevent',
+            'node_key' => 'experiences',
+            'link' => get_config('theme_dta', 'navbar_experiences_url'),
             'before_key' => "siteadminnode",
         ],
-        'ourcases' => [
+        'cases' => [
             'label' => get_string('navbar::ourcases', 'theme_dta'),
             'icon' => 'i/open',
             'node_key' => 'ourcases',
             'link' => get_config('theme_dta', 'navbar_ourcases_url'),
-            'before_key' => "siteadminnode",
-        ],
-        'mytutoring' => [
-            'label' => get_string('navbar::mytutoring', 'theme_dta'),
-            'icon' => 'i/tutoring',
-            'node_key' => 'mytutoring',
-            'link' => get_config('theme_dta', 'navbar_mytutoring_url'),
             'before_key' => "siteadminnode",
         ],
         'resourcerepository' => [
@@ -177,8 +170,8 @@ function redirect_login_is_not_loggedin(){
 function redirect_is_not_allowed_page() {
     global $PAGE, $USER;
 
-    $homeUrl = get_config('theme_dta', "navbar_home_url");
-    
+    $homeUrl = get_config('theme_dta', "navbar_teacheracademy_url");
+
     if (empty($homeUrl)) {
         return;
     }
@@ -191,6 +184,7 @@ function redirect_is_not_allowed_page() {
     $no_redirect_page_types = [
         'admin-',
         'local-dta',
+        'user-profile'
     ];
 
     foreach ($no_redirect_page_types as $type) {
