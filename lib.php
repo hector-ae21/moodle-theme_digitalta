@@ -16,7 +16,7 @@ function theme_dta_get_main_scss_content($theme)
     $fs = get_file_storage();
 
     $context = context_system::instance();
-    
+
     // Get all colors from the settings
     $colors = [
         'primarycolor' => get_config('theme_dta', 'primarycolor'),
@@ -58,6 +58,12 @@ function theme_dta_get_main_scss_content($theme)
     return $pre . "\n" . $scss . "\n" . $post;
 }
 
+function theme_dta_page_init()
+{
+    redirect_login_is_not_loggedin();
+    redirect_is_not_allowed_page();
+}
+
 function set_default_primarynav_sections()
 {
     global $PAGE;
@@ -69,7 +75,7 @@ function set_default_primarynav_sections()
          * @var $node navigation_node
          */
         $node = $PAGE->primarynav->get($section);
-        if (!empty($node)){
+        if (!empty($node)) {
             $node->icon = new pix_icon($icon, '');
             $node->text = get_string('navbar::siteadmin', 'theme_dta');
         }
@@ -153,4 +159,43 @@ function get_sections_details()
             'before_key' => "siteadminnode",
         ],
     ];
+}
+
+function redirect_login_is_not_loggedin(){
+    global $PAGE;
+
+    if ($PAGE->pagetype === 'login-index' || $PAGE->pagetype === 'login-logout' || defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
+        return;
+    }
+
+    if (!isloggedin() || isguestuser()) {
+        $loginurl = new moodle_url('/login/index.php');
+        redirect($loginurl);
+    }
+}
+
+function redirect_is_not_allowed_page() {
+    global $PAGE, $USER;
+
+    $homeUrl = get_config('theme_dta', "navbar_home_url");
+    if (empty($homeUrl)) {
+        return;
+    }
+    $redirecturl = new moodle_url($homeUrl);
+
+    if (!isloggedin() || isguestuser() || defined('AJAX_SCRIPT') && AJAX_SCRIPT || $PAGE->url->compare($redirecturl, URL_MATCH_BASE)) {
+        return;
+    }
+
+    $noRedirectPageTypes = [
+        'admin-',
+        'local-dta',
+    ];
+
+    foreach ($noRedirectPageTypes as $type) {
+        if (strpos($PAGE->pagetype, $type) === 0) {
+            return;
+        }
+    }
+    redirect($redirecturl);
 }
