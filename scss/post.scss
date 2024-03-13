@@ -642,11 +642,17 @@ div[role="main"] {
     background-color: transparent !important;
     outline: none !important;
   }
-}
+
   .experience-description{
     max-height: 250px;
     overflow: hidden;
   }
+}
+
+.recent-experiences .experience-card-img{
+  height: 140px;
+}
+  
 
 #page-local-dta-pages-experiences-view{
   @media screen and (max-width: 1199px){
