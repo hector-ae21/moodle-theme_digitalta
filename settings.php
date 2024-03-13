@@ -154,7 +154,7 @@ if ($ADMIN->fulltree) {
         'theme_dta/navbar_experiences_url',
         get_string('config::navbar_experiences_url', 'theme_dta'),
         get_string('config::navbar_experiences_url_desc', 'theme_dta'),
-        "$CFG->wwwroot/local/dta/pages/community/dashboard.php",
+        "$CFG->wwwroot/local/dta/pages/experience/dashboard.php",
         PARAM_URL
     ));
 
@@ -165,7 +165,7 @@ if ($ADMIN->fulltree) {
         'theme_dta/navbar_ourcases_url',
         get_string('config::navbar_ourcases_url', 'theme_dta'),
         get_string('config::navbar_ourcases_url_desc', 'theme_dta'),
-        "$CFG->wwwroot/local/dta/pages/ourcases/repository.php",
+        "$CFG->wwwroot/local/dta/pages/cases/repository.php",
         PARAM_URL
     ));
 
