@@ -643,6 +643,10 @@ div[role="main"] {
     outline: none !important;
   }
 }
+  .experience-description{
+    max-height: 250px;
+    overflow: hidden;
+  }
 
 #page-local-dta-pages-experiences-view{
   @media screen and (max-width: 1199px){
