@@ -181,26 +181,34 @@ function redirect_is_not_allowed_page()
 {
     global $PAGE;
 
-    $homeUrl = get_config('theme_dta', "navbar_teacheracademy_url");
+    $home_url = get_config('theme_dta', "navbar_teacheracademy_url");
 
-    if (empty($homeUrl)) {
+    if (empty($home_url)) {
         return;
     }
-    $redirecturl = new moodle_url($homeUrl);
+    $redirect_url = new moodle_url($home_url);
 
-    if (!isloggedin() || isguestuser() || defined('AJAX_SCRIPT') && AJAX_SCRIPT || $PAGE->url->compare($redirecturl, URL_MATCH_BASE)) {
-        return;
-    }
-
+    
     $no_redirect_page_types = [
         'admin-',
-        'local-dta'
+        'local-dta',
+        'edit',
+        'editadvanced'
     ];
-
+    
+    $profile_url = get_config('theme_dta', "profile_url");
+    if (!empty($profile_url) && strpos($PAGE->pagetype, 'profile') !== false) {
+        $redirect_url = new moodle_url($profile_url, ['id' => $PAGE->url->params()["id"]]);
+    }
+    if (!isloggedin() || isguestuser() || defined('AJAX_SCRIPT') && AJAX_SCRIPT || $PAGE->url->compare($redirect_url, URL_MATCH_BASE)) {
+        return;
+    }
+    
+    
     foreach ($no_redirect_page_types as $type) {
-        if (strpos($PAGE->pagetype, $type) === 0) {
+        if (strpos($PAGE->pagetype, $type) !== false) {
             return;
         }
     }
-    redirect($redirecturl);
+    redirect($redirect_url);
 }
