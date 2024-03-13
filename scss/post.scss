@@ -596,7 +596,7 @@ div[role="main"] {
   background-color: $primarycolor;
 }
 
-#page-local-dta-pages-myexperience-manage {
+#page-local-dta-pages-experiences-manage {
   #page-header .header-actions-container {
     display: none;
   }
@@ -607,7 +607,7 @@ div[role="main"] {
     }
   }
 }
-#page-local-dta-pages-myexperience-manage .mform .form-group.row {
+#page-local-dta-pages-experiences-manage .mform .form-group.row {
   display: flex;
   flex-direction: column;
   .filemanager-toolbar,
@@ -620,11 +620,11 @@ div[role="main"] {
   }
 }
 
-#page-local-dta-pages-myexperience-manage .mform .form-group.row > * {
+#page-local-dta-pages-experiences-manage .mform .form-group.row > * {
   max-width: 100%;
 }
 
-#page-local-dta-pages-myexperience-manage .mform .form-group.row > .felement > input {
+#page-local-dta-pages-experiences-manage .mform .form-group.row > .felement > input {
   max-width: 100%;
   width: 100%;
 }
