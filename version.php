@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // This is the version of the plugin.
-$plugin->version = '2024012408';
+$plugin->version = '2024012409';
 
 $plugin->component = 'theme_dta';
 
