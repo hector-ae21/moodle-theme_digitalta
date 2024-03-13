@@ -520,7 +520,7 @@ div[role="main"] {
 
 // NEW EXPERIENCE FORM //
 form {
-  input {
+  input[type="text"], input[type="password"] {
     font-size: 18px;
     padding: 5px 10px;
     width: 100%;
@@ -532,6 +532,27 @@ form {
     border-radius: 5px;
     box-shadow: 3px 3px 2px 0px #e2e2e2;
     transition: 0.3s ease;
+  }
+}
+
+// LOGIN & SIGNUP //
+.signupform {
+  input {
+    max-height: 50px;
+    margin: 0 !important;
+  }
+
+  #id_submitbutton {
+    background: $primarycolor !important;
+    margin-right: .5rem !important;
+  }
+
+  #id_cancel {
+    background: $tertiarycolor !important;
+  }
+
+  .fa-exclamation-circle {
+    color: $accentcolor !important;
   }
 }
 
