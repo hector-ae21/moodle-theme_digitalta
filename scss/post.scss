@@ -537,6 +537,10 @@ form {
 
 // LOGIN & SIGNUP //
 .signupform {
+  h1 {
+    display: none;
+  }
+
   input {
     max-height: 50px;
     margin: 0 !important;
