@@ -154,7 +154,7 @@ if ($ADMIN->fulltree) {
         'theme_dta/navbar_experiences_url',
         get_string('config::navbar_experiences_url', 'theme_dta'),
         get_string('config::navbar_experiences_url_desc', 'theme_dta'),
-        "$CFG->wwwroot/local/dta/pages/experience/dashboard.php",
+        "$CFG->wwwroot/local/dta/pages/experiences/dashboard.php",
         PARAM_URL
     ));
 
