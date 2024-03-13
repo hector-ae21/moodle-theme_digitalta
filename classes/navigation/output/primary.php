@@ -181,7 +181,7 @@ class primary extends \core\navigation\output\primary
         if (!isset($item->titleidentifier))
             return null;
 
-        if (str_contains($item->titleidentifier, 'profile')) {
+        if (strpos($item->titleidentifier, 'profile')) {
             $custom_profileurl = get_config('theme_dta', 'profile_url');
             if (!empty($custom_profileurl)) {
                 $item->titleidentifier = 'profile,custom';
@@ -189,7 +189,7 @@ class primary extends \core\navigation\output\primary
             }
         };
         $item->pixicon = self::get_custom_pixicon($item);
-        if (str_contains($item->titleidentifier, 'profile') || str_contains($item->titleidentifier, 'logout'))
+        if (strpos($item->titleidentifier, 'profile') || strpos($item->titleidentifier, 'logout'))
             return $item;
     }
 
@@ -200,9 +200,9 @@ class primary extends \core\navigation\output\primary
     private function get_custom_pixicon($item)
     {
         switch ($item->titleidentifier) {
-            case str_contains($item->titleidentifier, 'profile'):
+            case strpos($item->titleidentifier, 'profile'):
                 return 'i/user';
-            case str_contains($item->titleidentifier, 'logout'):
+            case strpos($item->titleidentifier, 'logout'):
                 return 'a/logout';
             default:
                 return '';
