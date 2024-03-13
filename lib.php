@@ -167,7 +167,7 @@ function redirect_login_is_not_loggedin()
 {
     global $PAGE;
 
-    if ($PAGE->pagetype === 'login-index' || $PAGE->pagetype === 'login-logout' || defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
+    if ($PAGE->pagetype === 'login-signup' || $PAGE->pagetype === 'login-index' || $PAGE->pagetype === 'login-logout' || defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
         return;
     }
 
