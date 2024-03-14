@@ -466,41 +466,44 @@ div[role="main"] {
 }
 
 @media screen and (max-width: 992px) {
-  .custom-input {
-    padding-right: 1px;
-    padding-left: 1rem !important;
+  .experience-view {
+    .custom-input {
+      padding-right: 1px;
+      padding-left: 1rem !important;
 
-    .bi-vector-pen {
+      .bi-vector-pen {
+        display: none;
+      }
+    }
+
+    .post-img {
       display: none;
     }
-  }
 
-  .post-img {
-    display: none;
-  }
-
-  .post-button {
-    padding: 7px 10px;
-    div {
-      display: none;
+    .post-button {
+      padding: 7px 10px;
+      div {
+        display: none;
+      }
     }
   }
 }
 
 @media screen and (max-width: 334px) {
-  .exp-card-body {
+  .experience-view {
+    .exp-card-body {
+      .exp-img-container {
+        background-color: $primarycolor;
+        transition: all 0.3s ease-in-out;
 
-    .exp-img-container {
-      background-color: $primarycolor;
-      transition: all 0.3s ease-in-out;
-
-      img {
-        content: url("");
+        img {
+          content: url("");
+        }
       }
-    }
 
-    .exp-img-container:hover {
-      max-height: inherit;
+      .exp-img-container:hover {
+        max-height: inherit;
+      }
     }
   }
 
@@ -676,29 +679,33 @@ div[role="main"] {
   width: 100%;
 }
 
-// .experience-card-body {
-//   padding: 1.25rem 0;
-//   .experience-card-title {
-//     border-bottom: 1px solid black;
-//     padding: 0.8rem 0;
-//   }
-//   a {
-//     color: #000 !important;
-//     box-shadow: none !important;
-//     text-decoration: none !important;
-//     background-color: transparent !important;
-//     outline: none !important;
-//   }
+#page-local-dta-pages-teacheracademy-index {
+  .experience-card-body {
+    padding: 1.25rem 0;
+    .experience-card-title {
+      border-bottom: 1px solid black;
+      color: $primarycolor !important;
+      padding: 0.8rem 0;
+    }
+    a {
+      box-shadow: none !important;
+      text-decoration: none !important;
+      background-color: transparent !important;
+      outline: none !important;
+    }
 
-//   .experience-description{
-//     max-height: 250px;
-//     overflow: hidden;
-//   }
-// }
+    .experience-description{
+      color: #000;
+      max-height: 250px;
+      overflow: hidden;
+    }
+  }
 
-// .recent-experiences .experience-card-img{
-//   height: 140px;
-// }
+  .recent-experiences .experience-card-img{
+    height: 140px;
+  }
+
+}
   
 
 #page-local-dta-pages-experiences-view{
