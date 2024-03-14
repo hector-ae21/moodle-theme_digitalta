@@ -465,7 +465,7 @@ div[role="main"] {
   border: 1px solid $secondarycolor;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1045px) {
   .custom-input {
     padding-right: 1px;
     padding-left: .25rem;
@@ -487,9 +487,9 @@ div[role="main"] {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 580px) {
   .input::placeholder {
-    color: #fff
+    color: transparent;
   }
 }
 
