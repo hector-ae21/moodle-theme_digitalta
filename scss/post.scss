@@ -465,10 +465,10 @@ div[role="main"] {
   border: 1px solid $secondarycolor;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 992px) {
   .custom-input {
     padding-right: 1px;
-    padding-left: .25rem;
+    padding-left: 1rem !important;
 
     .bi-vector-pen {
       display: none;
@@ -487,7 +487,23 @@ div[role="main"] {
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 334px) {
+  .exp-card-body {
+
+    .exp-img-container {
+      background-color: $primarycolor;
+      transition: all 0.3s ease-in-out;
+
+      img {
+        content: url("");
+      }
+    }
+
+    .exp-img-container:hover {
+      max-height: inherit;
+    }
+  }
+
   .input::placeholder {
     color: transparent;
   }
