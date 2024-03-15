@@ -1477,3 +1477,14 @@ div[role="main"] {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .post-container{
+    .custom-input{
+      padding-left: 1rem;
+    }
+    .svg-icon.bi-vector-pen, .post-button div {
+      display: none;
+    }
+  }
+}
