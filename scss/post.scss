@@ -30,7 +30,22 @@
   font-display: swap;
 }
 
-.login-page{
+body:not(.login-page){
+  padding-bottom: 230px;
+  overflow: visible;
+  height: auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 991px) {
+  body:not(.login-page){
+    padding-bottom: 480px;
+  }
+  
+}
+
+.login-page {
   * {
     margin: 0;
     padding: 0;
@@ -462,6 +477,54 @@
 
 #page {
   margin-top: 0px !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+#page-footer {
+  font-size: 11px;
+  color: #757575;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  .pre-footer {
+      padding-top: 2rem;
+      background-color: #f3f3f8;
+  }
+
+  .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .row {
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          margin-right: -15px;
+          margin-left: -15px;
+  }
+
+  .footer-info {
+      border-right: 1px solid #e2e4e5 !important;
+      display: flex;
+      align-items: center;
+  }
+
+  .footer-description {
+      border-right: 1px solid #e2e4e5 !important;
+      display: flex;
+      align-items: center;
+  }
+
+
+  #menu-menu-footer {
+      display: none;
+  }
 }
 
 .sticky {
@@ -1327,5 +1390,90 @@ div[role="main"] {
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
+  }
+}
+
+.summary-carousel{
+  .container {
+    height: 85%;
+    max-height: 417px;
+    width: 100%;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #dbdbdb;
+    font-family: sans-serif;
+  }
+  
+  .palette {
+    display: flex;
+    height: 95%;
+    width: 100%;
+  }
+  
+  .color {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: flex 0.1s linear;
+  }
+  
+  .color span {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    backdrop-filter: blur(8px);
+    
+    
+  }
+  
+  .color:nth-child(1) {
+    backdrop-filter: blur(10px);
+    background: url("https://digitalta.eu/wp-content/uploads/2023/12/portada.png") no-repeat center center;
+    background-size: cover;
+    
+    /*background: #264653;*/
+  }
+  
+  .color:nth-child(2) {
+    background: url("https://digitalta.eu/wp-content/uploads/2023/10/Erasmus-Days.png") no-repeat center center;
+    background-size: cover;
+    /*background: #2a9d8f;*/
+  }
+  
+  .color:nth-child(3) {
+    background: url("https://digitalta.eu/wp-content/uploads/2023/09/Jiri-Kropac.png") no-repeat center center;
+    background-size: cover;
+    /*background: #e9c46a;*/
+  }
+  
+  .color:nth-child(4) {
+    background: url("https://digitalta.eu/wp-content/uploads/2023/06/IMG_6148-1-1.jpg") no-repeat center center;
+    background-size: cover;
+    /*background: #f4a261;*/
+  }
+  
+  .color:nth-child(5) {
+    background: url("https://digitalta.eu/wp-content/uploads/2022/12/cover-uneatlantico.jpg") no-repeat center center;
+    background-size: cover;
+    /*background: #e76f51;*/
+  }
+  
+  .color:hover {
+    flex: 10;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .color:hover span {
+    opacity: 1;
+  }
+  
+  .h-exp-title {
+    opacity: 1;
   }
 }
