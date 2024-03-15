@@ -464,6 +464,13 @@
   margin-top: 0px !important;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
 [id^="page-admin"] #region-main {
   width: 75%;
 }
@@ -895,29 +902,48 @@ div[role="main"] {
   border: 1px solid $secondarycolor;
 }
 
-@media screen and (max-width: 1045px) {
-  .custom-input {
-    padding-right: 1px;
-    padding-left: .25rem;
+@media screen and (max-width: 992px) {
+  .experience-view {
+    .custom-input {
+      padding-right: 1px;
+      padding-left: 1rem !important;
 
-    .bi-vector-pen {
+      .bi-vector-pen {
+        display: none;
+      }
+    }
+
+    .post-img {
       display: none;
     }
-  }
 
-  .post-img {
-    display: none;
-  }
-
-  .post-button {
-    padding: 7px 10px;
-    div {
-      display: none;
+    .post-button {
+      padding: 7px 10px;
+      div {
+        display: none;
+      }
     }
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 334px) {
+  .experience-view {
+    .exp-card-body {
+      .exp-img-container {
+        background-color: $primarycolor;
+        transition: all 0.3s ease-in-out;
+
+        img {
+          content: url("");
+        }
+      }
+
+      .exp-img-container:hover {
+        max-height: inherit;
+      }
+    }
+  }
+
   .input::placeholder {
     color: transparent;
   }
@@ -1028,33 +1054,33 @@ div[role="main"] {
 
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
-  height: 5px;
-  width: 5px;
+  height: 5px !important;
+  width: 5px !important;
 }
 *::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #dfe9eb;
+  border-radius: 5px !important;
+  background-color: #dfe9eb !important;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #b8c0c2;
+  background-color: #b8c0c2 !important;
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #b8c0c2;
+  background-color: #b8c0c2 !important;
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #004997;
+  border-radius: 10px !important;
+  background-color: $secondarycolor !important;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: $primarycolor;
+  background-color: $primarycolor !important;
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: $primarycolor;
+  background-color: $primarycolor !important;
 }
 
 #page-local-dta-pages-experiences-manage {
@@ -1089,7 +1115,36 @@ div[role="main"] {
   max-width: 100%;
   width: 100%;
 }
- 
+
+#page-local-dta-pages-teacheracademy-index {
+  .experience-card-body {
+    padding: 1.25rem 0;
+    .experience-card-title {
+      border-bottom: 1px solid black;
+      color: $primarycolor !important;
+      padding: 0.8rem 0;
+    }
+    a {
+      box-shadow: none !important;
+      text-decoration: none !important;
+      background-color: transparent !important;
+      outline: none !important;
+    }
+
+    .experience-description{
+      color: #000;
+      max-height: 250px;
+      overflow: hidden;
+    }
+  }
+
+  .recent-experiences .experience-card-img{
+    height: 140px;
+  }
+
+}
+  
+
 #page-local-dta-pages-experiences-view{
   @media screen and (max-width: 1199px){
     .experience-first-col{
@@ -1162,7 +1217,68 @@ div[role="main"] {
   border-radius: 50%;
 }
 
+.experience-tags {
+  .tags-list {
+    list-style: none;
+    margin: 0;
+    overflow: hidden; 
+    padding: 0;
+    font-size: 9px;
+  }
+
+  .tags-list li {
+      float: left; 
+  }
+
+  .tag-basic {
+      background: #eee;
+      border-radius: 3px 0 0 3px;
+      color: #999;
+      display: inline-block;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 20px 0 23px;
+      position: relative;
+      text-decoration: none;
+      -webkit-transition: color 0.2s;
+  }
+
+  .tag-basic::before {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+      content: '';
+      height: 6px;
+      left: 10px;
+      position: absolute;
+      width: 6px;
+      top: 10px;
+  }
+
+  .tag-basic::after {
+      background: #fff;
+      border-bottom: 13px solid transparent;
+      border-left: 10px solid #eee;
+      border-top: 13px solid transparent;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+
+  .tag-basic:hover {
+      background-color: $accentcolor;
+      color: white;
+  }
+
+  .tag-basic:hover::after {
+      border-left-color: $accentcolor; 
+  }
+}
+
 .experiences-view {
+
+
   .experience-card {
     background: #fff;
     border-radius: 1rem;
@@ -1188,23 +1304,20 @@ div[role="main"] {
     max-height: 200px;
 
     .exp-img-container {
-      width: 10%;
-      height: 200px;
+      min-width: 250px;
+      max-width: 250px;
+      min-height: 200px;
+      max-height: 200px;
       border-radius: 1rem;
       margin-right: 1rem;
       object-fit: cover;
     }
 
-    .exp-img-container:hover {
-      width: 30%;
-      max-height: inherit;
-    }
-
     img {
       display: block;
       border-radius: 1rem;
+      height: 100%;
       width: 100%;
-      height: 100%
     }
 
   }

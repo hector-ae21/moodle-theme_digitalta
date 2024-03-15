@@ -32,49 +32,116 @@
     }
 }}
 
-<footer id="page-footer" class="footer-popover bg-white">
-    <div class="footer-content-popover container" data-region="footer-content-popover">
-        {{# output.has_popover_links }}
-            <div class="footer-section p-3 border-bottom">
-                {{# output.page_doc_link }}
-                    <div class="footer-support-link">{{{ output.page_doc_link }}}</div>
-                {{/ output.page_doc_link }}
-
-                {{# output.services_support_link }}
-                    <div class="footer-support-link">{{{ output.services_support_link }}}</div>
-                {{/ output.services_support_link }}
-
-                {{# output.supportemail }}
-                    <div class="footer-support-link">{{{ output.supportemail }}}</div>
-                {{/ output.supportemail }}
-            </div>
-        {{/ output.has_popover_links }}
-        <div class="footer-section p-3 border-bottom">
-            <div class="logininfo">
-                {{{ output.login_info }}}
-            </div>
-            <div class="tool_usertours-resettourcontainer">
-            </div>
-
-            {{{ output.standard_footer_html }}}
-            {{{ output.standard_end_of_body_html }}}
-        </div>
-        <div class="footer-section p-3">
-            <div>{{#str}}poweredbymoodle, core{{/str}}</div>
-            {{#output.moodle_release}}
-                <div>
-                    {{#str}}version, core{{/str}} {{{ output.moodle_release }}}
+<footer id="page-footer" class="bg-white">
+    <div class="pre-footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-info col-md-6 col-lg-3 col-xl-3 mb-3 border-end">
+                    <div id="block-50" class="widget widget_block">
+                        <div class="font-light fz-13 lh-1-5 pb-lg-2 pb-3">
+                        Digital TA <br>
+                        Erasmus+ <br>
+                        ERASMUS-EDU-2021-PEX-TEACH-ACA <br>
+                        Nº 101055620
+                        </div>
+                    </div>
                 </div>
-            {{/output.moodle_release}}
+                <div class="footer-description col-md-6 col-lg-5 col-xl-6 mb-3 border-end">
+                    <div id="block-51" class="widget widget_block widget_text">
+                        <p></p>
+                    </div>
+                    <div id="block-52" class="widget widget_block">
+                        <p class="font-light fz-13 lh-1-5">“Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor the granting authority can be held responsible for them.”</p>
+                    </div>
+                </div>
+                <div class="footer-logo col-md-12 col-lg-4 col-xl-3 mb-3">
+                    <div id="block-53" class="widget widget_block">
+                        <div class="font-light section-support_text fz-16 text-center">With the financial support of:</div>
+                        <div class="section-support_img">
+                        <div class="d-flex justify-content-center">
+                            <img decoding="async" class="py-3 img-fluid" src="https://digitalta.eu/wp-content/uploads/2023/04/eu-logo.png">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="bg-dark text-white">
+        <div class="container">
+            <div class="site-info py-2 text-right fz-14">
+                <!--&copy; Copyright Universidad Europea del Atlántico-->
+                © Copyright DIGITAL TA 2024 <br>
+                <div class="menu-menu-footer-container">
+                    <ul id="menu-menu-footer" class="menu">
+                        <li class="fz-14 menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><a href="https://digitalta.eu/projects-aims/">Project’s aims</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198"><a href="https://digitalta.eu/partnership/">Partnership</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-196"><a href="https://digitalta.eu/news/">News</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-867"><a href="https://digitalta.eu/gallery/">Gallery</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197"><a href="https://digitalta.eu/newsletter-5/">Newsletters</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-718"><a href="https://digitalta.eu/output_publications/">Output &amp; Publications</a></li>
+                    </ul>
+                </div>
+                <div id="block-46" class="widget widget_block"></div>
+            </div>
+        <!-- .site-info -->
+        </div>
+    </div>
+    {{{ output.standard_end_of_body_html }}}
 
-    <div class="footer-content-debugging footer-dark bg-dark text-light">
+    <!--<div class="footer-content-debugging footer-dark bg-dark text-light">
         <div class="container-fluid footer-dark-inner">
             {{{ output.debug_footer_html }}}
         </div>
-    </div>
+    </div>-->
 </footer>
+
+<style>
+    footer {
+        font-size: 11px;
+        color: #757575;
+
+        .pre-footer {
+            padding-top: 2rem;
+            background-color: #f3f3f8;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row {
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                margin-right: -15px;
+                margin-left: -15px;
+        }
+
+        .footer-info {
+            border-right: 1px solid #e2e4e5 !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-description {
+            border-right: 1px solid #e2e4e5 !important;
+            display: flex;
+            align-items: center;
+        }
+
+
+        #menu-menu-footer {
+            display: none;
+        }
+    }
+</style>
+
+
 {{#js}}
 require(['theme_dta/footer-popover'], function(FooterPopover) {
     FooterPopover.init();
