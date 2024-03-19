@@ -30,6 +30,8 @@
   font-display: swap;
 }
 
+// FOOTER START // 
+
 body:not(.login-page) {
   padding-bottom: 230px;
   overflow: visible;
@@ -42,8 +44,56 @@ body:not(.login-page) {
   body:not(.login-page) {
     padding-bottom: 480px;
   }
-
 }
+
+#page-footer {
+  font-size: 11px;
+  color: #757575;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  .pre-footer {
+    padding-top: 2rem;
+    background-color: #f3f3f8;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .footer-info {
+    border-right: 1px solid #e2e4e5 !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-description {
+    border-right: 1px solid #e2e4e5 !important;
+    display: flex;
+    align-items: center;
+  }
+
+
+  #menu-menu-footer {
+    display: none;
+  }
+}
+// FOOTER END // 
+
+// LOGIN PAGE START //
 
 .login-page {
   * {
@@ -184,7 +234,7 @@ body:not(.login-page) {
   }
 
   .login .logo {
-    margin-top: 75px;
+    margin-top: 20px;
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -195,9 +245,14 @@ body:not(.login-page) {
     font-weight: bolder;
   }
 
-  .login .container .login-form {
-    margin-top: 5vh;
+  #page-description {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
 
+  .login .container .login-form {
+    margin-top: 2vh;
+    bottom: 0;
   }
 
   .login .container .login-form form {
@@ -209,27 +264,27 @@ body:not(.login-page) {
     font-size: 16px;
     font-weight: normal;
     background: rgba(57, 57, 57, 0.07);
-    margin: 12.5px 0;
-    height: 68px;
+    margin: 0;
+    height: auto;
     border: none;
     padding: 0 30px;
     border-radius: 10px;
   }
 
   .login .container .login-form form button[type=submit] {
-    background: #1382c5;
+    background: $primarycolor;
     border: none;
     margin-top: 30px;
-    margin-bottom: 20px;
-    width: 100%;
-    height: 58px;
+    margin-bottom: 5px;
+    width: auto;
+    height: auto;
     text-transform: uppercase;
     color: white;
     border-radius: 10px;
     position: relative;
     z-index: 2;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.1rem;
   }
 
   .login .container .login-form form button[type=submit]:hover::after {
@@ -265,7 +320,7 @@ body:not(.login-page) {
   }
 
   .login .container .remember-form span {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: normal;
     position: absolute;
     top: 32px;
@@ -280,10 +335,10 @@ body:not(.login-page) {
   }
 
   .login .container .forget-pass a {
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
     font-weight: normal;
-    color: #1382c5;
+    color: $primary;
   }
 
   .login .container .forget-pass a::after {
@@ -312,6 +367,37 @@ body:not(.login-page) {
     text-align: end;
   }
 
+  .login-signup {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+  }
+
+  #partners {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+    }
+  }
+
+  .extra-logo {
+    position:fixed;
+    max-width: 400px;
+    min-width: 150px !important;
+    left:85vw;
+    bottom:10px;
+    margin:0;
+    padding:0;
+  }
+
+  .logo-sm {
+    display: none;
+  }
+
   @media only screen and (min-width: 1024px) and (max-width: 1680px) {
     .bg-illustration {
       width: 50%;
@@ -321,31 +407,9 @@ body:not(.login-page) {
 
     .login {
       width: 50%;
-    }
+    }    
   }
 
-
-  .custom-carousel {
-    border-radius: 1em 2em 2em 1em;
-  }
-
-  .carousel .slide {
-    height: fit-content;
-    max-height: 10vh;
-
-    p {
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  }
-
-  .testimonial {
-    color: #fff;
-  }
-
-  blockquote {
-    max-width: 45vw;
-  }
 
   @media screen and (max-width: 1024px) {
     .custom-carousel {
@@ -373,7 +437,35 @@ body:not(.login-page) {
     .blockquote-footer {
       display: none;
     }
+
+    .extra-logo {
+      left: 60vw;
+    }
   }
+
+  @media screen and (max-width: 500px) {
+
+    .login .logo {
+      margin-top: 5px;
+    }
+
+    .extra-logo {
+      left: 75vw;
+    }
+
+    .logo-lg {
+      display: none;
+    }
+
+    .logo-sm {
+      display: block;
+      max-width: 50px;
+      left: 75px;
+      margin-bottom: 10px;
+    }
+  }
+
+  
 
   /* Display 12", iPad PRO Portrait, iPad landscape */
   @media only screen and (max-width: 1024px) {
@@ -405,6 +497,20 @@ body:not(.login-page) {
       }
     }
 
+    .login-form {
+      a {
+        font-size: 11px;
+      }
+    }
+
+    .form-control {
+      margin: 0 !important;
+    }
+
+    #loginbtn {
+      margin-bottom: 0 !important;
+    }
+
     img {
       max-width: 200px;
     }
@@ -419,7 +525,7 @@ body:not(.login-page) {
       text-align: center;
 
       video {
-        height: 200px;
+        height: 100px;
       }
     }
 
@@ -511,6 +617,8 @@ body:not(.login-page) {
   }
 }
 
+// LOGIN PAGE END //
+
 
 #page {
   margin-top: 0px !important;
@@ -518,51 +626,7 @@ body:not(.login-page) {
   height: auto !important;
 }
 
-#page-footer {
-  font-size: 11px;
-  color: #757575;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 
-  .pre-footer {
-    padding-top: 2rem;
-    background-color: #f3f3f8;
-  }
-
-  .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .row {
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-
-  .footer-info {
-    border-right: 1px solid #e2e4e5 !important;
-    display: flex;
-    align-items: center;
-  }
-
-  .footer-description {
-    border-right: 1px solid #e2e4e5 !important;
-    display: flex;
-    align-items: center;
-  }
-
-
-  #menu-menu-footer {
-    display: none;
-  }
-}
 
 .sticky {
   position: fixed;

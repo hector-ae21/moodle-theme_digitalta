@@ -33,8 +33,10 @@ $string['showfooter'] = 'Show footer';
 
 $string['login::username'] = 'Username';
 $string['login::usernameemail'] = 'Email';
-$string['login::forgotpassword'] = 'Forgot your password?';
+$string['login::forgotpassword'] = 'Forgot password?';
 $string['login::login'] = 'Login';
+$string['login::signup_link'] = 'Sign up';
+$string['login::signup_flavour_text'] = 'No account?';
 
 //Config
 $string['config::primarycolor'] = 'Primary Color';
