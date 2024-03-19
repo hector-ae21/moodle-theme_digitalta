@@ -1329,6 +1329,17 @@ div[role="main"] {
   .experience-card-body {
     padding: 1.25rem 0;
 
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 400px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
     a {
       box-shadow: none !important;
       text-decoration: none !important;
@@ -1374,17 +1385,6 @@ div[role="main"] {
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
-}
-
-p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 400px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  /* number of lines to show */
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
 }
