@@ -1254,22 +1254,27 @@ div[role="main"] {
 #page-local-dta-pages-teacheracademy-index {
   h2 {
     margin-bottom: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  h4 {
+    color: $secondarycolor !important;
   }
 
   .experience-card-body {
     padding: 1.25rem 0;
 
-    .experience-card-title {
-      border-bottom: 1px solid black;
-      color: $primarycolor !important;
-      padding: 0.8rem 0;
-    }
-
     a {
       box-shadow: none !important;
       text-decoration: none !important;
-      background-color: transparent !important;
       outline: none !important;
+    }
+    
+
+    .experience-card-title {
+      border-bottom: 1px solid black;
+      color: $secondarycolor !important;
+      padding: 0.2rem 0;
     }
 
     .experience-description {
@@ -1317,12 +1322,6 @@ p {
   -webkit-box-orient: vertical;
 }
 
-
-
-.theme-container {
-  max-height: 136px;
-}
-
 }
 
 
@@ -1343,19 +1342,19 @@ p {
 
 // THEMES / TAGS //
 
-.theme:hover {
-  cursor: pointer;
-  background-color: #f8f9fa;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  padding: 3px;
-  transition: 0.3s;
-  animation-play-state: paused;
-}
+// .theme:hover {
+//   cursor: pointer;
+//   background-color: #f8f9fa;
+//   border-radius: 5px;
+//   font-size: 1.2rem;
+//   padding: 3px;
+//   transition: 0.3s;
+//   animation-play-state: paused;
+// }
 
-.theme-name {
-  text-transform: lowercase;
-}
+// .theme-name {
+//   text-transform: lowercase;
+// }
 
 // SEARCHBAR //
 
@@ -1387,7 +1386,7 @@ p {
   .input:focus,
   .input:hover {
     outline: none;
-    border-color: rgba(0, 48, 73, 0.4);
+    border-color: #00304966;
     background-color: #fff;
     box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
   }
@@ -1398,6 +1397,63 @@ p {
     fill: #9e9ea7;
     width: 1rem;
     height: 1rem;
+  }
+}
+
+// THEME SEARCH IN TEACHER ACADEMY //
+
+.theme-search {
+
+  .input-search-container {
+    position: relative;
+    --size-button: 30px;
+    color: primary;
+    top: 7px;
+  }
+
+  .input-search {
+    padding-left: var(--size-button) !important;
+    height: var(--size-button);
+    font-size: 15px;
+    border: none;
+    color: #000;
+    outline: none;
+    width: var(--size-button);
+    transition: all ease 0.3s;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border-bottom: 1px solid #00304966;
+    cursor: pointer;
+  }
+
+  .input-search:focus,
+  .input-search:not(:invalid) {
+    width: 200px;
+    cursor: text;
+    box-shadow: 0px 0px 0px #f8f8f8, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #f8f8f8, inset -1.5px -1.5px 3px #f8f8f8;
+    
+  }
+
+  .input-search:focus + .icon,
+  .input-search:not(:invalid) + .icon {
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+  .input-search-container .icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: $secondarycolor;
+    top: -8px;
+    left: -2px;
+    padding: 8px;
+    pointer-events: none;
+  }
+
+  .input-search-container .icon svg {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1479,6 +1535,78 @@ p {
   }
 }
 
+// TAGS IN HOME-TEACHER ACADEMY //
+
+.themes {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.75rem;
+  
+  .theme {
+    --size: 4;
+    --color: #a33;
+    color: var(--color);
+    font-size: calc(var(--size) * 0.25rem + 0.5rem);
+    display: block;
+    padding: 0.125rem 0.25rem;
+    position: relative;
+    text-decoration: none;
+    height: auto;
+    /* 
+    For different tones of a single color
+    opacity: calc((15 - (9 - var(--size))) / 15); 
+    */
+  }
+  
+  .theme[data-weight="1"] { --size: 1; }
+  .theme[data-weight="2"] { --size: 2; }
+  .theme[data-weight="3"] { --size: 3; }
+  .theme[data-weight="4"] { --size: 3.5; }
+  .theme[data-weight="5"] { --size: 4; }
+  .theme[data-weight="6"] { --size: 4.5; }
+  .theme[data-weight="7"] { --size: 5; }
+  
+  .cloud[data-show-value] div::after {
+    content: " (" attr(data-weight) ")";
+    font-size: 1rem;
+  }
+  
+  .theme:nth-child(2n+1) a { --color: #181; }
+  .theme:nth-child(3n+1) a { --color: #33a; }
+  .theme:nth-child(4n+1) a { --color: #c38; }
+  
+  .theme:focus {
+    outline: 1px dashed;
+  }
+  
+  .theme::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background: var(--color);
+    transform: translate(-50%, 0);
+    opacity: 0.15;
+    transition: width 0.25s;
+  }
+  
+  .theme:focus::before,
+  .theme:hover::before {
+    width: 100%;
+  }
+  
+  @media (prefers-reduced-motion) {
+    .cloud * {
+      transition: none !important;
+    }
+  }
+}
+
 .experiences-view {
 
 
@@ -1543,6 +1671,11 @@ p {
 }
 
 .summary-carousel {
+  span {
+    text-shadow: 1px 2px #00000077;
+    color: #e9e9e1;
+  }
+
   .container {
     height: 85%;
     max-height: 417px;
@@ -1576,7 +1709,7 @@ p {
     transition: opacity 0.1s linear;
     border-radius: 0.5em;
     padding: 0.5em 1em;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(100px);
 
 
   }
