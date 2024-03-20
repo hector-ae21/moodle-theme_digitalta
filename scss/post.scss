@@ -403,6 +403,12 @@ body:not(.login-page) {
     .login-form form {
       margin-top: 1vh !important;
     }
+
+    #partners {
+      height: 35px;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
   }
 
   @media only screen and (min-width: 1024px) and (max-width: 1680px) {
@@ -1779,35 +1785,32 @@ div[role="main"] {
 
   }
 
-  .color:nth-child(1) {
-    backdrop-filter: blur(10px);
-    background: url("https://digitalta.eu/wp-content/uploads/2023/12/portada.png") no-repeat center center;
-    background-size: cover;
+  .color {
+    background-size: cover !important;
+  }
 
+  .color:nth-child(1) {
+    background: url("https://digitalta.eu/wp-content/uploads/2023/12/portada.png") no-repeat center center;
     /*background: #264653;*/
   }
 
   .color:nth-child(2) {
     background: url("https://digitalta.eu/wp-content/uploads/2023/10/Erasmus-Days.png") no-repeat center center;
-    background-size: cover;
     /*background: #2a9d8f;*/
   }
 
   .color:nth-child(3) {
     background: url("https://digitalta.eu/wp-content/uploads/2023/09/Jiri-Kropac.png") no-repeat center center;
-    background-size: cover;
     /*background: #e9c46a;*/
   }
 
   .color:nth-child(4) {
     background: url("https://digitalta.eu/wp-content/uploads/2023/06/IMG_6148-1-1.jpg") no-repeat center center;
-    background-size: cover;
     /*background: #f4a261;*/
   }
 
   .color:nth-child(5) {
     background: url("https://digitalta.eu/wp-content/uploads/2022/12/cover-uneatlantico.jpg") no-repeat center center;
-    background-size: cover;
     /*background: #e76f51;*/
   }
 
