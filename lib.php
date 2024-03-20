@@ -200,9 +200,6 @@ function redirect_is_not_allowed_page()
     if (!empty($profile_url) && strpos($PAGE->pagetype, 'profile') !== false) {
         $redirect_url = new moodle_url($profile_url, ['id' => $PAGE->url->params()["id"]]);
     }
-    if (!isloggedin() || isguestuser() || defined('AJAX_SCRIPT') && AJAX_SCRIPT || $PAGE->url->compare($redirect_url, URL_MATCH_BASE)) {
-        return;
-    }
     
     
     foreach ($no_redirect_page_types as $type) {
