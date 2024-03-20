@@ -105,7 +105,7 @@ function set_aditional_primarynav_sections()
                     $content['node_key'],
                     new pix_icon($content['icon'], '')
                 );
-                $PAGE->primarynav->add_node($node, $content['before_key']);
+                $PAGE->primarynav->add_node($node);
             }
         }
     }
@@ -130,35 +130,30 @@ function get_sections_details()
             'icon' => 'i/home',
             'node_key' => 'home',
             'link' => get_config('theme_dta', 'navbar_teacheracademy_url'),
-            'before_key' => "siteadminnode",
         ],
         'themes' => [
             'label' => get_string('navbar::themes', 'theme_dta'),
             'icon' => 't/tags',
             'node_key' => 'themes',
             'link' => get_config('theme_dta', 'navbar_themes_url'),
-            'before_key' => "siteadminnode",
         ],
         'experiences' => [
             'label' => get_string('navbar::experiences', 'theme_dta'),
             'icon' => 'i/courseevent',
             'node_key' => 'experiences',
             'link' => get_config('theme_dta', 'navbar_experiences_url'),
-            'before_key' => "siteadminnode",
         ],
         'cases' => [
             'label' => get_string('navbar::ourcases', 'theme_dta'),
             'icon' => 'i/open',
             'node_key' => 'ourcases',
             'link' => get_config('theme_dta', 'navbar_ourcases_url'),
-            'before_key' => "siteadminnode",
         ],
         'resourcerepository' => [
             'label' => get_string('navbar::resourcerepository', 'theme_dta'),
             'icon' => 'i/repository',
             'node_key' => 'resourcerepository',
             'link' => get_config('theme_dta', 'navbar_resourcerepository_url'),
-            'before_key' => "siteadminnode",
         ],
     ];
 }
@@ -167,7 +162,7 @@ function redirect_login_is_not_loggedin()
 {
     global $PAGE;
 
-    if ($PAGE->pagetype === 'login-signup' || $PAGE->pagetype === 'login-index' || $PAGE->pagetype === 'login-logout' || defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
+    if (strpos($PAGE->pagetype, 'login-') !== false || defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
         return;
     }
 
@@ -207,5 +202,5 @@ function redirect_is_not_allowed_page()
             return;
         }
     }
-    redirect($redirect_url);
+    // redirect($redirect_url);
 }
