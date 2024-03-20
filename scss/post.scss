@@ -1410,22 +1410,6 @@ div[role="main"] {
   }
 }
 
-// THEMES / TAGS //
-
-// .theme:hover {
-//   cursor: pointer;
-//   background-color: #f8f9fa;
-//   border-radius: 5px;
-//   font-size: 1.2rem;
-//   padding: 3px;
-//   transition: 0.3s;
-//   animation-play-state: paused;
-// }
-
-// .theme-name {
-//   text-transform: lowercase;
-// }
-
 // SEARCHBAR //
 
 .custom-searchbar {
@@ -1496,6 +1480,10 @@ div[role="main"] {
     cursor: pointer;
   }
 
+  .input-search:hover {
+    background-color: #1382c511;
+  }
+
   .input-search:focus,
   .input-search:not(:invalid) {
     width: 200px;
@@ -1546,7 +1534,7 @@ div[role="main"] {
 
 // TAGS IN EXPERIENCE //
 
-.experience-tags {
+
   .tags-list {
     list-style: none;
     margin: 0;
@@ -1597,83 +1585,26 @@ div[role="main"] {
 
   .tag-basic:hover {
     background-color: $accentcolor;
-    color: white;
+    color: white !important;
   }
 
   .tag-basic:hover::after {
     border-left-color: $accentcolor;
   }
-}
 
 // TAGS IN HOME-TEACHER ACADEMY //
 
 .themes {
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap !important;
-    align-items: center;
-    justify-content: center;
-    line-height: 2.75rem;
-  
+  height: 250px;
+
   .theme {
-    --size: 4;
-    --color: #a33;
-    color: var(--color);
-    font-size: calc(var(--size) * 0.25rem + 0.5rem);
-    display: block;
-    padding: 0.125rem 0.25rem;
-    position: relative;
-    text-decoration: none;
-    height: auto;
-    /* 
-    For different tones of a single color
-    opacity: calc((15 - (9 - var(--size))) / 15); 
-    */
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.3s ease-in-out;
   }
   
-  .theme[data-weight="1"] { --size: 1; }
-  .theme[data-weight="2"] { --size: 2; }
-  .theme[data-weight="3"] { --size: 3; }
-  .theme[data-weight="4"] { --size: 3.5; }
-  .theme[data-weight="5"] { --size: 4; }
-  .theme[data-weight="6"] { --size: 4.5; }
-  .theme[data-weight="7"] { --size: 5; }
-  
-  .cloud[data-show-value] div::after {
-    content: " (" attr(data-weight) ")";
-    font-size: 1rem;
-  }
-  
-  .theme:nth-child(2n+1) a { --color: #181; }
-  .theme:nth-child(3n+1) a { --color: #33a; }
-  .theme:nth-child(4n+1) a { --color: #c38; }
-  
-  .theme:focus {
-    outline: 1px dashed;
-  }
-  
-  .theme::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 0;
-    height: 100%;
-    background: var(--color);
-    transform: translate(-50%, 0);
-    opacity: 0.15;
-    transition: width 0.25s;
-  }
-  
-  .theme:focus::before,
-  .theme:hover::before {
-    width: 100%;
-  }
-  
-  @media (prefers-reduced-motion) {
-    .cloud * {
-      transition: none !important;
-    }
+  .theme:hover {
+    transform: scale(1.1);
   }
 }
 
