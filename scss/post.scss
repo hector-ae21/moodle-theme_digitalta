@@ -1332,6 +1332,12 @@ div[role="main"] {
     color: $secondarycolor !important;
   }
 
+  .recent-exp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+  }
+
   .experience-card-body {
     padding: 1.25rem 0;
 
@@ -1365,35 +1371,61 @@ div[role="main"] {
     }
   }
 
-  .recent-experiences .experience-card-img {
-    height: 140px;
+  .recent-experiences .experience-card-img-container {
+    height: 140px;   
   }
-.study-cases {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  gap: 1rem;
-}
 
-.study-case-img {
-  width: 80px;
-  max-width: 200px;
-  max-height: 100px;
-  height: auto;
-  margin-bottom: 1rem;
-}
+  .experience-card-img {
+    object-fit: cover !important;
+    object-position: center !important;
+    transform: scale(1.5);
+  }
 
-.study-case-img img {
-  width: 100%;
-  max-width: 200px;
-  max-height: 100px;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
+  .experience-card-img:hover {
+    transform: scale(1.1);
+  }
 
-}
+  .study-cases-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
+  .study-cases {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .study-case-img {
+    width: 80px;
+    max-width: 200px;
+    max-height: 100px;
+    min-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .study-case-img img {
+    width: 100%;
+    max-width: 200px;
+    max-height: 100px;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .recent-panel {
+      flex-direction: column !important;
+    }
+  }
+}
 
 #page-local-dta-pages-experiences-view {
   @media screen and (max-width: 1199px) {
@@ -1592,6 +1624,20 @@ div[role="main"] {
     border-left-color: $accentcolor;
   }
 
+  @media screen and (max-width: 576px) {
+    .tag-basic {
+      background-color: transparent;
+      padding: 0 5px 0 20px;
+    }
+    .tag-basic::before {
+      background-color: $accentcolor;
+    }
+    .tag-basic::after {
+      display: none;
+    }
+    
+  }
+
 // TAGS IN HOME-TEACHER ACADEMY //
 
 .themes {
@@ -1599,7 +1645,6 @@ div[role="main"] {
 
   .theme {
     cursor: pointer;
-    flex: 1;
     transition: all 0.3s ease-in-out;
   }
   
