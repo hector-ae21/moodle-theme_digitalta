@@ -311,6 +311,26 @@ body:not(.login-page) {
     background: linear-gradient(to top, #1382c5 0%, #1798e8 100%);
   }
 
+  .password-toggle-icon {
+    display: none;
+    position: relative;
+    top: -38%;
+    right: -92%;
+    cursor: pointer;
+  }
+  
+  .password-toggle-icon i {
+    font-size: 18px;
+    line-height: 1;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  .password-toggle-icon i:hover {
+    color: #000;
+  }
+
   .login .container .remember-form {
     position: relative;
     margin-top: -30px;
@@ -1252,6 +1272,11 @@ div[role="main"] {
   .fa-exclamation-circle {
     color: $accentcolor !important;
   }
+
+  form {
+    margin-top: 0 !important;
+    margin-bottom: 50px !important;
+  }
 }
 
 // SCROLLBAR //
@@ -1341,7 +1366,7 @@ div[role="main"] {
     color: $secondarycolor !important;
   }
 
-  .recent-study-case-title {
+  .latest-study-case-title {
       overflow: hidden;
       max-width: 300px;
       text-overflow: ellipsis;
@@ -1351,11 +1376,11 @@ div[role="main"] {
       -webkit-box-orient: vertical;
   }
 
-  #recent-panel {
+  #latest-panel {
     flex-direction: row;
   }
 
-  .recent-exp-container {
+  .latest-exp-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between !important;
@@ -1395,7 +1420,7 @@ div[role="main"] {
     }
   }
 
-  .recent-experiences .experience-card-img-container {
+  .latest-experiences .experience-card-img-container {
     height: 140px;   
   }
 
@@ -1450,12 +1475,12 @@ div[role="main"] {
   }
 
   @media screen and (max-width: 768px) {
-    #recent-panel {
+    #latest-panel {
       flex-direction: column !important;
       gap: 2rem;
     }
 
-    .recent-experiences {
+    .latest-experiences {
       margin-top: 0;
 
       .experience-card {
@@ -1886,4 +1911,9 @@ div[role="main"] {
       display: none;
     }
   }
+}
+
+// Delete Edge Toogle Input Password
+@supports (-ms-ime-align:auto) {
+  
 }

@@ -37,6 +37,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="dta:image" content="https://digitalta.eu/wp-content/uploads/2022/11/logo-digitalta.svg" />
 
 <body class="login-page">
   <div class="parent clearfix">
@@ -107,4 +108,43 @@ M.util.js_pending('theme_dta/loader');
 require(['theme_dta/loader'], function() {
   M.util.js_complete('theme_dta/loader');
 });
+
+
+    document.getElementById('password').addEventListener('input', function (e) {
+        // get the password field
+        const password = document.getElementById('password');
+        
+        // get the eye icon
+        const eyeIcon = document.getElementById('togglePassword');
+        
+        // if password field is not empty, show the eye icon
+        if (password.value.length > 0) {
+            eyeIcon.className = eyeIcon.className.replace('d-none', 'd-block');
+            eyeIcon.className = eyeIcon.className.replace(
+                "d-none",
+                "d-block"
+            );
+        } else {
+            eyeIcon.className = eyeIcon.className.replace('d-block', 'd-none');
+            eyeIcon.className = eyeIcon.className.replace(
+                "d-block",
+                "d-none"
+            );
+        }
+    });
+
+    const passwordField = document.getElementById("password");
+    const togglePassword = document.querySelector(".password-toggle-icon i");
+
+    togglePassword.addEventListener("click", function () {
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "password";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+        }
+    });
 {{/js}}

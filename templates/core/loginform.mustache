@@ -138,6 +138,7 @@
                 !}}class="form-control form-control-lg" {{!
                 !}}placeholder="{{#cleanstr}}password{{/cleanstr}}" {{!
                 !}}autocomplete="current-password">
+            <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
         </div>
         {{#recaptcha}}
             <div class="login-form-recaptcha mb-3">
@@ -161,6 +162,7 @@
 </div>
 
 {{#js}}
+
     {{^error}}
         {{#autofocusform}}
             var userNameField = document.getElementById('username');
