@@ -1100,6 +1100,7 @@ div[role="main"] {
 }
 
 @media screen and (max-width: 992px) {
+
   .experience-view {
     .custom-input {
       padding-right: 1px;
@@ -1121,12 +1122,20 @@ div[role="main"] {
         display: none;
       }
     }
+    .exp-img-container {
+      width: 100% !important;
+    }
+
+    .exp-card-body {
+      flex-direction: column !important;
+    }
   }
 }
 
 @media screen and (max-width: 334px) {
   .experience-view {
     .exp-card-body {
+
       .exp-img-container {
         background-color: $primarycolor;
         transition: all 0.3s ease-in-out;
@@ -1332,6 +1341,10 @@ div[role="main"] {
     color: $secondarycolor !important;
   }
 
+  #recent-panel {
+    flex-direction: row;
+  }
+
   .recent-exp-container {
     display: flex;
     flex-direction: column;
@@ -1340,6 +1353,7 @@ div[role="main"] {
 
   .experience-card-body {
     padding: 1.25rem 0;
+    height: 200px !important;
 
     p {
       overflow: hidden;
@@ -1366,9 +1380,13 @@ div[role="main"] {
 
     .experience-description {
       color: #000;
-      max-height: 250px;
+      height: 200px !important;
       overflow: hidden;
     }
+  }
+
+  .recent-experiences {
+    margin-top: -100px;
   }
 
   .recent-experiences .experience-card-img-container {
@@ -1402,6 +1420,11 @@ div[role="main"] {
     }
   }
 
+  .study-case {
+    flex-direction: row;
+    max-width: 500px;
+  }
+
   .study-case-img {
     width: 80px;
     max-width: 200px;
@@ -1420,9 +1443,23 @@ div[role="main"] {
     object-position: 50% 50%;
   }
 
-  @media screen and (max-width: 1024px) {
-    .recent-panel {
+  @media screen and (max-width: 768px) {
+    #recent-panel {
       flex-direction: column !important;
+      gap: 2rem;
+    }
+
+    .study-case {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    .study-case-img {
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -1443,7 +1480,6 @@ div[role="main"] {
 }
 
 // SEARCHBAR //
-
 .custom-searchbar {
   display: flex;
   line-height: 28px;
@@ -1486,10 +1522,8 @@ div[role="main"] {
   }
 }
 
-// THEME SEARCH IN TEACHER ACADEMY //
-
+// THEME SEARCH BAR IN TEACHER ACADEMY //
 .theme-search {
-
   .input-search-container {
     position: relative;
     --size-button: 30px;
@@ -1676,18 +1710,21 @@ div[role="main"] {
 
   .exp-card-body {
     overflow: hidden;
-    margin: 0.7rem 0;
+    margin-bottom: 1rem !important;
     display: flex;
-    max-height: 200px;
+    flex-direction: row;
+    // max-height: 200px;
 
     .exp-img-container {
-      min-width: 250px;
+      min-width: 150px;
       max-width: 250px;
-      min-height: 200px;
+      min-height: 150px;
       max-height: 200px;
       border-radius: 1rem;
       margin-right: 1rem;
       object-fit: cover;
+      object-position: center;
+      overflow: hidden;
     }
 
     img {
@@ -1695,6 +1732,11 @@ div[role="main"] {
       border-radius: 1rem;
       height: 100%;
       width: 100%;
+      transform: scale(2);
+    }
+
+    img:hover {
+      transform: scale(1.5);
     }
 
   }
