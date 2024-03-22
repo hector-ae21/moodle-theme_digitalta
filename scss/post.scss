@@ -1449,14 +1449,20 @@ div[role="main"] {
       gap: 2rem;
     }
 
+    .recent-experiences {
+      margin-top: 0;
+
+      .experience-card {
+        margin-bottom: 8rem;
+      }
+    }
+
     .study-case {
       flex-direction: column;
       margin-bottom: 2rem;
     }
 
-    .recent-experiences {
-      margin-top: 0;
-    }
+    
 
     .study-case-img {
       max-width: 100%;
