@@ -1368,12 +1368,19 @@ div[role="main"] {
 
   .latest-study-case-title {
       overflow: hidden;
-      max-width: 300px;
       text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
+      max-width: 300px;
+  }
+
+  .latest-study-case-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+    max-width: 300px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   #latest-panel {
@@ -1460,7 +1467,7 @@ div[role="main"] {
     width: 80px;
     max-width: 200px;
     max-height: 100px;
-    min-width: 100px;
+    min-width: 200px;
     height: auto;
     margin-bottom: 1rem;
   }
@@ -1468,6 +1475,7 @@ div[role="main"] {
   .study-case-img img {
     width: 100%;
     max-width: 200px;
+    min-width: 200px;
     max-height: 100px;
     height: 100%;
     object-fit: cover;
