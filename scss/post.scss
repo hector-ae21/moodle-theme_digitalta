@@ -791,6 +791,11 @@ nav {
   border-radius: 10px;
 }
 
+.primary-navigation {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 #region-main {
   background-color: transparent;
 }
@@ -2110,4 +2115,54 @@ select {
 // Delete Edge Toogle Input Password
 @supports (-ms-ime-align:auto) {
   
+}
+
+.data-tooltip {
+  position: relative;
+  border-radius: 50px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 12px;
+  color: rgba($tertiarycolor, 1);
+  // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+
+  i {
+    margin: 5px 8px;
+  }
+}
+
+.data-tooltip::before,
+.data-tooltip::after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.2s ease;
+}
+
+.data-tooltip::before {
+  content: attr(data-tooltip-content);
+  width: fit-content;
+  font-size: small;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba($tertiarycolor, 1);
+  padding: 3px 10px;
+  border-radius: 4px;
+  bottom: calc(100% + 5px);
+}
+
+.data-tooltip::after {
+  content: "";
+  border-top: 5px solid $tertiarycolor;
+  // border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  bottom: calc(100% + 1px);
+}
+
+.data-tooltip:hover::before,
+.data-tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
