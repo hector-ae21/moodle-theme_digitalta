@@ -1234,6 +1234,17 @@ div[role="main"] {
   }
 }
 
+// CASES REPOSITORY //
+#page-local-dta-pages-cases-repository {
+  .experience-card-body {
+    h4 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 65%;
+    }
+  }
+}
+
 // NEW REFLECTION FORM //
 #page-local-dta-pages-experiences-reflection {
 
@@ -1715,6 +1726,21 @@ select {
     color: $secondarycolor !important;
   }
 
+  .latest-study-case {
+    overflow: hidden;
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-wrap: wrap;
+      max-width: 300px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
   .latest-study-case-title {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -1745,6 +1771,11 @@ select {
   .experience-card-body {
     padding: 1.25rem 0;
     height: 200px !important;
+
+    h4 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
     p {
       overflow: hidden;
