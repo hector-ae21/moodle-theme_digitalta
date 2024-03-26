@@ -40,6 +40,10 @@ body:not(.login-page) {
   min-height: 100vh;
 }
 
+#page-wrapper{
+  height: auto !important;
+}
+
 @media screen and (max-width: 991px) {
   body:not(.login-page) {
     padding-bottom: 480px;
@@ -696,7 +700,6 @@ body {
 
 h1 {
   margin: auto;
-  font-family: "Amiri", serif;
   font-weight: bold;
   font-size: 65px;
   color: $primarycolor;
@@ -1451,6 +1454,25 @@ div[role="main"] {
 }
 
 #page-local-dta-pages-experiences-manage {
+  .mform .form-inline .custom-select{
+    max-width: 550px;
+  }
+  .fp-login-form .fp-content-center form, .fp-upload-form .fp-content-center form {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .fp-viewbar {
+    display: none;
+  }
+  .fp-restrictions{
+    display: none;
+  }
+  .form-group{
+    &.fp-saveas, &.fp-setauthor, &.fp-setlicense{
+      display: none;
+    
+    }
+  }
   .card {
     box-shadow: none;
   }
@@ -1463,6 +1485,19 @@ div[role="main"] {
     padding-bottom: 1rem;
     padding-top: 1rem;
     background: transparent;
+  }
+  @media screen and (max-width: 767px) {
+    form {
+      max-width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    form {
+      max-width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
   }
 
   .col-form-label {
