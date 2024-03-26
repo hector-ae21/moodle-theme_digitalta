@@ -40,6 +40,10 @@ body:not(.login-page) {
   min-height: 100vh;
 }
 
+#page-wrapper{
+  height: auto !important;
+}
+
 @media screen and (max-width: 991px) {
   body:not(.login-page) {
     padding-bottom: 480px;
