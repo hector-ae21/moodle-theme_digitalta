@@ -138,7 +138,51 @@
                 !}}class="form-control form-control-lg" {{!
                 !}}placeholder="{{#cleanstr}}password{{/cleanstr}}" {{!
                 !}}autocomplete="current-password">
-            <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+            <i id="togglePassword" class="fa fa-eye password-toggle-icon d-none" aria-hidden="true"></i>
+            <script>document.getElementById('password').addEventListener('input', function (e) {
+                // get the password field
+                const password = document.getElementById('password');
+
+                // get the eye icon
+                const eyeIcon = document.getElementById('togglePassword');
+
+                // if password field is not empty, show the eye icon
+                if (password.value.length > 0) {
+                    eyeIcon.className = eyeIcon.className.replace(
+                            "d-none",
+                            "d-block"
+                    );
+                } else {
+                    eyeIcon.className = eyeIcon.className.replace(
+                            "d-block",
+                            "d-none"
+                    );
+                }
+            });
+
+            document.getElementById('togglePassword').addEventListener('click', function (e) {
+                // prevent the default action
+                e.preventDefault();
+
+                // get the password field
+                const password = document.getElementById('password');
+
+                // toggle the type attribute
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+
+                // get the eye icon
+                const eyeIcon = this;
+
+                // toggle the eye slash icon
+                if (eyeIcon.classList.contains('fa-eye')) {
+                    eyeIcon.classList.remove('fa-eye');
+                    eyeIcon.classList.add('fa-eye-slash');
+                } else {
+                    eyeIcon.classList.remove('fa-eye-slash');
+                    eyeIcon.classList.add('fa-eye');
+                }
+            });</script>
         </div>
         {{#recaptcha}}
             <div class="login-form-recaptcha mb-3">
@@ -151,25 +195,26 @@
             </div>
         </div>
         <div class="login-form-submit mb-3">
-            <button class="btn btn-primary btn-lg" type="submit" id="loginbtn">{{#str}}login::login, theme_dta{{/str}}</button>
+            <button class="btn btn-primary btn-lg" type="submit" id="loginbtn">{{#str}}
+                login::login, theme_dta{{/str}}</button>
         </div>
         {{#cansignup}}
-        <div class="login-signup">
-            {{#str}}login::signup_flavour_text, theme_dta{{/str}} <a class="ml-1" href="{{signupurl}}">{{#str}}login::signup_link, theme_dta{{/str}}</a>
-        </div>
+            <div class="login-signup">
+                {{#str}}login::signup_flavour_text, theme_dta{{/str}} <a class="ml-1" href="{{signupurl}}">{{#str}}
+                login::signup_link, theme_dta{{/str}}</a>
+            </div>
         {{/cansignup}}
     </form>
 </div>
 
 {{#js}}
-
     {{^error}}
         {{#autofocusform}}
             var userNameField = document.getElementById('username');
             if (userNameField.value.length == 0) {
-                userNameField.focus();
+            userNameField.focus();
             } else {
-                document.getElementById('password').focus();
+            document.getElementById('password').focus();
             }
         {{/autofocusform}}
     {{/error}}
@@ -177,9 +222,9 @@
         document.getElementById('loginerrormessage').focus();
     {{/error}}
     require(['core_form/submit'], function(Submit) {
-        Submit.init("loginbtn");
-        {{#canloginasguest}}
-            Submit.init("loginguestbtn");
-        {{/canloginasguest}}
+    Submit.init("loginbtn");
+    {{#canloginasguest}}
+        Submit.init("loginguestbtn");
+    {{/canloginasguest}}
     });
 {{/js}}

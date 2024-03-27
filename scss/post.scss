@@ -40,7 +40,7 @@ body:not(.login-page) {
   min-height: 100vh;
 }
 
-#page-wrapper{
+#page-wrapper {
   height: auto !important;
 }
 
@@ -95,7 +95,8 @@ body:not(.login-page) {
     display: none;
   }
 }
-// FOOTER END // 
+
+// FOOTER END //
 
 // LOGIN PAGE START //
 
@@ -322,7 +323,7 @@ body:not(.login-page) {
     right: -92%;
     cursor: pointer;
   }
-  
+
   .password-toggle-icon i {
     font-size: 18px;
     line-height: 1;
@@ -330,7 +331,7 @@ body:not(.login-page) {
     transition: color 0.3s ease-in-out;
     margin-bottom: 20px;
   }
-  
+
   .password-toggle-icon i:hover {
     color: #000;
   }
@@ -410,13 +411,13 @@ body:not(.login-page) {
   }
 
   .extra-logo {
-    position:fixed;
+    position: fixed;
     max-width: 400px;
     min-width: 150px !important;
-    left:85vw;
-    bottom:10px;
-    margin:0;
-    padding:0;
+    left: 85vw;
+    bottom: 10px;
+    margin: 0;
+    padding: 0;
   }
 
   .logo-sm {
@@ -444,10 +445,10 @@ body:not(.login-page) {
 
     .login {
       width: 50%;
-    }    
+    }
   }
 
-  @media screen and (min-height: 768px) and (max-width: 1024px){
+  @media screen and (min-height: 768px) and (max-width: 1024px) {
     .bg-illustration video {
       height: 200px !important;
     }
@@ -456,9 +457,10 @@ body:not(.login-page) {
       margin-top: 5px !important;
     }
   }
-  
 
-  @media screen and (max-width: 500px), (max-height: 582px) {
+
+  @media screen and (max-width: 500px),
+  (max-height: 582px) {
 
     .login .logo {
       margin-top: 0;
@@ -483,7 +485,7 @@ body:not(.login-page) {
     }
   }
 
-  
+
 
   /* Display 12", iPad PRO Portrait, iPad landscape */
   @media only screen and (max-width: 1024px) {
@@ -1150,6 +1152,7 @@ div[role="main"] {
         display: none;
       }
     }
+
     .exp-img-container {
       width: 100% !important;
     }
@@ -1549,84 +1552,85 @@ div[role="main"] {
   }
 
 
-select {
-  min-width: 100px;
-  display: block;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 16px;
-  // padding: 11px 15px;
-  margin-top: 9px;
-  margin-bottom: 15px;
-  width: 100%;
-  border-radius: 10px;
+  select {
+    min-width: 100px;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 16px;
+    // padding: 11px 15px;
+    margin-top: 9px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 10px;
 
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
 
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    pointer-events: none; // Arrow clickable in some browsers
-
-    // triangle set up
-    border: 1px solid transparent; // reset all borders
-    width: 0;
-    height: 0;
-    right: 16px;
-  }
-
-  // top arrow
-  &::before {
-    bottom: 55%;
-    border-width: 0 6.5px 8px 6.5px;
-    border-bottom-color: $tertiarycolor;
-  }
-
-  // bottom arrow
-  &::after {
-    border-width: 8px 6.5px 0 6.5px;
-    border-top-color: $tertiarycolor;
-    top: 55%;
-  }
-  
-  // firefox is outside the div
-  @-moz-document url-prefix() {
-    border-right: 1px solid $tertiarycolor;
-    
-    &:hover {
-      border-right: 1.2px solid $primarycolor;
-    }
-  }
-
-  &:hover {
-
-    select {
-      box-shadow: 0 2px 3px rgba($primary, 0.1) inset;
-      border-color: $primary;
-
-      // outline is critical but when we are hovering the div has the border already.
-      &:focus {
-        outline-color: transparent;
-      }
-      
-    }
-
-    &::before {
-      border-bottom-color: rgba($primarycolor, 1);
-    }
+    &::before,
     &::after {
-      border-top-color: rgba($primarycolor, 1);
+      content: '';
+      display: block;
+      position: absolute;
+      pointer-events: none; // Arrow clickable in some browsers
+
+      // triangle set up
+      border: 1px solid transparent; // reset all borders
+      width: 0;
+      height: 0;
+      right: 16px;
     }
 
-  }
+    // top arrow
+    &::before {
+      bottom: 55%;
+      border-width: 0 6.5px 8px 6.5px;
+      border-bottom-color: $tertiarycolor;
+    }
+
+    // bottom arrow
+    &::after {
+      border-width: 8px 6.5px 0 6.5px;
+      border-top-color: $tertiarycolor;
+      top: 55%;
+    }
+
+    // firefox is outside the div
+    @-moz-document url-prefix() {
+      border-right: 1px solid $tertiarycolor;
+
+      &:hover {
+        border-right: 1.2px solid $primarycolor;
+      }
+    }
+
+    &:hover {
+
+      select {
+        box-shadow: 0 2px 3px rgba($primary, 0.1) inset;
+        border-color: $primary;
+
+        // outline is critical but when we are hovering the div has the border already.
+        &:focus {
+          outline-color: transparent;
+        }
+
+      }
+
+      &::before {
+        border-bottom-color: rgba($primarycolor, 1);
+      }
+
+      &::after {
+        border-top-color: rgba($primarycolor, 1);
+      }
+
+    }
 
     select {
       border: 1px solid $tertiarycolor;
@@ -1636,7 +1640,7 @@ select {
       padding: 11px 15px;
       line-height: normal;
       transition: border-color 0.2s ease,
-                  outline 0.2s ease;
+        outline 0.2s ease;
 
 
       // we really need this for the tabbers
@@ -1648,12 +1652,13 @@ select {
         outline-offset: -1px; //offset vs width
       }
 
-      &[disabled], &:disabled{
+      &[disabled],
+      &:disabled {
         opacity: 0.4;
         cursor: not-allowed;
       }
 
-    // we use invalid like a placeholder
+      // we use invalid like a placeholder
       // 2019-03-05 added not selector for firefox and ie
       &:not(:focus):invalid {
         color: $tertiarycolor;
@@ -1685,16 +1690,17 @@ select {
     gap: 0.75rem;
     box-shadow: 0 4px 6px -1px rgba($primarycolor, 0.192), 0 2px 4px -1px rgba($primarycolor, 0.09);
   }
-  
+
   input[type="submit"]:hover {
     box-shadow: 0 10px 15px -3px rgba($primarycolor, 0.31), 0 4px 6px -2px rgba($primarycolor, 0.09);
   }
-  
-  input[type="submit"]:focus,button:active {
+
+  input[type="submit"]:focus,
+  button:active {
     opacity: .85;
     box-shadow: none;
   }
-  
+
   input[type="submit"] svg {
     width: 1.25rem;
     height: 1.25rem;
@@ -1737,7 +1743,7 @@ select {
 #page-local-dta-pages-experiences-manage .mform .form-group.row>.felement>input {
   max-width: 100%;
   width: 100%;
-  
+
   &:focus {
     border: 1px solid $primarycolor !important;
   }
@@ -1769,9 +1775,9 @@ select {
   }
 
   .latest-study-case-title {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
   }
 
   .latest-study-case-description {
@@ -1819,7 +1825,7 @@ select {
       text-decoration: none !important;
       outline: none !important;
     }
-    
+
 
     .experience-card-title {
       border-bottom: 1px solid black;
@@ -1835,7 +1841,7 @@ select {
   }
 
   .latest-experiences .experience-card-img-container {
-    height: 140px;   
+    height: 140px;
   }
 
   .experience-card-img {
@@ -1908,7 +1914,7 @@ select {
       margin-bottom: 2rem;
     }
 
-    
+
 
     .study-case-img {
       max-width: 100%;
@@ -2011,11 +2017,11 @@ select {
     width: 200px;
     cursor: text;
     box-shadow: 0px 0px 0px #f8f8f8, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #f8f8f8, inset -1.5px -1.5px 3px #f8f8f8;
-    
+
   }
 
-  .input-search:focus + .icon,
-  .input-search:not(:invalid) + .icon {
+  .input-search:focus+.icon,
+  .input-search:not(:invalid)+.icon {
     pointer-events: all;
     cursor: pointer;
   }
@@ -2057,76 +2063,78 @@ select {
 // TAGS IN EXPERIENCE //
 
 
-  .tags-list {
-    list-style: none;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    font-size: 9px;
-  }
+.tags-list {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  font-size: 9px;
+}
 
-  .tags-list li {
-    float: left;
-  }
+.tags-list li {
+  float: left;
+}
 
+.tag-basic {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag-basic::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag-basic::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag-basic:hover {
+  background-color: $accentcolor;
+  color: white !important;
+}
+
+.tag-basic:hover::after {
+  border-left-color: $accentcolor;
+}
+
+@media screen and (max-width: 576px) {
   .tag-basic {
-    background: #eee;
-    border-radius: 3px 0 0 3px;
-    color: #999;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
-    padding: 0 20px 0 23px;
-    position: relative;
-    text-decoration: none;
-    -webkit-transition: color 0.2s;
+    background-color: transparent;
+    padding: 0 5px 0 20px;
   }
 
   .tag-basic::before {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-    content: '';
-    height: 6px;
-    left: 10px;
-    position: absolute;
-    width: 6px;
-    top: 10px;
+    background-color: $accentcolor;
   }
 
   .tag-basic::after {
-    background: #fff;
-    border-bottom: 13px solid transparent;
-    border-left: 10px solid #eee;
-    border-top: 13px solid transparent;
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
+    display: none;
   }
 
-  .tag-basic:hover {
-    background-color: $accentcolor;
-    color: white !important;
-  }
-
-  .tag-basic:hover::after {
-    border-left-color: $accentcolor;
-  }
-
-  @media screen and (max-width: 576px) {
-    .tag-basic {
-      background-color: transparent;
-      padding: 0 5px 0 20px;
-    }
-    .tag-basic::before {
-      background-color: $accentcolor;
-    }
-    .tag-basic::after {
-      display: none;
-    }
-    
-  }
+}
 
 // TAGS IN HOME-TEACHER ACADEMY //
 
@@ -2137,7 +2145,7 @@ select {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
-  
+
   .theme:hover {
     transform: scale(1.1);
   }
@@ -2209,6 +2217,7 @@ select {
   .tox-promotion {
     display: none !important;
   }
+
 }
 
 .summary-carousel {
@@ -2262,8 +2271,8 @@ select {
     backdrop-filter: blur(100px);
     min-height: 70%;
     max-height: 70%;
-    overflow: hidden; 
-    
+    overflow: hidden;
+
     p {
       margin-top: auto;
       margin-bottom: auto;
@@ -2326,9 +2335,7 @@ select {
 }
 
 // Delete Edge Toogle Input Password
-@supports (-ms-ime-align:auto) {
-  
-}
+@supports (-ms-ime-align:auto) {}
 
 .data-tooltip {
   position: relative;
@@ -2379,4 +2386,63 @@ select {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+
+#togglePassword {
+  position: absolute;
+  top: 83%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+// test
+
+.imgbox {
+  padding: 0 0 30px 30px;
+}
+
+.imgbox .img-fluid {
+  display: inline-block;
+  box-shadow: -30px 30px 0 rgb(0, 0, 0);
+}
+
+// test2
+
+/* Initial state styles */
+.hover-image {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* Example initial background color - change as needed */
+  background-color: #f0f0f0;
+}
+
+/* Hover state styles */
+.hover-image:hover {
+  /* Change to your desired hover background color */
+  background-color: #e0e0e0;
+  /* Example hover shadow - adjust as needed */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple effect - simple scale animation (optional) */
+.hover-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.hover-image:hover::after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
 }
