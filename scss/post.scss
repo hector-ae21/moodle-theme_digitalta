@@ -1245,6 +1245,40 @@ div[role="main"] {
   }
 }
 
+// CASES VIEW //
+#page-local-dta-pages-cases-view {
+    h4 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 65%;
+    }
+
+
+    @media screen and (max-width: 498px) {
+      
+
+      .controls {
+        margin-left: 18px;
+      }
+
+      .user-info {
+
+        img { // User Profile Picture
+          display: none;
+        }
+
+        strong { // User Name
+          text-wrap: wrap;
+        }
+
+        small { // User Email
+          display: none;
+        }
+      }
+
+    }
+}
+
 // NEW REFLECTION FORM //
 #page-local-dta-pages-experiences-reflection {
 
@@ -1697,7 +1731,6 @@ select {
     display: none;
   }
 
-  .tox-statusbar,
   .tox-menubar {
     display: none;
   }
@@ -2180,9 +2213,6 @@ select {
 
 #page-local-dta-pages-cases-manage {
   .tox-promotion {
-    display: none !important;
-  }
-  .tox-statusbar {
     display: none !important;
   }
 }
