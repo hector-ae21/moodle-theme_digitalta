@@ -161,11 +161,11 @@ body:not(.login-page) {
 
   input[name="submitbuttonusername"] {
     max-width: 50%;
-    background: $primary !important;
+    background: #1382c5 !important;
   }
 
   input[name="submitbuttonusername"]::after {
-    background: -webkit-linear-gradient(bottom, $primary 0%, $primary-dim 100%) !important;
+    background: -webkit-linear-gradient(bottom, #1382c5 0%, #1798e8 100%) !important;
   }
 
   label[for="id_email"] {
@@ -174,11 +174,11 @@ body:not(.login-page) {
 
   input[name="submitbuttonemail"] {
     max-width: 50%;
-    background: $primary !important;
+    background: #1382c5 !important;
   }
 
   input[name="submitbuttonusername"]::after {
-    background: -webkit-linear-gradient(bottom, $primary 0%, $primary-dim 100%) !important;
+    background: -webkit-linear-gradient(bottom, #1382c5 0%, #1798e8 100%) !important;
   }
 
   .clearfix::after {
@@ -278,7 +278,7 @@ body:not(.login-page) {
   }
 
   .login .container .login-form form button[type=submit] {
-    background: $primary;
+    background: $primarycolor;
     border: none;
     margin-bottom: 5px;
     width: 137px;
@@ -309,10 +309,10 @@ body:not(.login-page) {
     transition: 0.3s ease-in-out;
     right: 0;
     bottom: 0;
-    background: -webkit-gradient(linear, left bottom, left top, from($primary), to($primary-dim));
-    background: -webkit-linear-gradient(bottom, $primary 0%, $primary-dim 100%);
-    background: -o-linear-gradient(bottom, $primary 0%, $primary-dim 100%);
-    background: linear-gradient(to top, $primary 0%, $primary-dim 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#1382c5), to(#1798e8));
+    background: -webkit-linear-gradient(bottom, #1382c5 0%, #1798e8 100%);
+    background: -o-linear-gradient(bottom, #1382c5 0%, #1798e8 100%);
+    background: linear-gradient(to top, #1382c5 0%, #1798e8 100%);
   }
 
   .password-toggle-icon {
@@ -702,18 +702,18 @@ h1 {
   margin: auto;
   font-weight: bold;
   font-size: 65px;
-  color: $primary;
+  color: $primarycolor;
 }
 
 .tag-blue {
-  border-radius: 1px solid $primary;
-  color: $primary;
+  border-radius: 1px solid $primarycolor;
+  color: $primarycolor;
   background-color: transparent;
 }
 
 .tag-dark-blue {
-  border-radius: 1px solid $secondary;
-  color: $secondary;
+  border-radius: 1px solid $secondarycolor;
+  color: $secondarycolor;
   background-color: transparent;
 }
 
@@ -768,12 +768,12 @@ nav {
 .navbar li a {
   --b: 0.1em;
   /* the thickness of the line */
-  --c: $primary;
+  --c: $primarycolor;
   /* the color */
 
-  color: $secondary;
+  color: $secondarycolor;
   padding-block: var(--b);
-  background: linear-gradient(var(--c) 50%, $secondary 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
+  background: linear-gradient(var(--c) 50%, $secondarycolor 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
     linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
@@ -786,7 +786,7 @@ nav {
 }
 
 .navbar li a:focus {
-  color: $primary !important;
+  color: $primarycolor !important;
   border-radius: 10px;
 }
 
@@ -960,14 +960,14 @@ div[role="main"] {
   p {
     font-family: "Piazzolla", sans-serif;
     overflow: hidden;
-    color: $tertiary;
+    color: $tertiarycolor;
   }
 }
 
 .card-footer div a {
-  background: $primary !important;
+  background: $primarycolor !important;
   border-radius: 999px !important;
-  box-shadow: $primary 0 10px 20px -10px !important;
+  box-shadow: $primarycolor 0 10px 20px -10px !important;
   box-sizing: border-box !important;
   color: #ffffff !important;
   cursor: pointer !important;
@@ -1111,7 +1111,7 @@ div[role="main"] {
   align-items: center;
   gap: 5px;
   position: relative;
-  background-color: $primary;
+  background-color: $primarycolor;
   color: #fff;
   border: none;
   padding: 7px 20px;
@@ -1123,8 +1123,8 @@ div[role="main"] {
 
 .post-button:hover {
   color: #fff;
-  background-color: $secondary;
-  border: 1px solid $secondary;
+  background-color: $secondarycolor;
+  border: 1px solid $secondarycolor;
 }
 
 @media screen and (max-width: 992px) {
@@ -1165,7 +1165,7 @@ div[role="main"] {
     .exp-card-body {
 
       .exp-img-container {
-        background-color: $primary;
+        background-color: $primarycolor;
         transition: all 0.3s ease-in-out;
 
         img {
@@ -1216,7 +1216,7 @@ div[role="main"] {
   }
 
   &:hover {
-    color: $primary;
+    color: $primarycolor;
   }
 
   &:after {
@@ -1318,7 +1318,7 @@ div[role="main"] {
           i {
               padding: 10px;
               font-size: 1em;
-              color: $primary;
+              color: #1382c5;
               margin: auto;
           }
       }
@@ -1326,14 +1326,14 @@ div[role="main"] {
       #add_button {
           display: flex;
           font-size: 2em;
-          color: $primary;
+          color: #1382c5;
           cursor: pointer;
           justify-content: center;
           align-items: center;
       }
 
       h2 {
-          color: $primary;
+          color: #1382c5;
           margin-bottom: 40px;
       }
 
@@ -1343,25 +1343,25 @@ div[role="main"] {
 
       #section_what {
           .questions {
-              border: 2px dashed $section-what;
+              border: 2px dashed rgba(204, 98, 33, 0.9);
           }
       }
 
       #section_so_what {
           .questions {
-              border: 2px dashed $section-sowhat;
+              border: 2px dashed rgba(57, 98, 33, 0.9);
           }
       }
 
       #section_now_what {
           .questions {
-              border: 2px dashed $section-nowwhat;
+              border: 2px dashed rgba(19, 130, 197, 0.9);
           }
       }
 
       #section_extra {
           .questions {
-              border: 2px dashed $section-extra;
+              border: 2px dashed rgba(200, 20, 50, 0.9);
           }
       }
 
@@ -1369,7 +1369,7 @@ div[role="main"] {
           h2 {
               font-size: 2em !important;
               font-weight: bold;
-              color: $primary;
+              color: #1382c5;
               /*transform: rotate(270deg);*/
               margin-bottom: 20px;
               height: fit-content;
@@ -1384,7 +1384,7 @@ div[role="main"] {
           display: flex;
           width: 100%;
           height: fit-content;
-          background-color: white;
+          background-color: #fff;
           border-radius: 10px; 
           padding: 10px 20px;                
 
@@ -1395,7 +1395,7 @@ div[role="main"] {
               h3 {
                   font-size: 1.5em !important;
                   font-weight: bold;
-                  color: $secondary;
+                  color: #062f4a;
               }
           }
       }
@@ -1414,8 +1414,8 @@ div[role="main"] {
       width: 100%;
       padding-left: 35px;
       outline: none;
-      background: white;
-      color: black;
+      background: #ffffff;
+      color: #000000;
       border: 1px solid #c4d1eb;
       border-radius: 5px;
       box-shadow: 3px 3px 2px 0px #e2e2e2;
@@ -1435,16 +1435,16 @@ div[role="main"] {
   }
 
   #id_submitbutton {
-    background: $primary !important;
+    background: $primarycolor !important;
     margin-right: .5rem !important;
   }
 
   #id_cancel {
-    background: $tertiary !important;
+    background: $tertiarycolor !important;
   }
 
   .fa-exclamation-circle {
-    color: $accent !important;
+    color: $accentcolor !important;
   }
 
   form {
@@ -1454,6 +1454,11 @@ div[role="main"] {
 }
 
 // SCROLLBAR //
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+    scrollbar-width: thin;
+    scrollbar-color: #004997 #DFE9EB;
+}*/
 
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
@@ -1463,28 +1468,28 @@ div[role="main"] {
 
 *::-webkit-scrollbar-track {
   border-radius: 5px !important;
-  background-color: $scrollbartrack !important;
+  background-color: #dfe9eb !important;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: $scrollbartrack-alt !important;
+  background-color: #b8c0c2 !important;
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: $scrollbartrack-alt !important;
+  background-color: #b8c0c2 !important;
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 10px !important;
-  background-color: $secondary !important;
+  background-color: $secondarycolor !important;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: $primary !important;
+  background-color: $primarycolor !important;
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: $primary !important;
+  background-color: $primarycolor !important;
 }
 
 #page-local-dta-pages-experiences-manage {
@@ -1514,7 +1519,7 @@ div[role="main"] {
   form {
     max-width: 65%;
     border-radius: 25px;
-    box-shadow: 0 0 5px $secondary;
+    box-shadow: 0 0 5px #062f4a;
     margin: auto;
     padding-bottom: 1rem;
     padding-top: 1rem;
@@ -1538,7 +1543,7 @@ div[role="main"] {
     font-size: 1.2rem;
     font-family: sans-serif;
     font-weight: bold;
-    color: $secondary;
+    color: $secondarycolor;
     margin-bottom: 0.5rem;
     max-height: 33px;
   }
@@ -1582,22 +1587,22 @@ select {
   &::before {
     bottom: 55%;
     border-width: 0 6.5px 8px 6.5px;
-    border-bottom-color: $tertiary;
+    border-bottom-color: $tertiarycolor;
   }
 
   // bottom arrow
   &::after {
     border-width: 8px 6.5px 0 6.5px;
-    border-top-color: $tertiary;
+    border-top-color: $tertiarycolor;
     top: 55%;
   }
   
   // firefox is outside the div
   @-moz-document url-prefix() {
-    border-right: 1px solid $tertiary;
+    border-right: 1px solid $tertiarycolor;
     
     &:hover {
-      border-right: 1.2px solid $primary;
+      border-right: 1.2px solid $primarycolor;
     }
   }
 
@@ -1615,16 +1620,16 @@ select {
     }
 
     &::before {
-      border-bottom-color: rgba($primary, 1);
+      border-bottom-color: rgba($primarycolor, 1);
     }
     &::after {
-      border-top-color: rgba($primary, 1);
+      border-top-color: rgba($primarycolor, 1);
     }
 
   }
 
     select {
-      border: 1px solid $tertiary;
+      border: 1px solid $tertiarycolor;
       border-radius: 0;
       font-weight: 400;
       color: inherit;
@@ -1637,9 +1642,9 @@ select {
       // we really need this for the tabbers
       // causes double borders though
       &:focus {
-        box-shadow: 0 3px 4px rgba($primary, 0.3) inset;
+        box-shadow: 0 3px 4px rgba($primarycolor, 0.3) inset;
         // outline is critical for usability
-        outline: 1px solid $primary;
+        outline: 1px solid $primarycolor;
         outline-offset: -1px; //offset vs width
       }
 
@@ -1651,7 +1656,7 @@ select {
     // we use invalid like a placeholder
       // 2019-03-05 added not selector for firefox and ie
       &:not(:focus):invalid {
-        color: $tertiary;
+        color: $tertiarycolor;
       }
 
     }
@@ -1666,7 +1671,7 @@ select {
     border: none;
     display: flex;
     padding: 0.75rem 1.5rem;
-    background-color: rgba($primary, 1);
+    background-color: rgba($primarycolor, 1);
     color: #ffffff;
     font-size: 0.75rem;
     line-height: 1rem;
@@ -1678,11 +1683,11 @@ select {
     border-radius: 0.5rem;
     user-select: none;
     gap: 0.75rem;
-    box-shadow: 0 4px 6px -1px rgba($primary, 0.192), 0 2px 4px -1px rgba($primary, 0.09);
+    box-shadow: 0 4px 6px -1px rgba($primarycolor, 0.192), 0 2px 4px -1px rgba($primarycolor, 0.09);
   }
   
   input[type="submit"]:hover {
-    box-shadow: 0 10px 15px -3px rgba($primary, 0.31), 0 4px 6px -2px rgba($primary, 0.09);
+    box-shadow: 0 10px 15px -3px rgba($primarycolor, 0.31), 0 4px 6px -2px rgba($primarycolor, 0.09);
   }
   
   input[type="submit"]:focus,button:active {
@@ -1734,7 +1739,7 @@ select {
   width: 100%;
   
   &:focus {
-    border: 1px solid $primary !important;
+    border: 1px solid $primarycolor !important;
   }
 }
 
@@ -1745,7 +1750,7 @@ select {
   }
 
   h4 {
-    color: $secondary !important;
+    color: $secondarycolor !important;
   }
 
   .latest-study-case {
@@ -1818,7 +1823,7 @@ select {
 
     .experience-card-title {
       border-bottom: 1px solid black;
-      color: $secondary !important;
+      color: $secondarycolor !important;
       padding: 0.2rem 0;
     }
 
@@ -1998,7 +2003,7 @@ select {
   }
 
   .input-search:hover {
-    background-color: $primary11;
+    background-color: #1382c511;
   }
 
   .input-search:focus,
@@ -2019,7 +2024,7 @@ select {
     position: absolute;
     width: 20px;
     height: 20px;
-    color: $secondary;
+    color: $secondarycolor;
     top: -8px;
     left: -2px;
     padding: 8px;
@@ -2101,12 +2106,12 @@ select {
   }
 
   .tag-basic:hover {
-    background-color: $accent;
+    background-color: $accentcolor;
     color: white !important;
   }
 
   .tag-basic:hover::after {
-    border-left-color: $accent;
+    border-left-color: $accentcolor;
   }
 
   @media screen and (max-width: 576px) {
@@ -2115,7 +2120,7 @@ select {
       padding: 0 5px 0 20px;
     }
     .tag-basic::before {
-      background-color: $accent;
+      background-color: $accentcolor;
     }
     .tag-basic::after {
       display: none;
@@ -2332,7 +2337,7 @@ select {
   height: fit-content;
   font-size: 12px;
   margin-left: -10px;
-  color: rgba($tertiary, 1);
+  color: rgba($tertiarycolor, 1);
   // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 
   i {
@@ -2355,7 +2360,7 @@ select {
   font-size: small;
   font-weight: 600;
   color: #fff;
-  background-color: rgba($tertiary, 1);
+  background-color: rgba($tertiarycolor, 1);
   padding: 3px 10px;
   border-radius: 4px;
   bottom: calc(100% + 5px);
@@ -2363,7 +2368,7 @@ select {
 
 .data-tooltip::after {
   content: "";
-  border-top: 5px solid $tertiary;
+  border-top: 5px solid $tertiarycolor;
   // border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   bottom: calc(100% + 1px);
