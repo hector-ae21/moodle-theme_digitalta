@@ -162,6 +162,11 @@ function redirect_login_is_not_loggedin()
 {
     global $PAGE;
 
+    $no_redirect_page_types = [
+        'login-',
+        'password',
+    ];
+
     if (strpos($PAGE->pagetype, 'login-') !== false || defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
         return;
     }
@@ -178,7 +183,7 @@ function redirect_is_not_allowed_page()
 
     $home_url = get_config('theme_dta', "navbar_teacheracademy_url");
 
-    if (empty($home_url)) {
+    if (empty($home_url) || !isloggedin() || isguestuser()) {
         return;
     }
     $redirect_url = new moodle_url($home_url);
@@ -202,5 +207,5 @@ function redirect_is_not_allowed_page()
             return;
         }
     }
-    // redirect($redirect_url);
+    redirect($redirect_url);
 }
