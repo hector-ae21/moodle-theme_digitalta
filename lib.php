@@ -103,9 +103,14 @@ function set_aditional_primarynav_sections()
                     $content['label'],
                     new moodle_url($content['link']),
                     $content['node_key'],
-                    new pix_icon($content['icon'], '')
+                    new pix_icon($content['icon'], ''),
                 );
-                $PAGE->primarynav->add_node($node);
+                $siteAdminNode = $PAGE->primarynav->get('siteadminnode');
+                if (isset($siteAdminNode)) {
+                    $PAGE->primarynav->add_node($node, 'siteadminnode');
+                } else {
+                    $PAGE->primarynav->add_node($node);
+                }
             }
         }
     }
@@ -188,20 +193,20 @@ function redirect_is_not_allowed_page()
     }
     $redirect_url = new moodle_url($home_url);
 
-    
+
     $no_redirect_page_types = [
         'admin-',
         'local-dta',
         'edit',
         'editadvanced'
     ];
-    
+
     $profile_url = get_config('theme_dta', "profile_url");
     if (!empty($profile_url) && strpos($PAGE->pagetype, 'profile') !== false) {
         $redirect_url = new moodle_url($profile_url, ['id' => $PAGE->url->params()["id"]]);
     }
-    
-    
+
+
     foreach ($no_redirect_page_types as $type) {
         if (strpos($PAGE->pagetype, $type) !== false) {
             return;
