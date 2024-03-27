@@ -172,8 +172,13 @@ function redirect_login_is_not_loggedin()
         'password',
     ];
 
-    if (strpos($PAGE->pagetype, 'login-') !== false || defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
+    if (defined('AJAX_SCRIPT') && AJAX_SCRIPT) {
         return;
+    }
+    foreach ($no_redirect_page_types as $type) {
+        if (strpos($PAGE->pagetype, $type) !== false) {
+            return;
+        }
     }
 
     if (!isloggedin() || isguestuser()) {
