@@ -1484,7 +1484,10 @@ div[role="main"] {
 }
 
 #page-local-dta-pages-experiences-manage {
-  .mform .form-inline .custom-select {
+  .mform div[data-fieldtype="autocomplete"] li:empty{
+    display: none !important;
+  }
+  .mform .form-inline .custom-select{
     max-width: 550px;
   }
 
