@@ -1231,6 +1231,12 @@ div[role="main"] {
       max-width: 65%;
     }
   }
+
+  @media screen and (max-width: 992px) {
+    .post-img {
+      display: none;
+    }
+  }
 }
 
 // CASES VIEW //
