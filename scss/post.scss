@@ -1934,6 +1934,20 @@ div[role="main"] {
 }
 
 #page-local-dta-pages-experiences-view {
+
+  // Reflection elements inside  Reflectio Manager
+  .list-group-item {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    audio {
+      max-width: 100%;
+    }
+  }
+
   @media screen and (max-width: 1199px) {
     .experience-first-col {
       order: 1;
