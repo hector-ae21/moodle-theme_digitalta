@@ -2390,9 +2390,7 @@ div[role="main"] {
 }
 
 #togglePassword {
-  position: absolute;
-  top: 83%;
-  right: 20px;
+  position: relative;
   transform: translateY(-50%);
   cursor: pointer;
 }
