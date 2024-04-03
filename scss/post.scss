@@ -1932,6 +1932,19 @@ body:not(.login-page) {
 
 // EXPERIENCES MANAGE START //
 #page-local-dta-pages-experiences-manage {
+
+  #page-header .header-actions-container {
+    display: none;
+  }
+
+  #page-header .d-flex.align-items-center {
+    justify-content: center;
+
+    .mr-auto {
+      margin: 0 !important;
+    }
+  }
+
   .mform div[data-fieldtype="autocomplete"] li:empty{
     display: none !important;
   }
@@ -2153,20 +2166,6 @@ body:not(.login-page) {
   input[type="submit"] svg {
     width: 1.25rem;
     height: 1.25rem;
-  }
-}
-
-#page-local-dta-pages-experiences-manage {
-  #page-header .header-actions-container {
-    display: none;
-  }
-
-  #page-header .d-flex.align-items-center {
-    justify-content: center;
-
-    .mr-auto {
-      margin: 0 !important;
-    }
   }
 }
 
