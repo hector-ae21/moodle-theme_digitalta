@@ -1175,58 +1175,15 @@ body:not(.login-page) {
   border: 1px solid $secondarycolor;
 }
 
-@media screen and (max-width: 992px) {
-  .experience-view {
-    .custom-input {
-      padding-right: 1px;
-      padding-left: 1rem !important;
-
-      .bi-vector-pen {
-        display: none;
-      }
-    }
-
-    .post-img {
-      display: none;
-    }
-
-    .post-button {
-      padding: 7px 10px;
-
-      div {
-        display: none;
-      }
-    }
-
-    .exp-img-container {
-      width: 100% !important;
-    }
-
-    .exp-card-body {
-      flex-direction: column !important;
-    }
-  }
+.svg-icon {
+  position: absolute;
+  left: 10px;
+  fill: #4660dc;
+  width: 18px;
+  height: 18px;
 }
 
 @media screen and (max-width: 334px) {
-  .experience-view {
-    .exp-card-body {
-
-      .exp-img-container {
-        background-color: $primarycolor;
-        transition: all 0.3s ease-in-out;
-
-        img {
-          content: url("");
-        }
-      }
-
-      .exp-img-container:hover {
-        max-height: inherit;
-      }
-    }
-  }
-
   .input::placeholder {
     color: transparent;
   }
@@ -1245,14 +1202,6 @@ body:not(.login-page) {
   }
 }
 // POST INPUT END //
-
-.svg-icon {
-  position: absolute;
-  left: 10px;
-  fill: #4660dc;
-  width: 18px;
-  height: 18px;
-}
 
 // CARD LIST START //
 .card-list {
@@ -1312,6 +1261,58 @@ body:not(.login-page) {
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .card-list {
+    .custom-input {
+      padding-right: 1px;
+      padding-left: 1rem !important;
+
+      .bi-vector-pen {
+        display: none;
+      }
+    }
+
+    .post-img {
+      display: none;
+    }
+
+    .post-button {
+      padding: 7px 10px;
+
+      div {
+        display: none;
+      }
+    }
+
+    .exp-img-container {
+      width: 100% !important;
+    }
+
+    .exp-card-body {
+      flex-direction: column !important;
+    }
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .card-list {
+    .exp-card-body {
+      .exp-img-container {
+        background-color: $primarycolor;
+        transition: all 0.3s ease-in-out;
+
+        img {
+          content: url("");
+        }
+      }
+
+      .exp-img-container:hover {
+        max-height: inherit;
+      }
+    }
   }
 }
 // CARD LIST START //
@@ -1717,13 +1718,19 @@ body:not(.login-page) {
     height: 140px;
   }
 
-  .experience-card-img {
+  .latest-experiences .experience-card-img {
     object-fit: cover !important;
     object-position: center !important;
     transform: scale(1.5);
+    
+    img {
+      text-align: center;
+      font-size: 12px !important;
+      color: #000;
+    }
   }
 
-  .experience-card-img:hover {
+  .latest-experiences .experience-card-img:hover {
     transform: scale(1.1);
   }
 
