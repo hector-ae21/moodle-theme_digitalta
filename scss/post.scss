@@ -30,8 +30,339 @@
   font-display: swap;
 }
 
-// FOOTER START // 
+// GENERAL STYLES START //
 
+// GENERAL
+#page {
+  margin-top: 0px !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+[id^="page-admin"] #region-main {
+  width: 75%;
+}
+
+#region-main {
+  background-color: transparent;
+}
+
+div[role="main"] {
+  background-color: transparent;
+}
+
+// ELEMENTS
+body.pagelayout-login {
+  background: $bg-color;
+}
+
+body.pagelayout-frontpage {
+  background: $bg-color;
+}
+
+body.pagelayout-mydashboard {
+  background: $bg-color;
+}
+
+body.pagelayout-course,
+body.pagelayout-incourse {
+  background: $bg-color;
+}
+
+body.pagelayout-embedded,
+body.pagelayout-popup,
+body.pagelayout-secure,
+body.pagelayout-print {
+  background-image: none;
+}
+
+body {
+  background: $bg-color;
+}
+
+h1 {
+  margin: auto;
+  font-weight: bold;
+  font-size: 65px;
+  color: $primarycolor;
+}
+
+a.dropdown-toggle:focus {
+  border-radius: 50px;
+}
+
+// NAV BAR
+nav {
+  background-color: transparent !important;
+}
+
+.navigation {
+  border-radius: 50px !important;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  margin: 1rem auto;
+  transition: 0.5s;
+  border-radius: 50px;
+  width: fit-content;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+
+  .divider {
+    display: none;
+  }
+}
+
+.navbar-brand:hover {
+  border-radius: 50px;
+}
+
+.navbar-brand:focus {
+  border-radius: 50px;
+}
+
+.navbar li a {
+  --b: 0.1em;
+  /* the thickness of the line */
+  --c: $primarycolor;
+  /* the color */
+
+  color: $secondarycolor;
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, $secondarycolor 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
+}
+
+.navbar li a:hover {
+  --_p: 100%;
+  --_s: 0.3s;
+}
+
+.navbar li a:focus {
+  color: $primarycolor !important;
+  border-radius: 10px;
+}
+
+.primary-navigation {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav-lt-tab {
+  border-top: 1px solid var(--dashui-border-color);
+}
+
+.nav-lt-tab .nav-item {
+  margin: -0.0625rem 1rem 0;
+}
+
+.nav-lt-tab .nav-item .nav-link {
+  border-radius: 0;
+  border-top: 2px solid transparent;
+  color: var(--dashui-gray-600);
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+// LOGO / AVATAR
+.logo {
+  margin-left: -0.9rem;
+}
+
+.avatar {
+  display: inline-block;
+  height: 3rem;
+  position: relative;
+  width: 3rem;
+  border-radius: 999px;
+  border-width: 0.15rem;
+  border-style: solid;
+  border-color: #fff;
+
+  img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.avatar-sm {
+  height: 2rem;
+  width: 2rem;
+}
+
+.avatar-xl {
+  height: 5rem;
+  width: 5rem;
+}
+
+.avatar-xxl {
+  height: 7.5rem;
+  width: 7.5rem;
+}
+
+.avatar-xxl.avatar-indicators:before {
+  bottom: 5px;
+  height: 16%;
+  right: 17%;
+  width: 16%;
+}
+
+.avatar-online:before {
+  background-color: #198754;
+}
+
+.avatar-indicators:before {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  bottom: 0;
+  content: "";
+  display: table;
+  height: 30%;
+  position: absolute;
+  right: 5%;
+  width: 30%;
+}
+
+// CONTAINERS
+.container {
+  justify-content: center;
+  margin: auto 0;
+}
+
+.main-inner {
+  margin: 0 !important;
+  background-color: transparent !important;
+  padding-top: 2rem !important;
+}
+
+.card-container {
+  display: inline-block;
+}
+
+.card {
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 20, 0.08), 0 1px 2px rgba(0, 0, 20, 0.08);
+}
+
+// TOOLTIP
+.data-tooltip {
+  position: relative;
+  border-radius: 50px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 12px;
+  margin-left: -10px;
+  color: rgba($tertiarycolor, 1);
+  // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+
+  i {
+    margin: 5px 8px;
+  }
+}
+
+.data-tooltip::before,
+.data-tooltip::after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.2s ease;
+}
+
+.data-tooltip::before {
+  content: attr(data-tooltip-content);
+  width: fit-content;
+  font-size: small;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba($tertiarycolor, 1);
+  padding: 3px 10px;
+  border-radius: 4px;
+  bottom: calc(100% + 5px);
+}
+
+.data-tooltip::after {
+  content: "";
+  border-top: 5px solid $tertiarycolor;
+  // border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  bottom: calc(100% + 1px);
+}
+
+.data-tooltip:hover::before,
+.data-tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// CUSTOM BOOSTRAP CLASSES
+.px-4 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.pt-20 {
+  padding-top: 8rem !important;
+}
+
+.mt-n10 {
+  margin-top: -3rem !important;
+}
+
+.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+.border-2 {
+  --dashui-border-width: 2px;
+}
+
+.border {
+  border: 1px solid #dcdcdc !important;
+}
+
+.py-6 {
+  padding-bottom: 1.5rem !important;
+  padding-top: 1.5rem !important;
+}
+
+.bg-gray-300 {
+  --dashui-bg-opacity: 1;
+  background-color: #cbd5e1 !important;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 2rem !important;
+}
+
+.mt-n7 {
+  margin-top: -1.75rem !important;
+}
+
+.ms-4 {
+  margin-left: 1rem !important;
+}
+
+// FOOTER START - NOT APPLIED IN LOGIN // 
 body:not(.login-page) {
   padding-bottom: 230px;
   overflow: visible;
@@ -42,12 +373,6 @@ body:not(.login-page) {
 
 #page-wrapper {
   height: auto !important;
-}
-
-@media screen and (max-width: 991px) {
-  body:not(.login-page) {
-    padding-bottom: 480px;
-  }
 }
 
 #page-footer {
@@ -96,10 +421,14 @@ body:not(.login-page) {
   }
 }
 
+@media screen and (max-width: 991px) {
+  body:not(.login-page) {
+    padding-bottom: 480px;
+  }
+}
 // FOOTER END //
 
-// LOGIN PAGE START //
-
+// LOGIN & SIGNUP START //
 .login-page {
   * {
     margin: 0;
@@ -648,300 +977,60 @@ body:not(.login-page) {
       margin-top: 5px;
     }
   }
+
+  // Delete Edge Toogle Input Password
+  @supports (-ms-ime-align:auto) {}
 }
 
-// LOGIN PAGE END //
+.loginform {
+  form {
 
-
-#page {
-  margin-top: 0px !important;
-  overflow: visible !important;
-  height: auto !important;
-}
-
-
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-
-[id^="page-admin"] #region-main {
-  width: 75%;
-}
-
-body.pagelayout-login {
-  background: $bg-color;
-}
-
-body.pagelayout-frontpage {
-  background: $bg-color;
-}
-
-body.pagelayout-mydashboard {
-  background: $bg-color;
-}
-
-body.pagelayout-course,
-body.pagelayout-incourse {
-  background: $bg-color;
-}
-
-body.pagelayout-embedded,
-body.pagelayout-popup,
-body.pagelayout-secure,
-body.pagelayout-print {
-  background-image: none;
-}
-
-body {
-  background: $bg-color;
-}
-
-h1 {
-  margin: auto;
-  font-weight: bold;
-  font-size: 65px;
-  color: $primarycolor;
-}
-
-.tag-blue {
-  border-radius: 1px solid $primarycolor;
-  color: $primarycolor;
-  background-color: transparent;
-}
-
-.tag-dark-blue {
-  border-radius: 1px solid $secondarycolor;
-  color: $secondarycolor;
-  background-color: transparent;
-}
-
-.navigation {
-  border-radius: 50px !important;
-}
-
-.main-inner {
-  margin: 0 !important;
-  background-color: transparent !important;
-  padding-top: 2rem !important;
-}
-
-.logo {
-  // border-radius: 50px;
-  margin-left: -0.9rem;
-}
-
-a.dropdown-toggle:focus {
-  border-radius: 50px;
-}
-
-nav {
-  background-color: transparent !important;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 20px;
-  margin: 1rem auto;
-  transition: 0.5s;
-  border-radius: 50px;
-  width: fit-content;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-
-  .divider {
-    display: none;
+    input[type="text"],
+    input[type="password"] {
+      font-size: 18px;
+      padding: 5px 10px;
+      width: 100%;
+      padding-left: 35px;
+      outline: none;
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #c4d1eb;
+      border-radius: 5px;
+      box-shadow: 3px 3px 2px 0px #e2e2e2;
+      transition: 0.3s ease;
+    }
   }
 }
 
-.navbar-brand:hover {
-  border-radius: 50px;
+.signupform {
+  h1 {
+    display: none;
+  }
+
+  input {
+    max-height: 50px;
+    margin: 0 !important;
+  }
+
+  #id_submitbutton {
+    background: $primarycolor !important;
+    margin-right: .5rem !important;
+  }
+
+  #id_cancel {
+    background: $tertiarycolor !important;
+  }
+
+  .fa-exclamation-circle {
+    color: $accentcolor !important;
+  }
+
+  form {
+    margin-top: 0 !important;
+    margin-bottom: 50px !important;
+  }
 }
-
-.navbar-brand:focus {
-  border-radius: 50px;
-}
-
-.navbar li a {
-  --b: 0.1em;
-  /* the thickness of the line */
-  --c: $primarycolor;
-  /* the color */
-
-  color: $secondarycolor;
-  padding-block: var(--b);
-  background: linear-gradient(var(--c) 50%, $secondarycolor 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b) no-repeat;
-  -webkit-background-clip: text, padding-box;
-  background-clip: text, padding-box;
-  transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
-}
-
-.navbar li a:hover {
-  --_p: 100%;
-  --_s: 0.3s;
-}
-
-.navbar li a:focus {
-  color: $primarycolor !important;
-  border-radius: 10px;
-}
-
-.primary-navigation {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-#region-main {
-  background-color: transparent;
-}
-
-div[role="main"] {
-  background-color: transparent;
-}
-
-.container {
-  justify-content: center;
-  margin: auto 0;
-}
-
-.card-container {
-  display: inline-block;
-}
-
-.card {
-  border: 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 20, 0.08), 0 1px 2px rgba(0, 0, 20, 0.08);
-}
-
-
-.rounded-bottom {
-  border-bottom-left-radius: 0.375rem !important;
-  border-bottom-right-radius: 0.375rem !important;
-}
-
-.avatar-xxl {
-  height: 7.5rem;
-  width: 7.5rem;
-}
-
-.nav-lt-tab {
-  border-top: 1px solid var(--dashui-border-color);
-}
-
-.px-4 {
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-}
-
-.avatar-sm {
-  height: 2rem;
-  width: 2rem;
-}
-
-.nav-lt-tab .nav-item {
-  margin: -0.0625rem 1rem 0;
-}
-
-.nav-lt-tab .nav-item .nav-link {
-  border-radius: 0;
-  border-top: 2px solid transparent;
-  color: var(--dashui-gray-600);
-  font-weight: 500;
-  padding: 1rem 0;
-}
-
-.pt-20 {
-  padding-top: 8rem !important;
-}
-
-.avatar-xxl.avatar-indicators:before {
-  bottom: 5px;
-  height: 16%;
-  right: 17%;
-  width: 16%;
-}
-
-.avatar-online:before {
-  background-color: #198754;
-}
-
-.avatar-indicators:before {
-  border: 2px solid #fff;
-  border-radius: 50%;
-  bottom: 0;
-  content: "";
-  display: table;
-  height: 30%;
-  position: absolute;
-  right: 5%;
-  width: 30%;
-}
-
-.avatar-xxl {
-  height: 7.5rem;
-  width: 7.5rem;
-}
-
-.mt-n10 {
-  margin-top: -3rem !important;
-}
-
-.me-2 {
-  margin-right: 0.5rem !important;
-}
-
-.align-items-end {
-  align-items: flex-end !important;
-}
-
-.rounded-circle {
-  border-radius: 50% !important;
-}
-
-.border-2 {
-  --dashui-border-width: 2px;
-}
-
-.border {
-  border: 1px solid #dcdcdc !important;
-}
-
-.py-6 {
-  padding-bottom: 1.5rem !important;
-  padding-top: 1.5rem !important;
-}
-
-.bg-gray-300 {
-  --dashui-bg-opacity: 1;
-  background-color: #cbd5e1 !important;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem !important;
-}
-
-.align-items-center {
-  align-items: center !important;
-}
-
-.mb-4 {
-  margin-bottom: 1rem !important;
-}
-
-.mb-8 {
-  margin-bottom: 2rem !important;
-}
-
-.shadow-none {
-  box-shadow: none !important;
-}
+// LOGIN & SIGNUP END //
 
 .card-body {
   p {
@@ -991,37 +1080,7 @@ div[role="main"] {
   border-top: inherit;
 }
 
-.avatar-xl {
-  height: 5rem;
-  width: 5rem;
-}
-
-.avatar {
-  display: inline-block;
-  height: 3rem;
-  position: relative;
-  width: 3rem;
-  border-radius: 999px;
-  border-width: 0.15rem;
-  border-style: solid;
-  border-color: #fff;
-}
-
-.mt-n7 {
-  margin-top: -1.75rem !important;
-}
-
-.ms-4 {
-  margin-left: 1rem !important;
-}
-
-.avatar img {
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-}
-
+// MASONRY GRID START//
 .masonry {
   column-count: 3;
   column-gap: 1em;
@@ -1039,12 +1098,14 @@ div[role="main"] {
   }
 }
 
+// MASONRY GRID END//
 .wrapper {
   height: fit-content;
   margin-top: -30px;
   margin-bottom: 37px;
 }
 
+// POST INPUT START //
 .post-container {
   display: flex;
   flex-direction: row;
@@ -1115,7 +1176,6 @@ div[role="main"] {
 }
 
 @media screen and (max-width: 992px) {
-
   .experience-view {
     .custom-input {
       padding-right: 1px;
@@ -1172,7 +1232,19 @@ div[role="main"] {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .post-container {
+    .custom-input {
+      padding-left: 1rem;
+    }
 
+    .svg-icon.bi-vector-pen,
+    .post-button div {
+      display: none;
+    }
+  }
+}
+// POST INPUT END //
 
 .svg-icon {
   position: absolute;
@@ -1182,7 +1254,69 @@ div[role="main"] {
   height: 18px;
 }
 
-// BREAD CRUMBS //
+// CARD LIST START //
+.card-list {
+  .experience-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .exp-card-head {
+    display: flex;
+    justify-content: start;
+  }
+
+  .exp-card-body {
+    overflow: hidden;
+    margin-bottom: 1rem !important;
+    display: flex;
+    flex-direction: row;
+    // max-height: 200px;
+
+    .exp-img-container {
+      min-width: 150px;
+      max-width: 250px;
+      min-height: 150px;
+      max-height: 200px;
+      border-radius: 1rem;
+      margin-right: 1rem;
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      border-radius: 1rem;
+      height: 100%;
+      width: 100%;
+      transform: scale(2);
+    }
+
+    img:hover {
+      transform: scale(1.5);
+    }
+
+  }
+
+  .exp-card-action-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+}
+// CARD LIST START //
+
+// BREAD CRUMBS START //
 .breadcrumb {
   font-size: 14px;
   letter-spacing: 0.025rem;
@@ -1221,275 +1355,9 @@ div[role="main"] {
     color: black;
   }
 }
+// BREAD CRUMBS END //
 
-// CASES REPOSITORY //
-#page-local-dta-pages-cases-repository {
-  .experience-card-body {
-    h4 {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 65%;
-    }
-  }
-
-  @media screen and (max-width: 992px) {
-    .post-img {
-      display: none;
-    }
-  }
-}
-
-// CASES VIEW //
-#page-local-dta-pages-cases-view {
-  h4 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 65%;
-  }
-
-
-  @media screen and (max-width: 498px) {
-
-
-    .controls {
-      margin-left: 18px;
-    }
-
-    .user-info {
-
-      img {
-        // User Profile Picture
-        display: none;
-      }
-
-      strong {
-        // User Name
-        text-wrap: wrap;
-      }
-
-      small {
-        // User Email
-        display: none;
-      }
-    }
-
-  }
-}
-
-// NEW REFLECTION FORM //
-#page-local-dta-pages-experiences-reflection {
-
-  .parent {
-    height: 100%;
-    transition: all 1s ease-in-out;
-    border-radius: 10px;
-
-    .header {
-      cursor: pointer;
-    }
-
-    #import_div {
-      display: none;
-      width: fit-content;
-      height: fit-content;
-      margin-top: 10px;
-      box-shadow: 0px 0px 2px 0px rgba(6, 47, 74, 1);
-      border-radius: 10px;
-      padding: 10px;
-      gap: 20px;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-    }
-
-    .import_button {
-      min-width: 50px;
-      width: fit-content;
-      max-height: 50px;
-      margin: auto;
-      box-shadow: 0px 0px 2px 0px rgba(6, 47, 74, 1);
-      border-radius: 10px;
-      cursor: pointer;
-      padding-right: 10px;
-
-      i {
-        padding: 10px;
-        font-size: 1em;
-        color: #1382c5;
-        margin: auto;
-      }
-    }
-
-    #add_button {
-      display: flex;
-      font-size: 2em;
-      color: #1382c5;
-      cursor: pointer;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h2 {
-      color: #1382c5;
-      margin-bottom: 40px;
-    }
-
-    .sections {
-      gap: 20px;
-    }
-
-    #section_what {
-      .questions {
-        border: 2px dashed rgba(204, 98, 33, 0.9);
-      }
-    }
-
-    #section_so_what {
-      .questions {
-        border: 2px dashed rgba(57, 98, 33, 0.9);
-      }
-    }
-
-    #section_now_what {
-      .questions {
-        border: 2px dashed rgba(19, 130, 197, 0.9);
-      }
-    }
-
-    #section_extra {
-      .questions {
-        border: 2px dashed rgba(200, 20, 50, 0.9);
-      }
-    }
-
-    .section {
-      h2 {
-        font-size: 2em !important;
-        font-weight: bold;
-        color: #1382c5;
-        /*transform: rotate(270deg);*/
-        margin-bottom: 20px;
-        height: fit-content;
-        text-wrap: nowrap;
-        width: 150px;
-        margin-top: 15px;
-        padding-left: 10px;
-      }
-    }
-
-    .questions {
-      display: flex;
-      width: 100%;
-      height: fit-content;
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 10px 20px;
-
-      .question {
-        padding: 20px 40px;
-        width: 100%;
-
-        h3 {
-          font-size: 1.5em !important;
-          font-weight: bold;
-          color: #062f4a;
-        }
-      }
-    }
-  }
-}
-
-// REFLECTION VIEW //
-#reflection-view {
-  .question {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .section {
-      margin-bottom: 20px;
-  }
-
-  #section_what {
-    .card-header {
-      background-color: #cc62214d;
-      color: #cc6221;
-    }
-  }
-
-  #section_so_what {
-    .card-header {
-      background-color: #3962214d;
-      color: #396221;
-    }
-  }
-
-  #section_now_what {
-    .card-header {
-      background-color: #1382c54d;
-      color: #1382c5;
-    }
-  }
-
-  #section_extra {
-    .card-header {
-      background-color: #c814324d;
-      color: #c81432;
-    }
-  }
-}
-
-
-// LOGIN & SIGNUP //
-.loginform {
-  form {
-
-    input[type="text"],
-    input[type="password"] {
-      font-size: 18px;
-      padding: 5px 10px;
-      width: 100%;
-      padding-left: 35px;
-      outline: none;
-      background: #ffffff;
-      color: #000000;
-      border: 1px solid #c4d1eb;
-      border-radius: 5px;
-      box-shadow: 3px 3px 2px 0px #e2e2e2;
-      transition: 0.3s ease;
-    }
-  }
-}
-
-.signupform {
-  h1 {
-    display: none;
-  }
-
-  input {
-    max-height: 50px;
-    margin: 0 !important;
-  }
-
-  #id_submitbutton {
-    background: $primarycolor !important;
-    margin-right: .5rem !important;
-  }
-
-  #id_cancel {
-    background: $tertiarycolor !important;
-  }
-
-  .fa-exclamation-circle {
-    color: $accentcolor !important;
-  }
-
-  form {
-    margin-top: 0 !important;
-    margin-bottom: 50px !important;
-  }
-}
-
-// SCROLLBAR //
+// SCROLLBAR START //
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
 /** {
     scrollbar-width: thin;
@@ -1527,7 +1395,542 @@ div[role="main"] {
 *::-webkit-scrollbar-thumb:active {
   background-color: $primarycolor !important;
 }
+// SCROLLBAR END //
 
+// GENERAL STYLES END //
+
+// HOME-TEACHERACADEMY START //
+#page-local-dta-pages-teacheracademy-index {
+
+  // GENERAL ELEMENTS
+  h2 {
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  h4 {
+    color: $secondarycolor !important;
+  }
+
+  // THEMES
+  .theme-search {
+    .input-search-container {
+      position: relative;
+      --size-button: 30px;
+      color: primary;
+      top: 7px;
+    }
+
+    .input-search {
+      padding-left: var(--size-button) !important;
+      height: var(--size-button);
+      font-size: 15px;
+      border: none;
+      color: #000;
+      outline: none;
+      width: var(--size-button);
+      transition: all ease 0.3s;
+      background-color: #ffffff;
+      border-radius: 50px;
+      border-bottom: 1px solid #00304966;
+      cursor: pointer;
+    }
+
+    .input-search:hover {
+      background-color: #1382c511;
+    }
+
+    .input-search:focus,
+    .input-search:not(:invalid) {
+      width: 200px;
+      cursor: text;
+      box-shadow: 0px 0px 0px #f8f8f8, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #f8f8f8, inset -1.5px -1.5px 3px #f8f8f8;
+
+    }
+
+    .input-search:focus+.icon,
+    .input-search:not(:invalid)+.icon {
+      pointer-events: all;
+      cursor: pointer;
+    }
+
+    .input-search-container .icon {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      color: $secondarycolor;
+      top: -8px;
+      left: -2px;
+      padding: 8px;
+      pointer-events: none;
+    }
+
+    .input-search-container .icon svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // TAGS IN HOME-TEACHER ACADEMY //
+  .themes {
+    height: 250px;
+
+    .theme {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .theme:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // FEATURED EXPERIENCES CAROUSEL
+  .summary-carousel {
+    height: 400px !important;
+  
+    span {
+      text-shadow: 1px 2px #00000077;
+      color: #e9e9e1;
+    }
+  
+    .container {
+      height: 85%;
+      max-height: 417px;
+      width: 100%;
+      border-radius: 1em;
+      overflow: hidden;
+      box-shadow: 0 10px 20px #dbdbdb;
+      font-family: sans-serif;
+    }
+  
+    .palette {
+      display: flex;
+      height: 95%;
+      width: 100%;
+    }
+  
+    .color {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: flex 0.1s linear;
+    }
+  
+    a {
+      flex: 1;
+    }
+  
+    a:hover {
+      flex: 10;
+    }
+  
+    .color span {
+      opacity: 0;
+      transition: opacity 0.1s linear;
+      border-radius: 0.5em;
+      padding: 0.5em 1em;
+      backdrop-filter: blur(100px);
+      min-height: 70%;
+      max-height: 70%;
+      overflow: hidden;
+  
+      p {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  
+    .color {
+      background-size: cover !important;
+    }
+  
+    .color:nth-child(1) {
+      background: url("https://digitalta.eu/wp-content/uploads/2023/12/portada.png") no-repeat center center;
+      /*background: #264653;*/
+    }
+  
+    .color:nth-child(2) {
+      background: url("https://digitalta.eu/wp-content/uploads/2023/10/Erasmus-Days.png") no-repeat center center;
+      /*background: #2a9d8f;*/
+    }
+  
+    .color:nth-child(3) {
+      background: url("https://digitalta.eu/wp-content/uploads/2023/09/Jiri-Kropac.png") no-repeat center center;
+      /*background: #e9c46a;*/
+    }
+  
+    .color:nth-child(4) {
+      background: url("https://digitalta.eu/wp-content/uploads/2023/06/IMG_6148-1-1.jpg") no-repeat center center;
+      /*background: #f4a261;*/
+    }
+  
+    .color:nth-child(5) {
+      background: url("https://digitalta.eu/wp-content/uploads/2022/12/cover-uneatlantico.jpg") no-repeat center center;
+      /*background: #e76f51;*/
+    }
+  
+    .color:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  
+    .color:hover span {
+      opacity: 1;
+    }
+  
+    .h-exp-title {
+      opacity: 1;
+    }
+  }
+
+  // LATEST
+  #latest-panel {
+    flex-direction: row;
+  }
+
+  // LATEST STUDY CASES
+  .latest-study-case {
+    overflow: hidden;
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-wrap: wrap;
+      max-width: 300px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .latest-study-case-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+  }
+
+  .latest-study-case-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+    max-width: 300px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .study-cases-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .study-cases {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .study-case {
+    flex-direction: row;
+    max-width: 500px;
+  }
+
+  .study-case-img {
+    width: 80px;
+    max-width: 200px;
+    max-height: 100px;
+    min-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .study-case-img img {
+    width: 100%;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 100px;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  // LATEST EXPERIENCES
+
+  .latest-exp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+  }
+
+  .experience-card-body {
+    padding: 1.25rem 0;
+    height: 200px !important;
+
+    h4 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 400px;
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      line-clamp: 10;
+      -webkit-box-orient: vertical;
+    }
+
+    a {
+      box-shadow: none !important;
+      text-decoration: none !important;
+      outline: none !important;
+    }
+
+
+    .experience-card-title {
+      border-bottom: 1px solid black;
+      color: $secondarycolor !important;
+      padding: 0.2rem 0;
+    }
+
+    .experience-description {
+      color: #000;
+      height: 200px !important;
+      overflow: hidden;
+    }
+  }
+
+  .latest-experiences .experience-card-img-container {
+    height: 140px;
+  }
+
+  .experience-card-img {
+    object-fit: cover !important;
+    object-position: center !important;
+    transform: scale(1.5);
+  }
+
+  .experience-card-img:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 768px) {
+    #latest-panel {
+      flex-direction: column !important;
+      gap: 2rem;
+    }
+
+    .latest-experiences {
+      margin-top: 0;
+
+      .experience-card {
+        margin-bottom: 8rem;
+      }
+    }
+
+    .study-case {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    .study-case-img {
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+// HOME-TEACHERACADEMY END //
+
+
+// --- EXPERIENCES START --- //
+// EXPERIENCES DASHBOARD START //
+#page-local-dta-pages-experiences-dashboard {
+
+  // TAGS IN EXPERIENCE //
+.tags-list {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  font-size: 9px;
+}
+
+.tags-list li {
+  float: left;
+}
+
+.tag-basic {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag-basic::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag-basic::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag-basic:hover {
+  background-color: $accentcolor;
+  color: white !important;
+}
+
+.tag-basic:hover::after {
+  border-left-color: $accentcolor;
+}
+
+@media screen and (max-width: 576px) {
+  .tag-basic {
+    background-color: transparent;
+    padding: 0 5px 0 20px;
+  }
+
+  .tag-basic::before {
+    background-color: $accentcolor;
+  }
+
+  .tag-basic::after {
+    display: none;
+  }
+
+}
+
+}
+// EXPERIENCES DASHBOARD END //
+
+// EXPERIENCES VIEW START //
+#page-local-dta-pages-experiences-view {
+
+  // MY TUTORING START //
+  .people-nearby .nearby-user {
+    padding: 20px 0;
+    border-top: 1px solid #f1f2f2;
+    border-bottom: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+  }
+
+  .people-nearby img.profile-photo-lg {
+    height: 80px;
+    width: 80px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  // MY TUTORING SEARCHBAR //
+  .custom-searchbar {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    .input {
+      width: 100%;
+      height: 40px;
+      line-height: 28px;
+      padding: 0 1rem;
+      padding-left: 2.5rem;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      outline: none;
+      background-color: #f3f3f4;
+      color: #0d0c22;
+      transition: 0.3s ease;
+    }
+
+    .input::placeholder {
+      color: #9e9ea7;
+    }
+
+    .input:focus,
+    .input:hover {
+      outline: none;
+      border-color: #00304966;
+      background-color: #fff;
+      box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
+    }
+
+    .icon {
+      position: absolute;
+      left: 1rem;
+      fill: #9e9ea7;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  // MY TUTORING END //
+
+  // Reflection elements inside  Reflectio Manager
+  .list-group-item {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    audio {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .experience-first-col {
+      order: 1;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .experience-card-module .card-body {
+      overflow: auto;
+      max-height: 380px;
+    }
+  }
+}
+// EXPERIENCES VIEW END //
+
+// EXPERIENCES MANAGE START //
 #page-local-dta-pages-experiences-manage {
   .mform div[data-fieldtype="autocomplete"] li:empty{
     display: none !important;
@@ -1794,659 +2197,240 @@ div[role="main"] {
     border: 1px solid $primarycolor !important;
   }
 }
+// EXPERIENCES MANAGE END //
 
-#page-local-dta-pages-teacheracademy-index {
-  h2 {
-    margin-bottom: 1.5rem;
-    margin-right: 1rem;
+// NEW REFLECTION FORM START //
+#page-local-dta-pages-experiences-reflection {
+
+  .parent {
+    height: 100%;
+    transition: all 1s ease-in-out;
+    border-radius: 10px;
+
+    .header {
+      cursor: pointer;
+    }
+
+    #import_div {
+      display: none;
+      width: fit-content;
+      height: fit-content;
+      margin-top: 10px;
+      box-shadow: 0px 0px 2px 0px rgba(6, 47, 74, 1);
+      border-radius: 10px;
+      padding: 10px;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .import_button {
+      min-width: 50px;
+      width: fit-content;
+      max-height: 50px;
+      margin: auto;
+      box-shadow: 0px 0px 2px 0px rgba(6, 47, 74, 1);
+      border-radius: 10px;
+      cursor: pointer;
+      padding-right: 10px;
+
+      i {
+        padding: 10px;
+        font-size: 1em;
+        color: #1382c5;
+        margin: auto;
+      }
+    }
+
+    #add_button {
+      display: flex;
+      font-size: 2em;
+      color: #1382c5;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h2 {
+      color: #1382c5;
+      margin-bottom: 40px;
+    }
+
+    .sections {
+      gap: 20px;
+    }
+
+    #section_what {
+      .questions {
+        border: 2px dashed rgba(204, 98, 33, 0.9);
+      }
+    }
+
+    #section_so_what {
+      .questions {
+        border: 2px dashed rgba(57, 98, 33, 0.9);
+      }
+    }
+
+    #section_now_what {
+      .questions {
+        border: 2px dashed rgba(19, 130, 197, 0.9);
+      }
+    }
+
+    .section {
+      h2 {
+        font-size: 2em !important;
+        font-weight: bold;
+        color: #1382c5;
+        /*transform: rotate(270deg);*/
+        margin-bottom: 20px;
+        height: fit-content;
+        text-wrap: nowrap;
+        width: 150px;
+        margin-top: 15px;
+        padding-left: 10px;
+      }
+    }
+
+    .questions {
+      display: flex;
+      width: 100%;
+      height: fit-content;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+
+      .question {
+        padding: 20px 40px;
+        width: 100%;
+
+        h3 {
+          font-size: 1.5em !important;
+          font-weight: bold;
+          color: #062f4a;
+        }
+      }
+    }
+  }
+}
+// NEW REFLECTION FORM END //
+
+// REFLECTION VIEW START //
+#page-local-dta-pages-experiences-reflection-view {
+  .question {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  h4 {
-    color: $secondarycolor !important;
+  .section {
+      margin-bottom: 20px;
   }
 
-  .latest-study-case {
-    overflow: hidden;
-
-    p {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-wrap: wrap;
-      max-width: 300px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
+  #section_what {
+    .card-header {
+      background-color: #cc62214d;
+      color: #cc6221;
     }
   }
 
-  .latest-study-case-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 300px;
+  #section_so_what {
+    .card-header {
+      background-color: #3962214d;
+      color: #396221;
+    }
   }
 
-  .latest-study-case-description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-wrap: wrap;
-    max-width: 300px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
+  #section_now_what {
+    .card-header {
+      background-color: #1382c54d;
+      color: #1382c5;
+    }
   }
+}
+// REFLECTION VIEW END //
+// --- EXPERIENCES END --- //
 
-  #latest-panel {
-    flex-direction: row;
-  }
 
-  .latest-exp-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between !important;
-  }
-
+// --- CASES START --- //
+// CASES REPOSITORY START //
+#page-local-dta-pages-cases-repository {
   .experience-card-body {
-    padding: 1.25rem 0;
-    height: 200px !important;
-
     h4 {
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-
-    p {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 400px;
-      display: -webkit-box;
-      -webkit-line-clamp: 10;
-      line-clamp: 10;
-      -webkit-box-orient: vertical;
-    }
-
-    a {
-      box-shadow: none !important;
-      text-decoration: none !important;
-      outline: none !important;
-    }
-
-
-    .experience-card-title {
-      border-bottom: 1px solid black;
-      color: $secondarycolor !important;
-      padding: 0.2rem 0;
-    }
-
-    .experience-description {
-      color: #000;
-      height: 200px !important;
-      overflow: hidden;
+      max-width: 65%;
     }
   }
 
-  .latest-experiences .experience-card-img-container {
-    height: 140px;
-  }
-
-  .experience-card-img {
-    object-fit: cover !important;
-    object-position: center !important;
-    transform: scale(1.5);
-  }
-
-  .experience-card-img:hover {
-    transform: scale(1.1);
-  }
-
-  .study-cases-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .study-cases {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-
-    p {
-      margin: 0;
-    }
-  }
-
-  .study-case {
-    flex-direction: row;
-    max-width: 500px;
-  }
-
-  .study-case-img {
-    width: 80px;
-    max-width: 200px;
-    max-height: 100px;
-    min-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  .study-case-img img {
-    width: 100%;
-    max-width: 200px;
-    min-width: 200px;
-    max-height: 100px;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-
-  @media screen and (max-width: 768px) {
-    #latest-panel {
-      flex-direction: column !important;
-      gap: 2rem;
-    }
-
-    .latest-experiences {
-      margin-top: 0;
-
-      .experience-card {
-        margin-bottom: 8rem;
-      }
-    }
-
-    .study-case {
-      flex-direction: column;
-      margin-bottom: 2rem;
-    }
-
-
-
-    .study-case-img {
-      max-width: 100%;
-
-      img {
-        max-width: 100%;
-      }
-    }
-  }
-}
-
-#page-local-dta-pages-experiences-view {
-
-  // Reflection elements inside  Reflectio Manager
-  .list-group-item {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    audio {
-      max-width: 100%;
-    }
-  }
-
-  @media screen and (max-width: 1199px) {
-    .experience-first-col {
-      order: 1;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    .experience-card-module .card-body {
-      overflow: auto;
-      max-height: 380px;
-    }
-  }
-}
-
-// SEARCHBAR //
-.custom-searchbar {
-  display: flex;
-  line-height: 28px;
-  align-items: center;
-  position: relative;
-  width: 100%;
-
-  .input {
-    width: 100%;
-    height: 40px;
-    line-height: 28px;
-    padding: 0 1rem;
-    padding-left: 2.5rem;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    background-color: #f3f3f4;
-    color: #0d0c22;
-    transition: 0.3s ease;
-  }
-
-  .input::placeholder {
-    color: #9e9ea7;
-  }
-
-  .input:focus,
-  .input:hover {
-    outline: none;
-    border-color: #00304966;
-    background-color: #fff;
-    box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
-  }
-
-  .icon {
-    position: absolute;
-    left: 1rem;
-    fill: #9e9ea7;
-    width: 1rem;
-    height: 1rem;
-  }
-}
-
-// THEME SEARCH BAR IN TEACHER ACADEMY //
-.theme-search {
-  .input-search-container {
-    position: relative;
-    --size-button: 30px;
-    color: primary;
-    top: 7px;
-  }
-
-  .input-search {
-    padding-left: var(--size-button) !important;
-    height: var(--size-button);
-    font-size: 15px;
-    border: none;
-    color: #000;
-    outline: none;
-    width: var(--size-button);
-    transition: all ease 0.3s;
-    background-color: #ffffff;
-    border-radius: 50px;
-    border-bottom: 1px solid #00304966;
-    cursor: pointer;
-  }
-
-  .input-search:hover {
-    background-color: #1382c511;
-  }
-
-  .input-search:focus,
-  .input-search:not(:invalid) {
-    width: 200px;
-    cursor: text;
-    box-shadow: 0px 0px 0px #f8f8f8, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #f8f8f8, inset -1.5px -1.5px 3px #f8f8f8;
-
-  }
-
-  .input-search:focus+.icon,
-  .input-search:not(:invalid)+.icon {
-    pointer-events: all;
-    cursor: pointer;
-  }
-
-  .input-search-container .icon {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    color: $secondarycolor;
-    top: -8px;
-    left: -2px;
-    padding: 8px;
-    pointer-events: none;
-  }
-
-  .input-search-container .icon svg {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-// PEOPLE NEARBY - TEACHER CHAT MESSAGE //
-
-.people-nearby .nearby-user {
-  padding: 20px 0;
-  border-top: 1px solid #f1f2f2;
-  border-bottom: 1px solid #f1f2f2;
-  margin-bottom: 20px;
-}
-
-.people-nearby img.profile-photo-lg {
-  height: 80px;
-  width: 80px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-// TAGS IN EXPERIENCE //
-
-
-.tags-list {
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  font-size: 9px;
-}
-
-.tags-list li {
-  float: left;
-}
-
-.tag-basic {
-  background: #eee;
-  border-radius: 3px 0 0 3px;
-  color: #999;
-  display: inline-block;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 20px 0 23px;
-  position: relative;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
-}
-
-.tag-basic::before {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-  content: '';
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  width: 6px;
-  top: 10px;
-}
-
-.tag-basic::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
-  border-top: 13px solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.tag-basic:hover {
-  background-color: $accentcolor;
-  color: white !important;
-}
-
-.tag-basic:hover::after {
-  border-left-color: $accentcolor;
-}
-
-@media screen and (max-width: 576px) {
-  .tag-basic {
-    background-color: transparent;
-    padding: 0 5px 0 20px;
-  }
-
-  .tag-basic::before {
-    background-color: $accentcolor;
-  }
-
-  .tag-basic::after {
-    display: none;
-  }
-
-}
-
-// TAGS IN HOME-TEACHER ACADEMY //
-
-.themes {
-  height: 250px;
-
-  .theme {
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .theme:hover {
-    transform: scale(1.1);
-  }
-}
-
-.experiences-view {
-
-
-  .experience-card {
-    background: #fff;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 1rem 0;
-    font-size: 0.85rem;
-    line-height: 1.5;
-
-    a {
-      text-decoration: none;
-    }
-  }
-
-  .exp-card-head {
-    display: flex;
-    justify-content: start;
-  }
-
-  .exp-card-body {
-    overflow: hidden;
-    margin-bottom: 1rem !important;
-    display: flex;
-    flex-direction: row;
-    // max-height: 200px;
-
-    .exp-img-container {
-      min-width: 150px;
-      max-width: 250px;
-      min-height: 150px;
-      max-height: 200px;
-      border-radius: 1rem;
-      margin-right: 1rem;
-      object-fit: cover;
-      object-position: center;
-      overflow: hidden;
-    }
-
-    img {
-      display: block;
-      border-radius: 1rem;
-      height: 100%;
-      width: 100%;
-      transform: scale(2);
-    }
-
-    img:hover {
-      transform: scale(1.5);
-    }
-
-  }
-
-  .exp-card-action-btns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-  }
-}
-
-#page-local-dta-pages-cases-manage {
-  .tox-promotion {
-    display: none !important;
-  }
-
-}
-
-.summary-carousel {
-  height: 400px !important;
-
-  span {
-    text-shadow: 1px 2px #00000077;
-    color: #e9e9e1;
-  }
-
-  .container {
-    height: 85%;
-    max-height: 417px;
-    width: 100%;
-    border-radius: 1em;
-    overflow: hidden;
-    box-shadow: 0 10px 20px #dbdbdb;
-    font-family: sans-serif;
-  }
-
-  .palette {
-    display: flex;
-    height: 95%;
-    width: 100%;
-  }
-
-  .color {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: flex 0.1s linear;
-  }
-
-  a {
-    flex: 1;
-  }
-
-  a:hover {
-    flex: 10;
-  }
-
-  .color span {
-    opacity: 0;
-    transition: opacity 0.1s linear;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    backdrop-filter: blur(100px);
-    min-height: 70%;
-    max-height: 70%;
-    overflow: hidden;
-
-    p {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-  }
-
-  .color {
-    background-size: cover !important;
-  }
-
-  .color:nth-child(1) {
-    background: url("https://digitalta.eu/wp-content/uploads/2023/12/portada.png") no-repeat center center;
-    /*background: #264653;*/
-  }
-
-  .color:nth-child(2) {
-    background: url("https://digitalta.eu/wp-content/uploads/2023/10/Erasmus-Days.png") no-repeat center center;
-    /*background: #2a9d8f;*/
-  }
-
-  .color:nth-child(3) {
-    background: url("https://digitalta.eu/wp-content/uploads/2023/09/Jiri-Kropac.png") no-repeat center center;
-    /*background: #e9c46a;*/
-  }
-
-  .color:nth-child(4) {
-    background: url("https://digitalta.eu/wp-content/uploads/2023/06/IMG_6148-1-1.jpg") no-repeat center center;
-    /*background: #f4a261;*/
-  }
-
-  .color:nth-child(5) {
-    background: url("https://digitalta.eu/wp-content/uploads/2022/12/cover-uneatlantico.jpg") no-repeat center center;
-    /*background: #e76f51;*/
-  }
-
-  .color:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
-
-  .color:hover span {
-    opacity: 1;
-  }
-
-  .h-exp-title {
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .post-container {
-    .custom-input {
-      padding-left: 1rem;
-    }
-
-    .svg-icon.bi-vector-pen,
-    .post-button div {
+  @media screen and (max-width: 992px) {
+    .post-img {
       display: none;
     }
   }
 }
+// CASES REPOSITORY END //
 
-// Delete Edge Toogle Input Password
-@supports (-ms-ime-align:auto) {}
+// CASES VIEW START //
+#page-local-dta-pages-cases-view {
+  h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 65%;
+  }
 
-.data-tooltip {
-  position: relative;
-  border-radius: 50px;
-  width: fit-content;
-  height: fit-content;
-  font-size: 12px;
-  margin-left: -10px;
-  color: rgba($tertiarycolor, 1);
-  // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 
-  i {
-    margin: 5px 8px;
+  @media screen and (max-width: 498px) {
+
+
+    .controls {
+      margin-left: 18px;
+    }
+
+    .user-info {
+
+      img {
+        // User Profile Picture
+        display: none;
+      }
+
+      strong {
+        // User Name
+        text-wrap: wrap;
+      }
+
+      small {
+        // User Email
+        display: none;
+      }
+    }
+
   }
 }
+// CASES VIEW END //
 
-.data-tooltip::before,
-.data-tooltip::after {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(5px);
-  transition: all 0.2s ease;
+// CASES MANAGAMENT START //
+#page-local-dta-pages-cases-manage {
+  .tox-promotion {
+    display: none !important;
+  }
 }
+// CASES MANAGAMENT END //
+// --- CASES END --- //
 
-.data-tooltip::before {
-  content: attr(data-tooltip-content);
-  width: fit-content;
-  font-size: small;
-  font-weight: 600;
-  color: #fff;
-  background-color: rgba($tertiarycolor, 1);
-  padding: 3px 10px;
-  border-radius: 4px;
-  bottom: calc(100% + 5px);
-}
 
-.data-tooltip::after {
-  content: "";
-  border-top: 5px solid $tertiarycolor;
-  // border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  bottom: calc(100% + 1px);
-}
 
-.data-tooltip:hover::before,
-.data-tooltip:hover::after {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 // test
