@@ -1399,6 +1399,45 @@ div[role="main"] {
   }
 }
 
+// REFLECTION VIEW //
+#reflection-view {
+  .question {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .section {
+      margin-bottom: 20px;
+  }
+
+  #section_what {
+    .card-header {
+      background-color: #cc62214d;
+      color: #cc6221;
+    }
+  }
+
+  #section_so_what {
+    .card-header {
+      background-color: #3962214d;
+      color: #396221;
+    }
+  }
+
+  #section_now_what {
+    .card-header {
+      background-color: #1382c54d;
+      color: #1382c5;
+    }
+  }
+
+  #section_extra {
+    .card-header {
+      background-color: #c814324d;
+      color: #c81432;
+    }
+  }
+}
+
 
 // LOGIN & SIGNUP //
 .loginform {
