@@ -1857,6 +1857,12 @@ body:not(.login-page) {
     margin-bottom: 20px;
   }
 
+  .request-list {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .tutor-list img.profile-photo-lg {
     height: 80px;
     width: 80px;
