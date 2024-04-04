@@ -1722,7 +1722,7 @@ body:not(.login-page) {
     object-fit: cover !important;
     object-position: center !important;
     transform: scale(1.5);
-    
+
     img {
       text-align: center;
       font-size: 12px !important;
@@ -1850,14 +1850,14 @@ body:not(.login-page) {
 #page-local-dta-pages-experiences-view {
 
   // MY TUTORING START //
-  .people-nearby .nearby-user {
-    padding: 20px 0;
+  .tutor-list .tutor {
+    padding: 5px 0;
     border-top: 1px solid #f1f2f2;
     border-bottom: 1px solid #f1f2f2;
     margin-bottom: 20px;
   }
 
-  .people-nearby img.profile-photo-lg {
+  .tutor-list img.profile-photo-lg {
     height: 80px;
     width: 80px;
     max-width: 100%;
@@ -1922,16 +1922,15 @@ body:not(.login-page) {
     }
   }
 
-  @media screen and (max-width: 1199px) {
-    .experience-first-col {
-      order: 1;
-    }
-  }
+
 
   @media screen and (min-width: 1200px) {
+    .tutor
+
+
     .experience-card-module .card-body {
       overflow: auto;
-      max-height: 380px;
+      max-height: 400px;
     }
   }
 }
@@ -2207,6 +2206,19 @@ body:not(.login-page) {
 
 // NEW REFLECTION FORM START //
 #page-local-dta-pages-experiences-reflection {
+
+  #import-cases-modal {
+    label {
+        width: 100%;
+    }
+
+    input:checked + label {
+        border: 1px solid #007bff;
+        border-radius: 0.25rem;
+        color: white;
+    }
+  }
+
 
   .parent {
     height: 100%;
