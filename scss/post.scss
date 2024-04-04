@@ -1943,7 +1943,7 @@ body:not(.login-page) {
 // EXPERIENCES VIEW END //
 
 // EXPERIENCES MANAGE START //
-#page-local-dta-pages-experiences-manage {
+/*#page-local-dta-pages-experiences-manage {
 
   #page-header .header-actions-container {
     display: none;
@@ -2207,11 +2207,12 @@ body:not(.login-page) {
   &:focus {
     border: 1px solid $primarycolor !important;
   }
-}
+}*/
 // EXPERIENCES MANAGE END //
 
 // NEW REFLECTION FORM START //
-#page-local-dta-pages-experiences-reflection {
+#page-local-dta-pages-experiences-reflection,
+#page-local-dta-pages-experiences-manage {
 
   #import-cases-modal {
     label {
@@ -2286,18 +2287,27 @@ body:not(.login-page) {
     }
 
     #section_what {
+      h2 {
+        color: rgba(204, 98, 33, 0.9);
+      }
       .questions {
         border: 2px dashed rgba(204, 98, 33, 0.9);
       }
     }
 
     #section_so_what {
+      h2 {
+        color: rgba(57, 98, 33, 0.9);
+      }
       .questions {
         border: 2px dashed rgba(57, 98, 33, 0.9);
       }
     }
 
     #section_now_what {
+      h2 {
+        color: rgba(19, 130, 197, 0.9);
+      }
       .questions {
         border: 2px dashed rgba(19, 130, 197, 0.9);
       }
