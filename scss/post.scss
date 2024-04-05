@@ -2236,6 +2236,61 @@ body:not(.login-page) {
       cursor: pointer;
     }
 
+    /*stepbar*/
+    #stepbar {
+      margin-bottom: 30px;
+      overflow: hidden;
+      margin: auto;
+      /*CSS counters to number the steps*/
+      counter-reset: step;
+    }
+    #stepbar li {
+      border: none !important;
+      list-style-type: none;
+      color: black;
+      background: transparent;
+      outline: none;
+      text-transform: uppercase;
+      font-size: 12px;
+      width: 10rem;
+      float: left;
+      position: relative;
+    }
+    #stepbar li:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 20px;
+      line-height: 20px;
+      display: block;
+      font-size: 10px;
+      color: white;
+      background: #333;
+      border-radius: 3px;
+      margin: 0 auto 5px auto;
+    }
+    /*stepbar connectors*/
+    #stepbar li:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: white;
+      position: absolute;
+      left: -50%;
+      top: 9px;
+      z-index: -1; /*put it behind the numbers*/
+    }
+    #stepbar li:first-child:after {
+      /*connector not needed before the first step*/
+      content: none; 
+    }
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/
+    #stepbar li.active:before, 
+    #stepbar li.active:after{
+      background: #27AE60;
+      color: white;
+    }
+
     #import_div {
       display: none;
       width: fit-content;
