@@ -426,6 +426,7 @@ body:not(.login-page) {
     padding-bottom: 480px;
   }
 }
+
 // FOOTER END //
 
 // LOGIN & SIGNUP START //
@@ -1030,6 +1031,7 @@ body:not(.login-page) {
     margin-bottom: 50px !important;
   }
 }
+
 // LOGIN & SIGNUP END //
 
 .card-body {
@@ -1201,6 +1203,7 @@ body:not(.login-page) {
     }
   }
 }
+
 // POST INPUT END //
 
 // CARD LIST START //
@@ -1315,6 +1318,7 @@ body:not(.login-page) {
     }
   }
 }
+
 // CARD LIST START //
 
 // BREAD CRUMBS START //
@@ -1356,6 +1360,7 @@ body:not(.login-page) {
     color: black;
   }
 }
+
 // BREAD CRUMBS END //
 
 // SCROLLBAR START //
@@ -1396,6 +1401,7 @@ body:not(.login-page) {
 *::-webkit-scrollbar-thumb:active {
   background-color: $primarycolor !important;
 }
+
 // SCROLLBAR END //
 
 // GENERAL STYLES END //
@@ -1489,12 +1495,12 @@ body:not(.login-page) {
   // FEATURED EXPERIENCES CAROUSEL
   .summary-carousel {
     height: 400px !important;
-  
+
     span {
       text-shadow: 1px 2px #00000077;
       color: #e9e9e1;
     }
-  
+
     .container {
       height: 85%;
       max-height: 417px;
@@ -1504,13 +1510,13 @@ body:not(.login-page) {
       box-shadow: 0 10px 20px #dbdbdb;
       font-family: sans-serif;
     }
-  
+
     .palette {
       display: flex;
       height: 95%;
       width: 100%;
     }
-  
+
     .color {
       height: 100%;
       display: flex;
@@ -1521,15 +1527,15 @@ body:not(.login-page) {
       letter-spacing: 1px;
       transition: flex 0.1s linear;
     }
-  
+
     a {
       flex: 1;
     }
-  
+
     a:hover {
       flex: 10;
     }
-  
+
     .color span {
       opacity: 0;
       transition: opacity 0.1s linear;
@@ -1539,50 +1545,50 @@ body:not(.login-page) {
       min-height: 70%;
       max-height: 70%;
       overflow: hidden;
-  
+
       p {
         margin-top: auto;
         margin-bottom: auto;
       }
     }
-  
+
     .color {
       background-size: cover !important;
     }
-  
+
     .color:nth-child(1) {
       background: url("https://digitalta.eu/wp-content/uploads/2023/12/portada.png") no-repeat center center;
       /*background: #264653;*/
     }
-  
+
     .color:nth-child(2) {
       background: url("https://digitalta.eu/wp-content/uploads/2023/10/Erasmus-Days.png") no-repeat center center;
       /*background: #2a9d8f;*/
     }
-  
+
     .color:nth-child(3) {
       background: url("https://digitalta.eu/wp-content/uploads/2023/09/Jiri-Kropac.png") no-repeat center center;
       /*background: #e9c46a;*/
     }
-  
+
     .color:nth-child(4) {
       background: url("https://digitalta.eu/wp-content/uploads/2023/06/IMG_6148-1-1.jpg") no-repeat center center;
       /*background: #f4a261;*/
     }
-  
+
     .color:nth-child(5) {
       background: url("https://digitalta.eu/wp-content/uploads/2022/12/cover-uneatlantico.jpg") no-repeat center center;
       /*background: #e76f51;*/
     }
-  
+
     .color:hover {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-  
+
     .color:hover span {
       opacity: 1;
     }
-  
+
     .h-exp-title {
       opacity: 1;
     }
@@ -1722,7 +1728,7 @@ body:not(.login-page) {
     object-fit: cover !important;
     object-position: center !important;
     transform: scale(1.5);
-    
+
     img {
       text-align: center;
       font-size: 12px !important;
@@ -1762,6 +1768,7 @@ body:not(.login-page) {
     }
   }
 }
+
 // HOME-TEACHERACADEMY END //
 
 
@@ -1770,80 +1777,81 @@ body:not(.login-page) {
 #page-local-dta-pages-experiences-dashboard {
 
   // TAGS IN EXPERIENCE //
-.tags-list {
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  font-size: 9px;
-}
+  .tags-list {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    font-size: 9px;
+  }
 
-.tags-list li {
-  float: left;
-}
+  .tags-list li {
+    float: left;
+  }
 
-.tag-basic {
-  background: #eee;
-  border-radius: 3px 0 0 3px;
-  color: #999;
-  display: inline-block;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 20px 0 23px;
-  position: relative;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
-}
-
-.tag-basic::before {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-  content: '';
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  width: 6px;
-  top: 10px;
-}
-
-.tag-basic::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
-  border-top: 13px solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.tag-basic:hover {
-  background-color: $accentcolor;
-  color: white !important;
-}
-
-.tag-basic:hover::after {
-  border-left-color: $accentcolor;
-}
-
-@media screen and (max-width: 576px) {
   .tag-basic {
-    background-color: transparent;
-    padding: 0 5px 0 20px;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    color: #999;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
   }
 
   .tag-basic::before {
-    background-color: $accentcolor;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    content: '';
+    height: 6px;
+    left: 10px;
+    position: absolute;
+    width: 6px;
+    top: 10px;
   }
 
   .tag-basic::after {
-    display: none;
+    background: #fff;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid #eee;
+    border-top: 13px solid transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .tag-basic:hover {
+    background-color: $accentcolor;
+    color: white !important;
+  }
+
+  .tag-basic:hover::after {
+    border-left-color: $accentcolor;
+  }
+
+  @media screen and (max-width: 576px) {
+    .tag-basic {
+      background-color: transparent;
+      padding: 0 5px 0 20px;
+    }
+
+    .tag-basic::before {
+      background-color: $accentcolor;
+    }
+
+    .tag-basic::after {
+      display: none;
+    }
+
   }
 
 }
 
-}
 // EXPERIENCES DASHBOARD END //
 
 // EXPERIENCES VIEW START //
@@ -1907,6 +1915,7 @@ body:not(.login-page) {
       height: 1rem;
     }
   }
+
   // MY TUTORING END //
 
   // Reflection elements inside  Reflectio Manager
@@ -1935,6 +1944,7 @@ body:not(.login-page) {
     }
   }
 }
+
 // EXPERIENCES VIEW END //
 
 // EXPERIENCES MANAGE START //
@@ -1952,10 +1962,11 @@ body:not(.login-page) {
     }
   }
 
-  .mform div[data-fieldtype="autocomplete"] li:empty{
+  .mform div[data-fieldtype="autocomplete"] li:empty {
     display: none !important;
   }
-  .mform .form-inline .custom-select{
+
+  .mform .form-inline .custom-select {
     max-width: 550px;
   }
 
@@ -2203,6 +2214,7 @@ body:not(.login-page) {
     border: 1px solid $primarycolor !important;
   }
 }
+
 // EXPERIENCES MANAGE END //
 
 // NEW REFLECTION FORM START //
@@ -2321,16 +2333,17 @@ body:not(.login-page) {
     }
   }
 }
+
 // NEW REFLECTION FORM END //
 
 // REFLECTION VIEW START //
 #page-local-dta-pages-experiences-reflection-view {
   .question {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .section {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   #section_what {
@@ -2354,6 +2367,7 @@ body:not(.login-page) {
     }
   }
 }
+
 // REFLECTION VIEW END //
 // --- EXPERIENCES END --- //
 
@@ -2375,6 +2389,7 @@ body:not(.login-page) {
     }
   }
 }
+
 // CASES REPOSITORY END //
 
 // CASES VIEW START //
@@ -2413,6 +2428,7 @@ body:not(.login-page) {
 
   }
 }
+
 // CASES VIEW END //
 
 // CASES MANAGAMENT START //
@@ -2421,6 +2437,7 @@ body:not(.login-page) {
     display: none !important;
   }
 }
+
 // CASES MANAGAMENT END //
 // --- CASES END --- //
 
@@ -2504,4 +2521,19 @@ body:not(.login-page) {
   -o-transform: scale(1.04);
   -ms-transform: scale(1.04);
   transform: scale(1.04);
+}
+
+.carousel-inner .slick-initialized .slick-slider {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.slick-prev, .slick-next {
+  display: flex;
+    align-items: center;
+}
+
+.fa-angle-left, .fa-angle-right {
+  font-size: 30px !important;
 }
