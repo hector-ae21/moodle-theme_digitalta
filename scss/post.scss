@@ -1729,6 +1729,7 @@ body:not(.login-page) {
     object-position: center !important;
     transform: scale(1.5);
 
+
     img {
       text-align: center;
       font-size: 12px !important;
@@ -1858,14 +1859,20 @@ body:not(.login-page) {
 #page-local-dta-pages-experiences-view {
 
   // MY TUTORING START //
-  .people-nearby .nearby-user {
-    padding: 20px 0;
+  .tutor-list .tutor {
+    padding: 5px 0;
     border-top: 1px solid #f1f2f2;
     border-bottom: 1px solid #f1f2f2;
     margin-bottom: 20px;
   }
 
-  .people-nearby img.profile-photo-lg {
+  .request-list {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .tutor-list img.profile-photo-lg {
     height: 80px;
     width: 80px;
     max-width: 100%;
@@ -1931,16 +1938,15 @@ body:not(.login-page) {
     }
   }
 
-  @media screen and (max-width: 1199px) {
-    .experience-first-col {
-      order: 1;
-    }
-  }
+
 
   @media screen and (min-width: 1200px) {
+    .tutor
+
+
     .experience-card-module .card-body {
       overflow: auto;
-      max-height: 380px;
+      max-height: 400px;
     }
   }
 }
@@ -1948,7 +1954,7 @@ body:not(.login-page) {
 // EXPERIENCES VIEW END //
 
 // EXPERIENCES MANAGE START //
-#page-local-dta-pages-experiences-manage {
+/*#page-local-dta-pages-experiences-manage {
 
   #page-header .header-actions-container {
     display: none;
@@ -2213,12 +2219,25 @@ body:not(.login-page) {
   &:focus {
     border: 1px solid $primarycolor !important;
   }
-}
-
+}*/
 // EXPERIENCES MANAGE END //
 
 // NEW REFLECTION FORM START //
-#page-local-dta-pages-experiences-reflection {
+#page-local-dta-pages-experiences-reflection,
+#page-local-dta-pages-experiences-manage {
+
+  #import-cases-modal {
+    label {
+        width: 100%;
+    }
+
+    input:checked + label {
+        border: 1px solid #007bff;
+        border-radius: 0.25rem;
+        color: white;
+    }
+  }
+
 
   .parent {
     height: 100%;
@@ -2227,6 +2246,61 @@ body:not(.login-page) {
 
     .header {
       cursor: pointer;
+    }
+
+    /*stepbar*/
+    #stepbar {
+      margin-bottom: 30px;
+      overflow: hidden;
+      margin: auto;
+      /*CSS counters to number the steps*/
+      counter-reset: step;
+    }
+    #stepbar li {
+      border: none !important;
+      list-style-type: none;
+      color: black;
+      background: transparent;
+      outline: none;
+      text-transform: uppercase;
+      font-size: 12px;
+      width: 10rem;
+      float: left;
+      position: relative;
+    }
+    #stepbar li:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 20px;
+      line-height: 20px;
+      display: block;
+      font-size: 10px;
+      color: white;
+      background: #333;
+      border-radius: 3px;
+      margin: 0 auto 5px auto;
+    }
+    /*stepbar connectors*/
+    #stepbar li:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: white;
+      position: absolute;
+      left: -50%;
+      top: 9px;
+      z-index: -1; /*put it behind the numbers*/
+    }
+    #stepbar li:first-child:after {
+      /*connector not needed before the first step*/
+      content: none; 
+    }
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/
+    #stepbar li.active:before, 
+    #stepbar li.active:after{
+      background: #27AE60;
+      color: white;
     }
 
     #import_div {
@@ -2280,18 +2354,27 @@ body:not(.login-page) {
     }
 
     #section_what {
+      h2 {
+        color: rgba(204, 98, 33, 0.9);
+      }
       .questions {
         border: 2px dashed rgba(204, 98, 33, 0.9);
       }
     }
 
     #section_so_what {
+      h2 {
+        color: rgba(57, 98, 33, 0.9);
+      }
       .questions {
         border: 2px dashed rgba(57, 98, 33, 0.9);
       }
     }
 
     #section_now_what {
+      h2 {
+        color: rgba(19, 130, 197, 0.9);
+      }
       .questions {
         border: 2px dashed rgba(19, 130, 197, 0.9);
       }
