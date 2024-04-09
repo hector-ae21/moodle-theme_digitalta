@@ -1941,10 +1941,7 @@ body:not(.login-page) {
 
 
   @media screen and (min-width: 1200px) {
-    .tutor
-
-
-    .experience-card-module .card-body {
+    .tutor .experience-card-module .card-body {
       overflow: auto;
       max-height: 400px;
     }
@@ -2228,13 +2225,13 @@ body:not(.login-page) {
 
   #import-cases-modal {
     label {
-        width: 100%;
+      width: 100%;
     }
 
-    input:checked + label {
-        border: 1px solid #007bff;
-        border-radius: 0.25rem;
-        color: white;
+    input:checked+label {
+      border: 1px solid #007bff;
+      border-radius: 0.25rem;
+      color: white;
     }
   }
 
@@ -2256,6 +2253,7 @@ body:not(.login-page) {
       /*CSS counters to number the steps*/
       counter-reset: step;
     }
+
     #stepbar li {
       border: none !important;
       list-style-type: none;
@@ -2268,6 +2266,7 @@ body:not(.login-page) {
       float: left;
       position: relative;
     }
+
     #stepbar li:before {
       content: counter(step);
       counter-increment: step;
@@ -2280,6 +2279,7 @@ body:not(.login-page) {
       border-radius: 3px;
       margin: 0 auto 5px auto;
     }
+
     /*stepbar connectors*/
     #stepbar li:after {
       content: '';
@@ -2289,16 +2289,19 @@ body:not(.login-page) {
       position: absolute;
       left: -50%;
       top: 9px;
-      z-index: -1; /*put it behind the numbers*/
+      z-index: -1;
+      /*put it behind the numbers*/
     }
+
     #stepbar li:first-child:after {
       /*connector not needed before the first step*/
-      content: none; 
+      content: none;
     }
+
     /*marking active/completed steps green*/
     /*The number of the step and the connector before it = green*/
-    #stepbar li.active:before, 
-    #stepbar li.active:after{
+    #stepbar li.active:before,
+    #stepbar li.active:after {
       background: #27AE60;
       color: white;
     }
@@ -2357,6 +2360,7 @@ body:not(.login-page) {
       h2 {
         color: rgba(204, 98, 33, 0.9);
       }
+
       .questions {
         border: 2px dashed rgba(204, 98, 33, 0.9);
       }
@@ -2366,6 +2370,7 @@ body:not(.login-page) {
       h2 {
         color: rgba(57, 98, 33, 0.9);
       }
+
       .questions {
         border: 2px dashed rgba(57, 98, 33, 0.9);
       }
@@ -2375,6 +2380,7 @@ body:not(.login-page) {
       h2 {
         color: rgba(19, 130, 197, 0.9);
       }
+
       .questions {
         border: 2px dashed rgba(19, 130, 197, 0.9);
       }
@@ -2606,17 +2612,15 @@ body:not(.login-page) {
   transform: scale(1.04);
 }
 
-.carousel-inner .slick-initialized .slick-slider {
+
+//
+
+.slick-prev {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  align-items: center;
 }
 
-.slick-prev, .slick-next {
+.slick-next {
   display: flex;
-    align-items: center;
-}
-
-.fa-angle-left, .fa-angle-right {
-  font-size: 30px !important;
+  align-items: center;
 }
