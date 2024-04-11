@@ -1493,6 +1493,29 @@ body:not(.login-page) {
   }
 
   // FEATURED EXPERIENCES CAROUSEL
+  .carouselExperiences {
+    .slick-arrow {
+
+    }
+
+    .card-img-top {
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: wrap;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
   .summary-carousel {
     height: 400px !important;
 
@@ -1775,7 +1798,14 @@ body:not(.login-page) {
 
 // --- EXPERIENCES START --- //
 // EXPERIENCES DASHBOARD START //
-#page-local-dta-pages-experiences-dashboard {
+
+
+// EXPERIENCES DASHBOARD END //
+
+
+// TAGS STYLES BETWEEN EXPERIENCES DASHBOARD AND EXPERIENCES VIEW //
+#page-local-dta-pages-experiences-dashboard,
+#page-local-dta-pages-experiences-view {
 
   // TAGS IN EXPERIENCE //
   .tags-list {
@@ -1852,8 +1882,6 @@ body:not(.login-page) {
   }
 
 }
-
-// EXPERIENCES DASHBOARD END //
 
 // EXPERIENCES VIEW START //
 #page-local-dta-pages-experiences-view {
