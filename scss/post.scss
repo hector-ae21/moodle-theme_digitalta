@@ -1935,8 +1935,20 @@ body:not(.login-page) {
 
 }
 
+// REACTION BUTTONS START //
+#reaction-buttons {
+  #flag-button {
+    color: $accentcolor;
+    border: solid 1px $accentcolor;
+  }
+}
+
+// REACTION BUTTONS END //
+
 // EXPERIENCES VIEW START //
 #page-local-dta-pages-experiences-view {
+
+  
 
   // MY TUTORING START //
   .tutor-list .tutor {
@@ -2004,6 +2016,14 @@ body:not(.login-page) {
   }
 
   // MY TUTORING END //
+
+  // RESOURCES START //
+  .resource-repository .card-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 300px;
+  }
+  // RESOURCES END //
 
   // Reflection elements inside  Reflectio Manager
   .list-group-item {
