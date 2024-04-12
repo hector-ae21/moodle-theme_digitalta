@@ -1504,7 +1504,7 @@ body:not(.login-page) {
     }
 
     .card-body {
-      height: 250px;
+      height: 275px;
 
       h5 {
         overflow: hidden;
@@ -1521,8 +1521,8 @@ body:not(.login-page) {
         text-overflow: ellipsis;
         text-wrap: wrap;
         display: -webkit-box;
-        -webkit-line-clamp: 7;
-        line-clamp: 7;
+        -webkit-line-clamp: 8;
+        line-clamp: 8;
         -webkit-box-orient: vertical;
       }
     }
