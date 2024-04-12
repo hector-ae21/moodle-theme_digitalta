@@ -1645,6 +1645,10 @@ body:not(.login-page) {
   // LATEST
   #latest-panel {
     flex-direction: row;
+
+    .latest-cases-container {
+      min-height: 100%;
+    }
   }
 
   // LATEST STUDY CASES
@@ -1689,7 +1693,6 @@ body:not(.login-page) {
   .study-cases {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     height: 100%;
 
     p {
