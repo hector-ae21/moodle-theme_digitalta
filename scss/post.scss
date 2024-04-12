@@ -362,7 +362,30 @@ nav {
   margin-left: 1rem !important;
 }
 
-// FOOTER START - NOT APPLIED IN LOGIN // 
+.btn-outline-warning {
+  color: $accentcolor;
+  border: solid 1px $accentcolor;
+  //change the background color if the boton is hover and not change color of the icon or text into the button
+  &:hover, &:focus {
+    background-color: $accentcolor;
+    color: #fff;
+  }
+
+  //change the background color if the boton is active and not change color of the icon or text into the button
+  &:active {
+    background-color: $accentcolor;
+    color: #fff;
+  }
+
+  //change the background color if the boton is active and not change color of the icon or text into the button
+  &:active {
+    background-color: $accentcolor;
+    color: #fff;
+  }
+  
+}
+
+// FOOTER START - NOT APPLIED IN LOGIN //
 body:not(.login-page) {
   padding-bottom: 230px;
   overflow: visible;
@@ -414,7 +437,6 @@ body:not(.login-page) {
     display: flex;
     align-items: center;
   }
-
 
   #menu-menu-footer {
     display: none;
@@ -555,7 +577,7 @@ body:not(.login-page) {
 
   .login {
     max-height: 100vh;
-    overflow-Y: auto;
+    overflow-y: auto;
     float: left;
     margin: 0 auto;
     width: calc(100% - 1194px);
@@ -608,7 +630,7 @@ body:not(.login-page) {
     border-radius: 10px;
   }
 
-  .login .container .login-form form button[type=submit] {
+  .login .container .login-form form button[type="submit"] {
     background: $primarycolor;
     border: none;
     margin-bottom: 5px;
@@ -623,11 +645,11 @@ body:not(.login-page) {
     font-size: 1.1rem;
   }
 
-  .login .container .login-form form button[type=submit]:hover::after {
+  .login .container .login-form form button[type="submit"]:hover::after {
     opacity: 1;
   }
 
-  .login .container .login-form form button[type=submit]::after {
+  .login .container .login-form form button[type="submit"]::after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -671,7 +693,7 @@ body:not(.login-page) {
     margin-top: -30px;
   }
 
-  .login .container .remember-form input[type=checkbox] {
+  .login .container .remember-form input[type="checkbox"] {
     margin-top: 9px;
   }
 
@@ -680,7 +702,7 @@ body:not(.login-page) {
     font-weight: normal;
     position: absolute;
     top: 32px;
-    color: #3B3B3B;
+    color: #3b3b3b;
     margin-left: 15px;
   }
 
@@ -703,9 +725,9 @@ body:not(.login-page) {
     height: 2px;
     width: 100%;
     border-radius: 100px;
-    background: -webkit-linear-gradient(110deg, #223E5C 0%, #416280 100%);
-    background: -o-linear-gradient(110deg, #223E5C 0%, #416280 100%);
-    background: linear-gradient(-20deg, #223E5C 0%, #416280 100%);
+    background: -webkit-linear-gradient(110deg, #223e5c 0%, #416280 100%);
+    background: -o-linear-gradient(110deg, #223e5c 0%, #416280 100%);
+    background: linear-gradient(-20deg, #223e5c 0%, #416280 100%);
     bottom: -4px;
     left: 0;
     -webkit-transition: 0.3s;
@@ -788,10 +810,7 @@ body:not(.login-page) {
     }
   }
 
-
-  @media screen and (max-width: 500px),
-  (max-height: 582px) {
-
+  @media screen and (max-width: 500px), (max-height: 582px) {
     .login .logo {
       margin-top: 0;
     }
@@ -814,8 +833,6 @@ body:not(.login-page) {
       margin-top: 5px;
     }
   }
-
-
 
   /* Display 12", iPad PRO Portrait, iPad landscape */
   @media only screen and (max-width: 1024px) {
@@ -912,7 +929,7 @@ body:not(.login-page) {
       height: 45px;
     }
 
-    .login .container .login-form form button[type=submit] {
+    .login .container .login-form form button[type="submit"] {
       height: 45px;
       margin-top: 2rem;
     }
@@ -949,7 +966,7 @@ body:not(.login-page) {
       font-size: 16px;
       position: relative;
       font-weight: normal;
-      color: #918F8F;
+      color: #918f8f;
     }
 
     .forget-pass a::after {
@@ -958,9 +975,9 @@ body:not(.login-page) {
       height: 2px;
       width: 100%;
       border-radius: 100px;
-      background: -webkit-linear-gradient(110deg, #223E5C 0%, #416280 100%);
-      background: -o-linear-gradient(110deg, #223E5C 0%, #416280 100%);
-      background: linear-gradient(-20deg, #223E5C 0%, #416280 100%);
+      background: -webkit-linear-gradient(110deg, #223e5c 0%, #416280 100%);
+      background: -o-linear-gradient(110deg, #223e5c 0%, #416280 100%);
+      background: linear-gradient(-20deg, #223e5c 0%, #416280 100%);
       bottom: -4px;
       left: 0;
       -webkit-transition: 0.3s;
@@ -980,12 +997,12 @@ body:not(.login-page) {
   }
 
   // Delete Edge Toogle Input Password
-  @supports (-ms-ime-align:auto) {}
+  @supports (-ms-ime-align: auto) {
+  }
 }
 
 .loginform {
   form {
-
     input[type="text"],
     input[type="password"] {
       font-size: 18px;
@@ -1015,7 +1032,7 @@ body:not(.login-page) {
 
   #id_submitbutton {
     background: $primarycolor !important;
-    margin-right: .5rem !important;
+    margin-right: 0.5rem !important;
   }
 
   #id_cancel {
@@ -1049,8 +1066,9 @@ body:not(.login-page) {
   box-sizing: border-box !important;
   color: #ffffff !important;
   cursor: pointer !important;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol",
-    "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif !important;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji",
+    "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif !important;
   font-size: 16px !important;
   font-weight: 700 !important;
   line-height: 24px !important;
@@ -1065,19 +1083,19 @@ body:not(.login-page) {
   border: 0 !important;
 }
 
-.card>.list-group:last-child {
+.card > .list-group:last-child {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border-bottom-width: 0;
 }
 
-.card>.list-group:first-child {
+.card > .list-group:first-child {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   border-top-width: 0;
 }
 
-.card>.list-group {
+.card > .list-group {
   border-bottom: inherit;
   border-top: inherit;
 }
@@ -1139,7 +1157,7 @@ body:not(.login-page) {
   border-radius: 10px;
   box-shadow: 3px 3px 2px 0px #e2e2e2;
   transition: 0.3s ease;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 
   .input {
     font-size: 18px;
@@ -1148,7 +1166,6 @@ body:not(.login-page) {
     transition: 0.3s ease;
     border: none;
   }
-
 }
 
 .input::placeholder {
@@ -1256,7 +1273,6 @@ body:not(.login-page) {
     img:hover {
       transform: scale(1.5);
     }
-
   }
 
   .exp-card-action-btns {
@@ -1408,7 +1424,6 @@ body:not(.login-page) {
 
 // HOME-TEACHERACADEMY START //
 #page-local-dta-pages-teacheracademy-index {
-
   // GENERAL ELEMENTS
   h2 {
     margin-bottom: 1.5rem;
@@ -1452,12 +1467,12 @@ body:not(.login-page) {
     .input-search:not(:invalid) {
       width: 200px;
       cursor: text;
-      box-shadow: 0px 0px 0px #f8f8f8, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #f8f8f8, inset -1.5px -1.5px 3px #f8f8f8;
-
+      box-shadow: 0px 0px 0px #f8f8f8, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #f8f8f8,
+        inset -1.5px -1.5px 3px #f8f8f8;
     }
 
-    .input-search:focus+.icon,
-    .input-search:not(:invalid)+.icon {
+    .input-search:focus + .icon,
+    .input-search:not(:invalid) + .icon {
       pointer-events: all;
       cursor: pointer;
     }
@@ -1501,7 +1516,7 @@ body:not(.login-page) {
         color: $primarycolor !important;
       }
 
-      i{
+      i {
         -webkit-text-stroke: 2px;
         font-size: 2rem;
       }
@@ -1649,13 +1664,30 @@ body:not(.login-page) {
     .latest-cases-container {
       min-height: 100%;
     }
-  
 
-  // LATEST STUDY CASES
-  .latest-study-case {
-    overflow: hidden;
+    // LATEST STUDY CASES
+    .latest-study-case {
+      overflow: hidden;
 
-    p {
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: wrap;
+        max-width: 300px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .latest-study-case-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+    }
+
+    .latest-study-case-description {
       overflow: hidden;
       text-overflow: ellipsis;
       text-wrap: wrap;
@@ -1665,173 +1697,150 @@ body:not(.login-page) {
       line-clamp: 2;
       -webkit-box-orient: vertical;
     }
-  }
 
-  .latest-study-case-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 300px;
-  }
-
-  .latest-study-case-description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-wrap: wrap;
-    max-width: 300px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-
-  .study-cases-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .study-cases {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-
-    p {
-      margin: 0;
-    }
-  }
-
-  .study-case {
-    flex-direction: row;
-    max-width: 500px;
-  }
-
-  .study-case-img {
-    width: 80px;
-    max-width: 200px;
-    max-height: 100px;
-    min-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  .study-case-img img {
-    width: 100%;
-    max-width: 200px;
-    min-width: 200px;
-    max-height: 100px;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-
-  // LATEST EXPERIENCES
-
-  .latest-exp-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between !important;
-  }
-
-  
-
-  .experience-card {
-    max-width: 33% !important;
-  }
-
-  .experience-card-body {
-    padding: 1.25rem 0;
-    height: fit-content !important;
-
-    h4,
-    h5 {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: $primarycolor;
+    .study-cases-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    p {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 400px;
-      display: -webkit-box;
-      -webkit-line-clamp: 10;
-      line-clamp: 10;
-      -webkit-box-orient: vertical;
-      height: inherit;
-    }
+    .study-cases {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
 
-    a {
-      box-shadow: none !important;
-      text-decoration: none !important;
-      outline: none !important;
-    }
-
-
-    .experience-card-title {
-      border-bottom: 1px solid black;
-      color: $primarycolor !important;
-      padding: 0.2rem 0;
-    }
-
-    .experience-description {
-      color: #000;
-      overflow: hidden;
-    }
-  }
-
-  .latest-experiences .experience-card-img-container {
-    height: 140px;
-  }
-
-  .latest-experiences .experience-card-img {
-    object-fit: cover !important;
-    object-position: center !important;
-    transform: scale(1.5);
-
-
-    img {
-      text-align: center;
-      font-size: 12px !important;
-      color: #000;
-    }
-  }
-
-  .latest-experiences .experience-card-img:hover {
-    transform: scale(1.1);
-  }
-
-  @media screen and (max-width: 768px) {
-    #latest-panel {
-      flex-direction: column !important;
-      gap: 2rem;
-    }
-
-    .latest-experiences {
-      margin-top: 0;
-
-      .experience-card {
-        margin-bottom: 8rem;
+      p {
+        margin: 0;
       }
     }
 
     .study-case {
-      flex-direction: column;
-      margin-bottom: 2rem;
+      flex-direction: row;
+      max-width: 500px;
     }
 
     .study-case-img {
-      max-width: 100%;
+      width: 80px;
+      max-width: 200px;
+      max-height: 100px;
+      min-width: 200px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .study-case-img img {
+      width: 100%;
+      max-width: 200px;
+      min-width: 200px;
+      max-height: 100px;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    // LATEST EXPERIENCES
+
+    .latest-exp-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between !important;
+    }
+
+    .experience-card {
+      max-width: 33% !important;
+    }
+
+    .experience-card-body {
+      padding: 1.25rem 0;
+      height: fit-content !important;
+
+      h4,
+      h5 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $primarycolor;
+      }
+
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 400px;
+        display: -webkit-box;
+        -webkit-line-clamp: 10;
+        line-clamp: 10;
+        -webkit-box-orient: vertical;
+        height: inherit;
+      }
+
+      a {
+        box-shadow: none !important;
+        text-decoration: none !important;
+        outline: none !important;
+      }
+
+      .experience-card-title {
+        border-bottom: 1px solid black;
+        color: $primarycolor !important;
+        padding: 0.2rem 0;
+      }
+
+      .experience-description {
+        color: #000;
+        overflow: hidden;
+      }
+    }
+
+    .latest-experiences .experience-card-img-container {
+      height: 140px;
+    }
+
+    .latest-experiences .experience-card-img {
+      object-fit: cover !important;
+      object-position: center !important;
+      transform: scale(1.5);
 
       img {
+        text-align: center;
+        font-size: 12px !important;
+        color: #000;
+      }
+    }
+
+    .latest-experiences .experience-card-img:hover {
+      transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 768px) {
+      #latest-panel {
+        flex-direction: column !important;
+        gap: 2rem;
+      }
+
+      .latest-experiences {
+        margin-top: 0;
+
+        .experience-card {
+          margin-bottom: 8rem;
+        }
+      }
+
+      .study-case {
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+
+      .study-case-img {
         max-width: 100%;
+
+        img {
+          max-width: 100%;
+        }
       }
     }
   }
 }
-}
 
 // HOME-TEACHERACADEMY END //
-
 
 // --- EXPERIENCES START --- //
 // EXPERIENCES DASHBOARD START //
@@ -1853,12 +1862,9 @@ body:not(.login-page) {
   }
 }
 
-
-
-.experience-card,  
+.experience-card,
 #page-local-dta-pages-experiences-dashboard,
 #page-local-dta-pages-experiences-view {
-
   // TAGS IN EXPERIENCE //
   .tags-list {
     list-style: none;
@@ -1889,7 +1895,7 @@ body:not(.login-page) {
     background: #fff;
     border-radius: 10px;
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-    content: '';
+    content: "";
     height: 6px;
     left: 10px;
     position: absolute;
@@ -1902,7 +1908,7 @@ body:not(.login-page) {
     border-bottom: 13px solid transparent;
     border-left: 10px solid #eee;
     border-top: 13px solid transparent;
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     top: 0;
@@ -1930,26 +1936,11 @@ body:not(.login-page) {
     .tag-basic::after {
       display: none;
     }
-
-  }
-
-}
-
-// REACTION BUTTONS START //
-#reaction-buttons {
-  #flag-button {
-    color: $accentcolor;
-    border: solid 1px $accentcolor;
   }
 }
-
-// REACTION BUTTONS END //
 
 // EXPERIENCES VIEW START //
 #page-local-dta-pages-experiences-view {
-
-  
-
   // MY TUTORING START //
   .tutor-list .tutor {
     padding: 5px 0;
@@ -2037,8 +2028,6 @@ body:not(.login-page) {
       max-width: 100%;
     }
   }
-
-
 
   @media screen and (min-width: 1200px) {
     .tutor .experience-card-module .card-body {
@@ -2322,19 +2311,17 @@ body:not(.login-page) {
 // NEW REFLECTION FORM START //
 #page-local-dta-pages-experiences-reflection,
 #page-local-dta-pages-experiences-manage {
-
   #import-cases-modal {
     label {
       width: 100%;
     }
 
-    input:checked+label {
+    input:checked + label {
       border: 1px solid #007bff;
       border-radius: 0.25rem;
       color: white;
     }
   }
-
 
   .parent {
     height: 100%;
@@ -2382,7 +2369,7 @@ body:not(.login-page) {
 
     /*stepbar connectors*/
     #stepbar li:after {
-      content: '';
+      content: "";
       width: 100%;
       height: 2px;
       background: white;
@@ -2402,7 +2389,7 @@ body:not(.login-page) {
     /*The number of the step and the connector before it = green*/
     #stepbar li.active:before,
     #stepbar li.active:after {
-      background: #27AE60;
+      background: #27ae60;
       color: white;
     }
 
@@ -2560,7 +2547,6 @@ body:not(.login-page) {
 // REFLECTION VIEW END //
 // --- EXPERIENCES END --- //
 
-
 // --- CASES START --- //
 // CASES REPOSITORY START //
 #page-local-dta-pages-cases-repository {
@@ -2589,16 +2575,12 @@ body:not(.login-page) {
     max-width: 65%;
   }
 
-
   @media screen and (max-width: 498px) {
-
-
     .controls {
       margin-left: 18px;
     }
 
     .user-info {
-
       img {
         // User Profile Picture
         display: none;
@@ -2614,7 +2596,6 @@ body:not(.login-page) {
         display: none;
       }
     }
-
   }
 }
 
@@ -2629,21 +2610,6 @@ body:not(.login-page) {
 
 // CASES MANAGAMENT END //
 // --- CASES END --- //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // test
 
@@ -2687,12 +2653,12 @@ body:not(.login-page) {
   background-position: 50%;
   transform: scale(10, 10);
   opacity: 0;
-  transition: transform .5s, opacity 1s;
+  transition: transform 0.5s, opacity 1s;
 }
 
 .hover-image:hover::after {
   transform: scale(0, 0);
-  opacity: .3;
+  opacity: 0.3;
   transition: 0s;
 }
 
@@ -2711,7 +2677,6 @@ body:not(.login-page) {
   -ms-transform: scale(1.04);
   transform: scale(1.04);
 }
-
 
 //
 
