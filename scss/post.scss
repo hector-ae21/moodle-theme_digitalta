@@ -364,16 +364,11 @@ nav {
 
 .btn-outline-warning {
   color: $accentcolor;
-  border: solid 1px $accentcolor;
+  border: solid 1px $accentcolor !important;
   //change the background color if the boton is hover and not change color of the icon or text into the button
-  &:hover, &:focus {
-    background-color: $accentcolor;
-    color: #fff;
-  }
-
-  .active {
-    background-color: $accentcolor;
-    color: #fff;
+  &:hover, &:focus, &.active {
+    background-color: $accentcolor !important;
+    color: #fff !important;
   }
   
 }
