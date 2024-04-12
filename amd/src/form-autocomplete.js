@@ -1078,9 +1078,9 @@ define([
                 noSelectionString: noSelectionString,
                 templates: $.extend({
                         input: 'core/form_autocomplete_input',
-                        items: 'theme_dta/form_autocomplete_selection_items',
+                        items: 'core/form_autocomplete_selection_items',
                         layout: 'core/form_autocomplete_layout',
-                        selection: 'theme_dta/form_autocomplete_selection',
+                        selection: 'core/form_autocomplete_selection',
                         suggestions: 'core/form_autocomplete_suggestions',
                     }, templateOverrides),
             };
