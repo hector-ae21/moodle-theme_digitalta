@@ -1413,6 +1413,7 @@ body:not(.login-page) {
   h2 {
     margin-bottom: 1.5rem;
     margin-right: 1rem;
+    color: $secondarycolor !important;
   }
 
   h4 {
@@ -1495,7 +1496,23 @@ body:not(.login-page) {
   // FEATURED EXPERIENCES CAROUSEL
   .carouselExperiences {
     .slick-arrow {
+      button {
+        background-color: transparent !important;
+        color: $primarycolor !important;
+      }
 
+      i{
+        -webkit-text-stroke: 2px;
+        font-size: 2rem;
+      }
+
+      :focus {
+        outline: none;
+      }
+    }
+
+    .slick-list {
+      border-radius: 1.5rem;
     }
 
     .card-img-top {
