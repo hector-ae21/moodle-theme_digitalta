@@ -1493,106 +1493,141 @@ body:not(.login-page) {
   }
 
   // FEATURED EXPERIENCES CAROUSEL
-  .summary-carousel {
-    height: 400px !important;
+  .carouselExperiences {
+    .slick-arrow {
 
-    span {
-      text-shadow: 1px 2px #00000077;
-      color: #e9e9e1;
     }
 
-    .container {
-      height: 85%;
-      max-height: 417px;
-      width: 100%;
-      border-radius: 1em;
-      overflow: hidden;
-      box-shadow: 0 10px 20px #dbdbdb;
-      font-family: sans-serif;
+    .card-img-top {
+      height: 100px;
+      object-fit: cover;
     }
 
-    .palette {
-      display: flex;
-      height: 95%;
-      width: 100%;
-    }
+    .card-body {
+      height: 275px;
 
-    .color {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 600;
-      letter-spacing: 1px;
-      transition: flex 0.1s linear;
-    }
-
-    a {
-      flex: 1;
-    }
-
-    a:hover {
-      flex: 10;
-    }
-
-    .color span {
-      opacity: 0;
-      transition: opacity 0.1s linear;
-      border-radius: 0.5em;
-      padding: 0.5em 1em;
-      backdrop-filter: blur(100px);
-      min-height: 70%;
-      max-height: 70%;
-      overflow: hidden;
+      h5 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: wrap;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
 
       p {
-        margin-top: auto;
-        margin-bottom: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: wrap;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        line-clamp: 8;
+        -webkit-box-orient: vertical;
       }
     }
-
-    .color {
-      background-size: cover !important;
-    }
-
-    .color:nth-child(1) {
-      background: url("https://digitalta.eu/wp-content/uploads/2023/12/portada.png") no-repeat center center;
-      /*background: #264653;*/
-    }
-
-    .color:nth-child(2) {
-      background: url("https://digitalta.eu/wp-content/uploads/2023/10/Erasmus-Days.png") no-repeat center center;
-      /*background: #2a9d8f;*/
-    }
-
-    .color:nth-child(3) {
-      background: url("https://digitalta.eu/wp-content/uploads/2023/09/Jiri-Kropac.png") no-repeat center center;
-      /*background: #e9c46a;*/
-    }
-
-    .color:nth-child(4) {
-      background: url("https://digitalta.eu/wp-content/uploads/2023/06/IMG_6148-1-1.jpg") no-repeat center center;
-      /*background: #f4a261;*/
-    }
-
-    .color:nth-child(5) {
-      background: url("https://digitalta.eu/wp-content/uploads/2022/12/cover-uneatlantico.jpg") no-repeat center center;
-      /*background: #e76f51;*/
-    }
-
-    .color:hover {
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    }
-
-    .color:hover span {
-      opacity: 1;
-    }
-
-    .h-exp-title {
-      opacity: 1;
-    }
   }
+
+  // .summary-carousel {
+  //   height: 400px !important;
+
+  //   span {
+  //     text-shadow: 1px 2px #00000077;
+  //     color: #e9e9e1;
+  //   }
+
+  //   .container {
+  //     height: 85%;
+  //     max-height: 417px;
+  //     width: 100%;
+  //     border-radius: 1em;
+  //     overflow: hidden;
+  //     box-shadow: 0 10px 20px #dbdbdb;
+  //     font-family: sans-serif;
+  //   }
+
+  //   .palette {
+  //     display: flex;
+  //     height: 95%;
+  //     width: 100%;
+  //   }
+
+  //   .color {
+  //     height: 100%;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     color: white;
+  //     font-weight: 600;
+  //     letter-spacing: 1px;
+  //     transition: flex 0.1s linear;
+  //   }
+
+  //   a {
+  //     flex: 1;
+  //   }
+
+  //   a:hover {
+  //     flex: 10;
+  //   }
+
+  //   .color span {
+  //     opacity: 0;
+  //     transition: opacity 0.1s linear;
+  //     border-radius: 0.5em;
+  //     padding: 0.5em 1em;
+  //     backdrop-filter: blur(100px);
+  //     min-height: 70%;
+  //     max-height: 70%;
+  //     overflow: hidden;
+
+  //     p {
+  //       margin-top: auto;
+  //       margin-bottom: auto;
+  //     }
+  //   }
+
+  //   .color {
+  //     background-size: cover !important;
+  //   }
+
+  //   .color:nth-child(1) {
+  //     background: url("https://digitalta.eu/wp-content/uploads/2023/12/portada.png") no-repeat center center;
+  //     /*background: #264653;*/
+  //   }
+
+  //   .color:nth-child(2) {
+  //     background: url("https://digitalta.eu/wp-content/uploads/2023/10/Erasmus-Days.png") no-repeat center center;
+  //     /*background: #2a9d8f;*/
+  //   }
+
+  //   .color:nth-child(3) {
+  //     background: url("https://digitalta.eu/wp-content/uploads/2023/09/Jiri-Kropac.png") no-repeat center center;
+  //     /*background: #e9c46a;*/
+  //   }
+
+  //   .color:nth-child(4) {
+  //     background: url("https://digitalta.eu/wp-content/uploads/2023/06/IMG_6148-1-1.jpg") no-repeat center center;
+  //     /*background: #f4a261;*/
+  //   }
+
+  //   .color:nth-child(5) {
+  //     background: url("https://digitalta.eu/wp-content/uploads/2022/12/cover-uneatlantico.jpg") no-repeat center center;
+  //     /*background: #e76f51;*/
+  //   }
+
+  //   .color:hover {
+  //     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  //   }
+
+  //   .color:hover span {
+  //     opacity: 1;
+  //   }
+
+  //   .h-exp-title {
+  //     opacity: 1;
+  //   }
+  // }
 
   // LATEST
   #latest-panel {
@@ -1681,11 +1716,18 @@ body:not(.login-page) {
     justify-content: space-between !important;
   }
 
+  
+
+  .experience-card {
+    max-width: 33% !important;
+  }
+
   .experience-card-body {
     padding: 1.25rem 0;
     height: 200px !important;
 
-    h4 {
+    h4,
+    h5 {
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -1775,7 +1817,9 @@ body:not(.login-page) {
 
 // --- EXPERIENCES START --- //
 // EXPERIENCES DASHBOARD START //
-.experience-card  {
+.experience-card  
+#page-local-dta-pages-experiences-dashboard,
+#page-local-dta-pages-experiences-view {
 
   // TAGS IN EXPERIENCE //
   .tags-list {
@@ -1852,8 +1896,6 @@ body:not(.login-page) {
   }
 
 }
-
-// EXPERIENCES DASHBOARD END //
 
 // EXPERIENCES VIEW START //
 #page-local-dta-pages-experiences-view {
