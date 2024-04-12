@@ -1817,82 +1817,76 @@ body:not(.login-page) {
 
 // --- EXPERIENCES START --- //
 // EXPERIENCES DASHBOARD START //
-.experience-card  
-#page-local-dta-pages-experiences-dashboard,
-#page-local-dta-pages-experiences-view {
+// TAGS IN EXPERIENCE //
+.tags-list {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  font-size: 9px;
+}
 
-  // TAGS IN EXPERIENCE //
-  .tags-list {
-    list-style: none;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    font-size: 9px;
-  }
+.tags-list li {
+  float: left;
+}
 
-  .tags-list li {
-    float: left;
-  }
+.tag-basic {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
 
+.tag-basic::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag-basic::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag-basic:hover {
+  background-color: $accentcolor;
+  color: white !important;
+}
+
+.tag-basic:hover::after {
+  border-left-color: $accentcolor;
+}
+
+@media screen and (max-width: 576px) {
   .tag-basic {
-    background: #eee;
-    border-radius: 3px 0 0 3px;
-    color: #999;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
-    padding: 0 20px 0 23px;
-    position: relative;
-    text-decoration: none;
-    -webkit-transition: color 0.2s;
+    background-color: transparent;
+    padding: 0 5px 0 20px;
   }
 
   .tag-basic::before {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-    content: '';
-    height: 6px;
-    left: 10px;
-    position: absolute;
-    width: 6px;
-    top: 10px;
+    background-color: $accentcolor;
   }
 
   .tag-basic::after {
-    background: #fff;
-    border-bottom: 13px solid transparent;
-    border-left: 10px solid #eee;
-    border-top: 13px solid transparent;
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .tag-basic:hover {
-    background-color: $accentcolor;
-    color: white !important;
-  }
-
-  .tag-basic:hover::after {
-    border-left-color: $accentcolor;
-  }
-
-  @media screen and (max-width: 576px) {
-    .tag-basic {
-      background-color: transparent;
-      padding: 0 5px 0 20px;
-    }
-
-    .tag-basic::before {
-      background-color: $accentcolor;
-    }
-
-    .tag-basic::after {
-      display: none;
-    }
-
+    display: none;
   }
 
 }
