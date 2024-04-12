@@ -371,14 +371,7 @@ nav {
     color: #fff;
   }
 
-  //change the background color if the boton is active and not change color of the icon or text into the button
-  &:active {
-    background-color: $accentcolor;
-    color: #fff;
-  }
-
-  //change the background color if the boton is active and not change color of the icon or text into the button
-  &:active {
+  .active {
     background-color: $accentcolor;
     color: #fff;
   }
