@@ -1724,12 +1724,13 @@ body:not(.login-page) {
 
   .experience-card-body {
     padding: 1.25rem 0;
-    height: 200px !important;
+    height: fit-content !important;
 
     h4,
     h5 {
       overflow: hidden;
       text-overflow: ellipsis;
+      color: $primarycolor;
     }
 
     p {
@@ -1740,6 +1741,7 @@ body:not(.login-page) {
       -webkit-line-clamp: 10;
       line-clamp: 10;
       -webkit-box-orient: vertical;
+      height: inherit;
     }
 
     a {
