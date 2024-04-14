@@ -1209,6 +1209,14 @@ body:not(.login-page) {
   }
 }
 
+//GENERAL CARDS
+.card-action-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
 // POST INPUT END //
 
 // CARD LIST START //
@@ -1262,14 +1270,8 @@ body:not(.login-page) {
       transform: scale(1.5);
     }
   }
-
-  .exp-card-action-btns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-  }
 }
+
 
 @media screen and (max-width: 992px) {
   .card-list {
@@ -1322,8 +1324,6 @@ body:not(.login-page) {
     }
   }
 }
-
-// CARD LIST START //
 
 // BREAD CRUMBS START //
 .breadcrumb {
