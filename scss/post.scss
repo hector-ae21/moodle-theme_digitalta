@@ -1728,6 +1728,17 @@ body:not(.login-page) {
 
     // LATEST EXPERIENCES
 
+    .latest-experiences-img-container {
+      min-height: 215px;
+      max-height: 215px;
+    }
+
+    .latest-experiences-img {
+      min-height: 300px;
+      object-fit: cover;
+      object-position: center;
+    }
+
     .latest-exp-container {
       display: flex;
       flex-direction: column;
