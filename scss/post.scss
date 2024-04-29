@@ -30,6 +30,14 @@
   font-display: swap;
 }
 
+:root {
+  --border-radius: 0.5rem;
+  --bubble-top-right: var(--border-radius) 0px var(--border-radius) var(--border-radius); 
+  --bubble-top-left: 0px var(--border-radius) var(--border-radius) var(--border-radius); 
+  --bubble-bottom-right: var(--border-radius) var(--border-radius) 0px var(--border-radius);
+  --bubble-bottom-left: var(--border-radius) var(--border-radius) var(--border-radius) 0px;
+}
+
 // GENERAL STYLES START //
 
 // GENERAL
