@@ -2696,3 +2696,147 @@ body:not(.login-page) {
   display: flex;
   align-items: center;
 }
+
+
+// Import Resources Modal START //
+
+.modal {
+  font-family: 'Inter', sans-serif;
+
+  button:focus {
+    outline: none;
+    box-shadow: none !important;
+    border: none;
+  }
+
+  .modal-dialog:focus {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .modal-header {
+    color: $secondarycolor;
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-transform: uppercase;
+    align-items: center;
+    border-bottom: none;
+
+    .close {
+      color: $dta-danger-color;
+      font-size: 2rem;
+    }
+  }
+
+  .modal-body {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #res-import-form {
+    .form-group.label-extra {
+      align-items: end;
+      justify-content: start;
+      gap: 8px;
+    }
+
+    label {
+      color: $dta-white;
+      background-color: $dta-secondary-color;
+      border-radius: 10px 10px 0 0;
+      padding: 0 8px;
+      margin-bottom: 0;
+    }
+
+    p {
+      color: $dta-tertiary-color;
+      font-style: italic;
+      margin-bottom: 0;
+      margin-left: 8px;
+    }
+
+
+
+    .form-control {
+      --border-radius: 10px;
+      border-radius: var(--bubble-top-left);
+    }
+
+    .form-control:focus {
+      box-shadow: none !important;
+      border: 2px solid $dta-primary-color !important;
+    }
+  
+    .tags-input {
+
+      .tags-container {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      max-width: 300px;
+      min-width: 300px;
+
+      background-image:
+        linear-gradient(45deg, transparent 50%,$dta-black 50%),
+        linear-gradient(135deg, $dta-black 50%, transparent 50%);
+      background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px);
+      background-size:
+        5px 5px,
+        5px 5px;
+      background-repeat: no-repeat;
+
+      option:checked {
+        background-color: $dta-soft-hover-color;
+        color: $dta-black;
+      }
+    }
+
+    select:focus {
+      background-image:
+        linear-gradient(45deg, $dta-black 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, $dta-black 50%);
+      background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em;
+      background-size:
+        5px 5px,
+        5px 5px;
+      background-repeat: no-repeat;
+      border-color: $dta-secondary-color;
+      outline: 0;
+    }
+
+    select::-ms-expand {
+      display: none;
+    }
+  }
+
+
+  button {
+    --border-radius: 10px;
+      border-radius: var(--bubble-bottom-right);
+  }
+
+  .modal-footer {
+    border: none;
+  }
+}
+
+// Import Resources Modal END //
+
+.tag-normal {
+  background-color: $dta-soft-tertiary-color;
+  color: $dta-secondary-color;
+  padding: 2px 8px;
+  border-radius: 50px;
+  margin-right: 0.5rem;
+}
