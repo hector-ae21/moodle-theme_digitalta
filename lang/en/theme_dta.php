@@ -71,8 +71,8 @@ $string['config::profile_url_desc'] = 'Custom profile page URL';
 
 
 $string['navbar::teacheracademy'] = 'Teacher Academy';
+$string['navbar::experiences'] = 'Learning Community';
+$string['navbar::ourcases'] = 'Study cases';
+$string['navbar::resourcerepository'] = 'Resource Repository';
 $string['navbar::themes'] = 'Themes';
-$string['navbar::experiences'] = 'Experiences';
-$string['navbar::ourcases'] = 'Our cases';
-$string['navbar::resourcerepository'] = 'Resources';
 $string['navbar::siteadmin'] = 'Administration';

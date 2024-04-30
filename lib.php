@@ -136,12 +136,6 @@ function get_sections_details()
             'node_key' => 'home',
             'link' => get_config('theme_dta', 'navbar_teacheracademy_url'),
         ],
-        'themes' => [
-            'label' => get_string('navbar::themes', 'theme_dta'),
-            'icon' => 't/tags',
-            'node_key' => 'themes',
-            'link' => get_config('theme_dta', 'navbar_themes_url'),
-        ],
         'experiences' => [
             'label' => get_string('navbar::experiences', 'theme_dta'),
             'icon' => 'i/courseevent',
@@ -150,15 +144,21 @@ function get_sections_details()
         ],
         'cases' => [
             'label' => get_string('navbar::ourcases', 'theme_dta'),
-            'icon' => 'i/open',
+            'icon' => null,
             'node_key' => 'ourcases',
             'link' => get_config('theme_dta', 'navbar_ourcases_url'),
         ],
         'resourcerepository' => [
             'label' => get_string('navbar::resourcerepository', 'theme_dta'),
-            'icon' => 'i/repository',
+            'icon' => 'i/open',
             'node_key' => 'resourcerepository',
             'link' => get_config('theme_dta', 'navbar_resourcerepository_url'),
+        ],
+        'themes' => [
+            'label' => get_string('navbar::themes', 'theme_dta'),
+            'icon' => 't/tags',
+            'node_key' => 'themes',
+            'link' => get_config('theme_dta', 'navbar_themes_url'),
         ],
     ];
 }

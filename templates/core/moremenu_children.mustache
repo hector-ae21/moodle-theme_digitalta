@@ -103,6 +103,9 @@
                         {{#icon.pix}}
                             {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
                         {{/icon.pix}}
+                        {{^icon.pix}}
+                            <i class="icon fa fa-book fa-fw"></i>
+                        {{/icon.pix}}
                     {{/key}}
                     {{{text}}}
                 </a>
