@@ -2,32 +2,46 @@
 // Font imports
 @font-face {
   font-family: "Amiri";
-  src: url("../fonts/Amiri-Bold-Italic.ttf") format("truetype");
+  src: url([[font:theme|Amiri-Bold-Italic.ttf]]) format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Volkhov";
-  src: url("../fonts/Volkhov-Bold-Italic.ttf") format("truetype");
+  src: url([[font:theme|Volkhov-Bold-Italic.ttf]]) format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Piazzolla Thin";
-  src: url("../fonts/PiazzollaThinItalic-ThinItalic.ttf") format("truetype");
+  src: url([[font:theme|PiazzollaThinItalic-ThinItalic.ttf]]) format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Piazzolla";
-  src: url("../fonts/Piazzolla-ThinItalic.ttf") format("truetype");
+  src: url([[font:theme|Piazzolla-ThinItalic.ttf]]) format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Piazzolla";
-  src: url("../fonts/Piazzolla-Thin.ttf") format("truetype");
+  src: url([[font:theme|Piazzolla-Thin.ttf]]) format("truetype");
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url([[font:theme|Raleway-VariableFont_wght.ttf]]) format("truetype-variations");
+  font-display: swap;
+  font-variation-settings: "wght" 400, "wdth" 700;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url([[font:theme|Oswald-VariableFont_wght.ttf]]) format("truetype-variations");
+  font-display: swap;
+  font-variation-settings: "wght" 400, "wdth" 700;
 }
 
 :root {
@@ -97,6 +111,32 @@ h1 {
 
 a.dropdown-toggle:focus {
   border-radius: 50px;
+}
+
+// DTA CUSTOM ELEMENTS
+.dta-inner {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dta-highlighted {
+  color: #1382c5;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dta-subtitle {
+  color: $dta-secondary-color !important;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.dta-title {
+  color: $dta-secondary-color !important;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1em;
+  text-transform: uppercase;
 }
 
 // NAV BAR
@@ -1420,161 +1460,7 @@ body:not(.login-page) {
 // GENERAL STYLES END //
 
 // HOME-TEACHERACADEMY START //
-#page-local-dta-pages-teacheracademy-index {
-  // GENERAL ELEMENTS
-  h1 {
-    color: $dta-secondary-color !important;
-  }
 
-  h2 {
-    margin-bottom: 1.5rem;
-    margin-right: 1rem;
-    color: $dta-secondary-color !important;
-  }
-
-  .dta-subtitle {
-    color: $dta-secondary-color !important;
-  }
-
-  // THEMES
-  .theme-search {
-    .input-search-container {
-      position: relative;
-      --size-button: 30px;
-      color: primary;
-      top: 7px;
-    }
-
-    .input-search {
-      padding-left: var(--size-button) !important;
-      height: var(--size-button);
-      font-size: 15px;
-      border: none;
-      color: #000;
-      outline: none;
-      width: var(--size-button);
-      transition: all ease 0.3s;
-      background-color: #ffffff;
-      border-radius: 50px;
-      border-bottom: 1px solid #00304966;
-      cursor: pointer;
-    }
-
-    .input-search:hover {
-      background-color: #1382c511;
-    }
-
-    .input-search:focus,
-    .input-search:not(:invalid) {
-      width: 200px;
-      cursor: text;
-      box-shadow: 0px 0px 0px #f8f8f8, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #f8f8f8,
-        inset -1.5px -1.5px 3px #f8f8f8;
-    }
-
-    .input-search:focus + .icon,
-    .input-search:not(:invalid) + .icon {
-      pointer-events: all;
-      cursor: pointer;
-    }
-
-    .input-search-container .icon {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      color: $secondarycolor;
-      top: -8px;
-      left: -2px;
-      padding: 8px;
-      pointer-events: none;
-    }
-
-    .input-search-container .icon svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  // TAGS IN HOME-TEACHER ACADEMY //
-  .themes {
-    height: 250px;
-
-    .theme {
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .theme:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  .experience-name {
-    color: $dta-primary-color;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-
-  .home-case-card {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 16px;
-        position: relative;
-        border-radius: 10px;
-        border: 1px solid;
-        border-color: #1382c533;
-    
-    .title-container {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        position: absolute;
-        top: -14px;
-        left: 14px;
-        background-color: #ffffff;
-
-        h5 {
-          font-family: "Oswald", sans-serif;
-          font-weight: bold;
-          color: $dta-primary-color;
-          font-size: 18px;
-          position: relative;
-          margin-top: -1px;
-          letter-spacing: 0;
-          line-height: normal;
-      }
-    }
-    
-    .description-container {
-        font-family: "Inter", sans-serif;
-        color: $dta-secondary-color !important;
-        color: transparent;
-        font-size: 15px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        position: relative;
-        margin-top: -1px;
-        letter-spacing: 0;
-        line-height: normal;
-
-        a {
-          text-decoration: none;
-        }
-    }
-  
-  }
-
-  
-}
 
 // HOME-TEACHERACADEMY END //
 

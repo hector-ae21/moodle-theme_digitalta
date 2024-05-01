@@ -52,7 +52,11 @@ function theme_dta_get_main_scss_content($theme)
     // Pre CSS - this is loaded AFTER any prescss from the setting but before the main scss.                                        
     $pre = file_get_contents($CFG->dirroot . '/theme/dta/scss/pre.scss');
     // Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.                                    
-    $post = file_get_contents($CFG->dirroot . '/theme/dta/scss/post.scss');
+    $post = "";
+    $post_filenames = glob($CFG->dirroot . '/theme/dta/scss/post-*.scss');
+    foreach ($post_filenames as $post_filename) {
+        $post .= file_get_contents($post_filename);
+    }
 
     // Combine them together.                                                                                                       
     return $pre . "\n" . $scss . "\n" . $post;
