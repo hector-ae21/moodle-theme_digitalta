@@ -1,0 +1,60 @@
+#page-local-dta-pages-tags-index {
+
+    font-family: 'Raleway', sans-serif;
+
+    // GENERAL ELEMENTS
+    h2 {
+        font-weight: bold;
+    }
+
+    h3 {
+        color: $dta-primary-color;
+        font-family: "Oswald", sans-serif;
+        font-size: 1.3em;
+    }
+
+    // THEMES
+    .themes {
+        min-height: 250px;
+        .theme {            
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            .theme-overlay {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+        }
+        .theme:hover {
+            transform: scale(1.1);
+            z-index: 1;
+        }
+    }
+
+    // TAGS
+    .tags {
+        .tag {
+            cursor: pointer;
+        }
+    }
+
+    // EXPERIENCES
+    .experiences {
+        .experience {
+            .experience-icon {
+                object-fit: cover;
+            }
+            .experience-overlay {
+                left: 3em;
+                top: 1em;
+                transform: translate(-43%, -49%) !important;
+            }
+            .experience-name {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
