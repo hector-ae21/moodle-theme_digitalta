@@ -58,6 +58,54 @@
         }
     }
 
+    // CASES
+    .home-case-card {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 16px;
+        position: relative;
+        border-radius: 10px;
+        border: 1px solid;
+        border-color: #1382c533;
+    
+        .title-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            position: absolute;
+            top: -14px;
+            left: 14px;
+            background-color: $dta-white;
+
+            h5 {
+                font-family: "Oswald", sans-serif;
+                font-weight: bold;
+                color: $dta-primary-color;
+                font-size: 18px;
+                position: relative;
+                margin-top: -1px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+        }
+
+        .description-container {
+            font-family: "Inter", sans-serif;
+            color: $dta-secondary-color !important;
+            color: transparent;
+            font-size: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+    
+    }
+
+
     //TODO: Pasar a otras vistas (todo menos el index)
     .mentor-card-vertical {
         display: flex;
