@@ -58,3 +58,16 @@
         }
     }
 }
+
+//TODO: Pasar a otras vistas (todo menos el index)
+#page-local-dta-pages-teacheracademy-index {
+    .theme-tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dta-white;
+        background-color: $dta-accent-color;
+        border-radius: 50px;
+        padding: 0px 8px;
+    }
+}
