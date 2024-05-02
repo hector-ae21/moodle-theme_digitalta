@@ -2464,6 +2464,15 @@ body:not(.login-page) {
   font-size: 14px;
 }
 
+.tag-secondary {
+  background-color: $dta-secondary-color;
+  color: $dta-white;
+  padding: 2px 8px;
+  border-radius: 50px;
+  margin-right: 0.5rem;
+  font-size: 14px;
+}
+
 // --- RESOURCES REPOSITORY START --- //
 
 .bg-repository-card {
@@ -2471,10 +2480,5 @@ body:not(.login-page) {
   border-radius: 18px;
 }
 
-#filterOptions {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
+
+

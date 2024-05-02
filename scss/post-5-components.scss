@@ -1,0 +1,28 @@
+.dta-primary-button {
+    border-radius: 50px;
+    color: $dta-white;
+    background-color: $dta-primary-color;
+    outline: none;
+    padding: 2px 8px;
+    border: none;
+
+    i {
+        margin-right: 8px;
+    }
+}
+
+.dta-primary-button:focus, .dta-primary-button:active, .dta-primary-button:hover {
+    background-color: $dta-white;
+    color: $dta-primary-color;
+    border: 1px solid $dta-primary-color;
+    border-radius: 50px;
+}
+
+.searchbar-icon-button {
+    background-color: $dta-secondary-color;
+    color: $dta-white;
+    border: none;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 0 10px 10px 0;
+}
