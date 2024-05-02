@@ -46,8 +46,8 @@
 
 :root {
   --border-radius: 0.5rem;
-  --bubble-top-right: var(--border-radius) 0px var(--border-radius) var(--border-radius); 
-  --bubble-top-left: 0px var(--border-radius) var(--border-radius) var(--border-radius); 
+  --bubble-top-right: var(--border-radius) 0px var(--border-radius) var(--border-radius);
+  --bubble-top-left: 0px var(--border-radius) var(--border-radius) var(--border-radius);
   --bubble-bottom-right: var(--border-radius) var(--border-radius) 0px var(--border-radius);
   --bubble-bottom-left: var(--border-radius) var(--border-radius) var(--border-radius) 0px;
 }
@@ -413,12 +413,15 @@ nav {
 .btn-outline-warning {
   color: $accentcolor;
   border: solid 1px $accentcolor !important;
+
   //change the background color if the boton is hover and not change color of the icon or text into the button
-  &:hover, &:focus, &.active {
+  &:hover,
+  &:focus,
+  &.active {
     background-color: $accentcolor !important;
     color: #fff !important;
   }
-  
+
 }
 
 // FOOTER START - NOT APPLIED IN LOGIN //
@@ -846,7 +849,8 @@ body:not(.login-page) {
     }
   }
 
-  @media screen and (max-width: 500px), (max-height: 582px) {
+  @media screen and (max-width: 500px),
+  (max-height: 582px) {
     .login .logo {
       margin-top: 0;
     }
@@ -1033,12 +1037,12 @@ body:not(.login-page) {
   }
 
   // Delete Edge Toogle Input Password
-  @supports (-ms-ime-align: auto) {
-  }
+  @supports (-ms-ime-align: auto) {}
 }
 
 .loginform {
   form {
+
     input[type="text"],
     input[type="password"] {
       font-size: 18px;
@@ -1119,19 +1123,19 @@ body:not(.login-page) {
   border: 0 !important;
 }
 
-.card > .list-group:last-child {
+.card>.list-group:last-child {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border-bottom-width: 0;
 }
 
-.card > .list-group:first-child {
+.card>.list-group:first-child {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   border-top-width: 0;
 }
 
-.card > .list-group {
+.card>.list-group {
   border-bottom: inherit;
   border-top: inherit;
 }
@@ -1487,6 +1491,7 @@ body:not(.login-page) {
 .experience-card,
 #page-local-dta-pages-experiences-dashboard,
 #page-local-dta-pages-experiences-view {
+
   // TAGS IN EXPERIENCE //
   .tags-list {
     list-style: none;
@@ -1563,6 +1568,7 @@ body:not(.login-page) {
 
 // EXPERIENCES VIEW START //
 #page-local-dta-pages-experiences-view {
+
   // MY TUTORING START //
   .tutor-list .tutor {
     padding: 5px 0;
@@ -1636,6 +1642,7 @@ body:not(.login-page) {
     overflow-x: hidden;
     max-height: 300px;
   }
+
   // RESOURCES END //
 
   // Reflection elements inside  Reflectio Manager
@@ -1938,7 +1945,7 @@ body:not(.login-page) {
       width: 100%;
     }
 
-    input:checked + label {
+    input:checked+label {
       border: 1px solid #007bff;
       border-radius: 0.25rem;
       color: white;
@@ -2381,7 +2388,7 @@ body:not(.login-page) {
       box-shadow: none !important;
       border: 2px solid $dta-primary-color !important;
     }
-  
+
     .tags-input {
 
       .tags-container {
@@ -2390,7 +2397,7 @@ body:not(.login-page) {
       }
     }
 
-    
+
 
     select {
       -webkit-appearance: none;
@@ -2399,7 +2406,7 @@ body:not(.login-page) {
       min-width: 300px;
 
       background-image:
-        linear-gradient(45deg, transparent 50%,$dta-black 50%),
+        linear-gradient(45deg, transparent 50%, $dta-black 50%),
         linear-gradient(135deg, $dta-black 50%, transparent 50%);
       background-position:
         calc(100% - 20px) calc(1em + 2px),
@@ -2438,7 +2445,7 @@ body:not(.login-page) {
 
   button {
     --border-radius: 10px;
-      border-radius: var(--bubble-bottom-right);
+    border-radius: var(--bubble-bottom-right);
   }
 
   .modal-footer {
@@ -2454,4 +2461,19 @@ body:not(.login-page) {
   padding: 2px 8px;
   border-radius: 50px;
   margin-right: 0.5rem;
+}
+
+// --- RESOURCES REPOSITORY START --- //
+
+.bg-repository-card {
+  background-color: #eeeeee;
+  border-radius: 18px;
+}
+
+#filterOptions {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
