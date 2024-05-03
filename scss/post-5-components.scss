@@ -34,13 +34,18 @@
         border-bottom: 1px solid $dta-secondary-color !important;
         color: $dta-secondary-color  !important;
         cursor: pointer;
+        .form-check-label{
+            background-color: transparent !important;
+            color: #062f4a !important;
+        }
     }
 
     .form-check:focus {
         background-color: $dta-soft-hover-color !important;
     }
 
-    input[type="checkbox"] {
-        display: none;
-    }
+    // input[type="checkbox"] {
+    //     display: none;
+    // }
+
 }
