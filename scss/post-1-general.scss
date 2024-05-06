@@ -2473,6 +2473,20 @@ body:not(.login-page) {
   font-size: 14px;
 }
 
+// START THEMES // 
+// Theme Tags //
+.theme-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $dta-white;
+  background-color: $dta-accent-color;
+  border-radius: 50px;
+  padding: 0px 8px;
+  width: fit-content;
+}
+// END THEMES //
+
 // --- RESOURCES REPOSITORY START --- //
 
 .bg-repository-card {
