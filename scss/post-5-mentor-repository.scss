@@ -1,8 +1,14 @@
 #page-local-dta-pages-mentors-index {
+    #region-main {
+        width: 83.33333%; // col-10
+        margin: auto;
+    }
+
     h1 {
         text-transform: capitalize !important;
         margin-bottom: 30px;
         font-weight: 400 !important;
+        margin-left: 0;
     }
 
     .searchbar {
