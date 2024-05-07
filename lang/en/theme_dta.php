@@ -1,16 +1,30 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * dta theme
+ * Theme strings
  *
- * @package    theme_dta
- * @copyright  2024 ADSDR-FUNIBER Scepter Team
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   local_dta
+ * @copyright 2024 ADSDR-FUNIBER Scepter Team
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-
+// Theme settings
 $string['advancedsettings'] = 'Advanced settings';
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
@@ -29,8 +43,7 @@ $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS co
 $string['region-side-pre'] = 'Right';
 $string['showfooter'] = 'Show footer';
 
-
-
+// Login
 $string['login::username'] = 'Username';
 $string['login::usernameemail'] = 'Email';
 $string['login::forgotpassword'] = 'Forgot password?';
@@ -38,7 +51,7 @@ $string['login::login'] = 'Login';
 $string['login::signup_link'] = 'Sign up';
 $string['login::signup_flavour_text'] = 'No account?';
 
-//Config
+// Config
 $string['config::primarycolor'] = 'Primary Color';
 $string['config::primarycolor_desc'] = 'Select the primary color for the theme.';
 $string['config::secondarycolor'] = 'Secondary Color';
@@ -59,8 +72,8 @@ $string['config::themes_url'] = 'Themes URL';
 $string['config::themes_url_desc'] = 'Themes page URL';
 $string['config::navbar_experiences_url'] = 'Experiences URL';
 $string['config::navbar_experiences_url_desc'] = 'Experiences page URL';
-$string['config::navbar_ourcases_url'] = 'Our cases URL';
-$string['config::navbar_ourcases_url_desc'] = 'Our cases page URL';
+$string['config::navbar_cases_url'] = 'Our cases URL';
+$string['config::navbar_cases_url_desc'] = 'Our cases page URL';
 $string['config::navbar_resourcerepository_url'] = 'Resource repository URL';
 $string['config::navbar_resourcerepository_url_desc'] = 'Resource repository page URL';
 $string['config::custom_usermenu'] = 'Active custom user menu';
@@ -68,11 +81,10 @@ $string['config::custom_usermenu_desc'] = 'Active custom dropdown user menu';
 $string['config::profile_url'] = 'Custom profile URL';
 $string['config::profile_url_desc'] = 'Custom profile page URL';
 
-
-
+// Navbar
 $string['navbar::teacheracademy'] = 'Teacher Academy';
 $string['navbar::experiences'] = 'Learning Community';
-$string['navbar::ourcases'] = 'Study cases';
+$string['navbar::cases'] = 'Study cases';
 $string['navbar::resourcerepository'] = 'Resource Repository';
 $string['navbar::themes'] = 'Themes';
 $string['navbar::siteadmin'] = 'Administration';

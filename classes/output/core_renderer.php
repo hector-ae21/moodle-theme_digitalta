@@ -28,6 +28,12 @@ namespace theme_dta\output;
 
 defined('MOODLE_INTERNAL') || die;
 
+/**
+ * This class is used to render the core output
+ *
+ * @copyright 2024 ADSDR-FUNIBER Scepter Team
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class core_renderer extends \theme_boost\output\core_renderer {
 
     /**
