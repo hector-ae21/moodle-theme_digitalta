@@ -15,24 +15,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * dta theme
+ * Theme version
  *
  * @package    theme_dta
  * @copyright  2024 ADSDR-FUNIBER Scepter Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
-// This is the version of the plugin.
-$plugin->version = '2024050201';
-
+$plugin->version = '2024050700';
 $plugin->component = 'theme_dta';
-
-$plugin ->requires = '2016052300'; // Requires this Moodle version
-
-// This is a list of plugins, this plugin depends on (and their versions).
+$plugin->requires = '2016052300';
 $plugin->dependencies = [
     'theme_boost' => '2016102100'
 ];

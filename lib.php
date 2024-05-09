@@ -1,12 +1,36 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-// Every file should have GPL and copyright in the header - we skip it in tutorials but you should not skip it for real.
+/**
+ * Theme functions
+ *
+ * @package   local_dta
+ * @copyright 2024 ADSDR-FUNIBER Scepter Team
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
-// This line protects the file from being accessed by a URL directly.                                                               
 defined('MOODLE_INTERNAL') || die();
 
-// We will add callbacks here as we add features to our theme.
 
+/**
+ * Returns the main SCSS content.
+ *
+ * @param theme_config $theme
+ * @return string
+ */
 function theme_dta_get_main_scss_content($theme)
 {
     global $CFG;
@@ -62,12 +86,18 @@ function theme_dta_get_main_scss_content($theme)
     return $pre . "\n" . $scss . "\n" . $post;
 }
 
+/**
+ * Initialises the theme.
+ */
 function theme_dta_page_init()
 {
     redirect_login_is_not_loggedin();
     redirect_is_not_allowed_page();
 }
 
+/**
+ * Sets the default primarynav sections.
+ */
 function set_default_primarynav_sections()
 {
     global $PAGE;
@@ -86,6 +116,9 @@ function set_default_primarynav_sections()
     }
 }
 
+/**
+ * Sets the default primarynav usermenu.
+ */
 function set_default_primarynav_usermenu()
 {
     global $PAGE;
@@ -95,7 +128,9 @@ function set_default_primarynav_usermenu()
     }
 }
 
-
+/**
+ * Sets aditional primarynav sections.
+ */
 function set_aditional_primarynav_sections()
 {
     global $PAGE;
@@ -119,6 +154,16 @@ function set_aditional_primarynav_sections()
         }
     }
 }
+
+/**
+ * Creates a navigation node.
+ *
+ * @param  string          $str_title The title of the node
+ * @param  moodle_url      $redirect_url The url to redirect
+ * @param  string          $node_key The key of the node
+ * @param  pix_icon        $pix_icon The icon of the node
+ * @return navigation_node The navigation node
+ */
 function create_navigation_node($str_title, $redirect_url, $node_key, $pix_icon)
 {
     return navigation_node::create(
@@ -131,6 +176,11 @@ function create_navigation_node($str_title, $redirect_url, $node_key, $pix_icon)
     );
 }
 
+/**
+ * Gets the sections details.
+ *
+ * @return array The sections details
+ */
 function get_sections_details()
 {
     return [
@@ -147,10 +197,10 @@ function get_sections_details()
             'link' => get_config('theme_dta', 'navbar_experiences_url'),
         ],
         'cases' => [
-            'label' => get_string('navbar::ourcases', 'theme_dta'),
+            'label' => get_string('navbar::cases', 'theme_dta'),
             'icon' => null,
-            'node_key' => 'ourcases',
-            'link' => get_config('theme_dta', 'navbar_ourcases_url'),
+            'node_key' => 'cases',
+            'link' => get_config('theme_dta', 'navbar_cases_url'),
         ],
         'resourcerepository' => [
             'label' => get_string('navbar::resourcerepository', 'theme_dta'),
@@ -167,6 +217,9 @@ function get_sections_details()
     ];
 }
 
+/**
+ * Redirects to login page if user is not logged in.
+ */
 function redirect_login_is_not_loggedin()
 {
     global $PAGE;
@@ -191,6 +244,9 @@ function redirect_login_is_not_loggedin()
     }
 }
 
+/**
+ * Redirects to the home page if the user is not allowed to access the page.
+ */
 function redirect_is_not_allowed_page()
 {
     global $PAGE;

@@ -26,9 +26,14 @@ namespace theme_dta\navigation\output;
 
 use renderer_base;
 
+/**
+ * This class is used to render the navigation menu
+ *
+ * @copyright 2024 ADSDR-FUNIBER Scepter Team
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class primary extends \core\navigation\output\primary
 {
-
     private $page = null;
 
     public function __construct($page)
