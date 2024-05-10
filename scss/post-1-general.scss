@@ -2654,4 +2654,18 @@ button.btn.btn-tutoring-mentor-calendar:active {
 
     color: white !important;
   }
+  .time {
+    font-size: 0.65rem;
+  }
+}
+
+.chat-container {
+  height: 400px; /* Adjust based on your needs */
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse; /* Makes new messages appear at the bottom */
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 10px; /* Adjust based on your needs */
 }
