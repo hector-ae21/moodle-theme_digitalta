@@ -2665,3 +2665,26 @@ button.btn.btn-tutoring-mentor-calendar:active {
   display: flex;
   flex-direction: column-reverse; /* Makes new messages appear at the bottom */
 }
+
+#message-list {
+
+  .skeleton {
+    opacity: 0.7;
+    height: 100%;
+    background-color: $dta-soft-tertiary-color;
+  }
+
+  .skeleton-text {
+    height: 3rem;
+    width: 25%;
+    border-radius: .25rem;
+  }
+
+  .skeleton-img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: .25rem;
+    border-radius: 50px 50px 0 50px;
+  }
+}
+
