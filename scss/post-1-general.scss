@@ -34,14 +34,12 @@
     font-family: "Raleway";
     src: url([[font:theme|Raleway-VariableFont_wght.ttf]]) format("truetype-variations");
     font-display: swap;
-    font-variation-settings: "wght" 400, "wdth" 700;
 }
 
 @font-face {
     font-family: "Oswald";
     src: url([[font:theme|Oswald-VariableFont_wght.ttf]]) format("truetype-variations");
     font-display: swap;
-    font-variation-settings: "wght" 400, "wdth" 700;
 }
 
 :root {
@@ -121,7 +119,12 @@ a.dropdown-toggle:focus {
 }
 
 .dta-highlighted {
-    color: #1382c5;
+    color: $primarycolor;
+    font-weight: bold;
+}
+
+.dta-highlighted-upper {
+    color: $primarycolor;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -135,8 +138,14 @@ a.dropdown-toggle:focus {
 .dta-title {
     color: $dta-secondary-color !important;
     font-family: 'Oswald', sans-serif;
+    font-weight: 400;
     line-height: 1em;
     text-transform: uppercase;
+}
+
+label.dta-required:after {
+    content:" *";
+    color: red;
 }
 
 // NAV BAR
@@ -1513,6 +1522,7 @@ body:not(.login-page) {
         position: relative;
         text-decoration: none;
         -webkit-transition: color 0.2s;
+        transition: color 0.2s;
     }
 
     .tag-basic::before {
@@ -1664,514 +1674,6 @@ body:not(.login-page) {
 }
 
 // EXPERIENCES VIEW END //
-
-// EXPERIENCES MANAGE START //
-/*#page-local-dta-pages-experiences-manage {
-
-    #page-header .header-actions-container {
-        display: none;
-    }
-
-    #page-header .d-flex.align-items-center {
-        justify-content: center;
-
-        .mr-auto {
-            margin: 0 !important;
-        }
-    }
-
-    .mform div[data-fieldtype="autocomplete"] li:empty {
-        display: none !important;
-    }
-
-    .mform .form-inline .custom-select {
-        max-width: 550px;
-    }
-
-    .fp-login-form .fp-content-center form,
-    .fp-upload-form .fp-content-center form {
-        box-shadow: none;
-        border-radius: 0;
-    }
-
-    .fp-viewbar {
-        display: none;
-    }
-
-    .fp-restrictions {
-        display: none;
-    }
-
-    .form-group {
-
-        &.fp-saveas,
-        &.fp-setauthor,
-        &.fp-setlicense {
-            display: none;
-
-        }
-    }
-
-    .card {
-        box-shadow: none;
-    }
-
-    form {
-        max-width: 65%;
-        border-radius: 25px;
-        box-shadow: 0 0 5px #062f4a;
-        margin: auto;
-        padding-bottom: 1rem;
-        padding-top: 1rem;
-        background: transparent;
-    }
-
-    @media screen and (max-width: 767px) {
-        form {
-            max-width: 80%;
-        }
-    }
-
-    @media screen and (max-width: 575px) {
-        form {
-            max-width: 100%;
-            border-radius: 0;
-            box-shadow: none;
-        }
-    }
-
-    .col-form-label {
-        font-size: 1.2rem;
-        font-family: sans-serif;
-        font-weight: bold;
-        color: $secondarycolor;
-        margin-bottom: 0.5rem;
-        max-height: 33px;
-    }
-
-
-    select {
-        min-width: 100px;
-        display: block;
-        border-radius: 0;
-        box-shadow: none;
-        font-size: 16px;
-        // padding: 11px 15px;
-        margin-top: 9px;
-        margin-bottom: 15px;
-        width: 100%;
-        border-radius: 10px;
-
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-        background-repeat: no-repeat, repeat;
-        background-position: right .7em top 50%, 0 0;
-        background-size: .65em auto, 100%;
-
-        &::before,
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            pointer-events: none; // Arrow clickable in some browsers
-
-            // triangle set up
-            border: 1px solid transparent; // reset all borders
-            width: 0;
-            height: 0;
-            right: 16px;
-        }
-
-        // top arrow
-        &::before {
-            bottom: 55%;
-            border-width: 0 6.5px 8px 6.5px;
-            border-bottom-color: $tertiarycolor;
-        }
-
-        // bottom arrow
-        &::after {
-            border-width: 8px 6.5px 0 6.5px;
-            border-top-color: $tertiarycolor;
-            top: 55%;
-        }
-
-        // firefox is outside the div
-        @-moz-document url-prefix() {
-            border-right: 1px solid $tertiarycolor;
-
-            &:hover {
-                border-right: 1.2px solid $primarycolor;
-            }
-        }
-
-        &:hover {
-
-            select {
-                box-shadow: 0 2px 3px rgba($primary, 0.1) inset;
-                border-color: $primary;
-
-                // outline is critical but when we are hovering the div has the border already.
-                &:focus {
-                    outline-color: transparent;
-                }
-
-            }
-
-            &::before {
-                border-bottom-color: rgba($primarycolor, 1);
-            }
-
-            &::after {
-                border-top-color: rgba($primarycolor, 1);
-            }
-
-        }
-
-        select {
-            border: 1px solid $tertiarycolor;
-            border-radius: 0;
-            font-weight: 400;
-            color: inherit;
-            padding: 11px 15px;
-            line-height: normal;
-            transition: border-color 0.2s ease,
-                outline 0.2s ease;
-
-
-            // we really need this for the tabbers
-            // causes double borders though
-            &:focus {
-                box-shadow: 0 3px 4px rgba($primarycolor, 0.3) inset;
-                // outline is critical for usability
-                outline: 1px solid $primarycolor;
-                outline-offset: -1px; //offset vs width
-            }
-
-            &[disabled],
-            &:disabled {
-                opacity: 0.4;
-                cursor: not-allowed;
-            }
-
-            // we use invalid like a placeholder
-            // 2019-03-05 added not selector for firefox and ie
-            &:not(:focus):invalid {
-                color: $tertiarycolor;
-            }
-
-        }
-    }
-
-    select::-ms-expand {
-        display: none;
-    }
-
-    input[type="submit"] {
-        max-width: fit-content;
-        border: none;
-        display: flex;
-        padding: 0.75rem 1.5rem;
-        background-color: rgba($primarycolor, 1);
-        color: #ffffff;
-        font-size: 0.75rem;
-        line-height: 1rem;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-        vertical-align: middle;
-        align-items: center;
-        border-radius: 0.5rem;
-        user-select: none;
-        gap: 0.75rem;
-        box-shadow: 0 4px 6px -1px rgba($primarycolor, 0.192), 0 2px 4px -1px rgba($primarycolor, 0.09);
-    }
-
-    input[type="submit"]:hover {
-        box-shadow: 0 10px 15px -3px rgba($primarycolor, 0.31), 0 4px 6px -2px rgba($primarycolor, 0.09);
-    }
-
-    input[type="submit"]:focus,
-    button:active {
-        opacity: .85;
-        box-shadow: none;
-    }
-
-    input[type="submit"] svg {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-}
-
-#page-local-dta-pages-experiences-manage .mform .form-group.row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .filemanager-toolbar,
-    .fp-pathbar {
-        display: none;
-    }
-
-    .tox-menubar {
-        display: none;
-    }
-}
-
-#page-local-dta-pages-experiences-manage .mform .form-group.row>* {
-    max-width: 88%;
-}
-
-#page-local-dta-pages-experiences-manage .mform .form-group.row>.felement>input {
-    max-width: 100%;
-    width: 100%;
-
-    &:focus {
-        border: 1px solid $primarycolor !important;
-    }
-}*/
-// EXPERIENCES MANAGE END //
-
-// NEW REFLECTION FORM START //
-#page-local-dta-pages-experiences-reflection,
-#page-local-dta-pages-experiences-manage {
-    #import-cases-modal {
-        label {
-            width: 100%;
-        }
-
-        input:checked+label {
-            border: 1px solid #007bff;
-            border-radius: 0.25rem;
-            color: white;
-        }
-    }
-
-    .parent {
-        height: 100%;
-        transition: all 1s ease-in-out;
-        border-radius: 10px;
-
-        .header {
-            cursor: pointer;
-        }
-
-        /*stepbar*/
-        #stepbar {
-            margin-bottom: 30px;
-            overflow: hidden;
-            margin: auto;
-            /*CSS counters to number the steps*/
-            counter-reset: step;
-        }
-
-        #stepbar li {
-            border: none !important;
-            list-style-type: none;
-            color: black;
-            background: transparent;
-            outline: none;
-            text-transform: uppercase;
-            font-size: 12px;
-            width: 10rem;
-            float: left;
-            position: relative;
-        }
-
-        #stepbar li:before {
-            content: counter(step);
-            counter-increment: step;
-            width: 20px;
-            line-height: 20px;
-            display: block;
-            font-size: 10px;
-            color: white;
-            background: #333;
-            border-radius: 3px;
-            margin: 0 auto 5px auto;
-        }
-
-        /*stepbar connectors*/
-        #stepbar li:after {
-            content: "";
-            width: 100%;
-            height: 2px;
-            background: white;
-            position: absolute;
-            left: -50%;
-            top: 9px;
-            z-index: -1;
-            /*put it behind the numbers*/
-        }
-
-        #stepbar li:first-child:after {
-            /*connector not needed before the first step*/
-            content: none;
-        }
-
-        /*marking active/completed steps green*/
-        /*The number of the step and the connector before it = green*/
-        #stepbar li.active:before,
-        #stepbar li.active:after {
-            background: #27ae60;
-            color: white;
-        }
-
-        #import_div {
-            display: none;
-            width: fit-content;
-            height: fit-content;
-            margin-top: 10px;
-            box-shadow: 0px 0px 2px 0px rgba(6, 47, 74, 1);
-            border-radius: 10px;
-            padding: 10px;
-            gap: 20px;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: row;
-        }
-
-        .import_button {
-            min-width: 50px;
-            width: fit-content;
-            max-height: 50px;
-            margin: auto;
-            box-shadow: 0px 0px 2px 0px rgba(6, 47, 74, 1);
-            border-radius: 10px;
-            cursor: pointer;
-            padding-right: 10px;
-
-            i {
-                padding: 10px;
-                font-size: 1em;
-                color: #1382c5;
-                margin: auto;
-            }
-        }
-
-        #add_button {
-            display: flex;
-            font-size: 2em;
-            color: #1382c5;
-            cursor: pointer;
-            justify-content: center;
-            align-items: center;
-        }
-
-        h2 {
-            color: #1382c5;
-            margin-bottom: 40px;
-        }
-
-        .sections {
-            gap: 20px;
-        }
-
-        #section_what {
-            h2 {
-                color: rgba(204, 98, 33, 0.9);
-            }
-
-            .questions {
-                border: 2px dashed rgba(204, 98, 33, 0.9);
-            }
-        }
-
-        #section_so_what {
-            h2 {
-                color: rgba(57, 98, 33, 0.9);
-            }
-
-            .questions {
-                border: 2px dashed rgba(57, 98, 33, 0.9);
-            }
-        }
-
-        #section_now_what {
-            h2 {
-                color: rgba(19, 130, 197, 0.9);
-            }
-
-            .questions {
-                border: 2px dashed rgba(19, 130, 197, 0.9);
-            }
-        }
-
-        .section {
-            h2 {
-                font-size: 2em !important;
-                font-weight: bold;
-                color: #1382c5;
-                /*transform: rotate(270deg);*/
-                margin-bottom: 20px;
-                height: fit-content;
-                text-wrap: nowrap;
-                width: 150px;
-                margin-top: 15px;
-                padding-left: 10px;
-            }
-        }
-
-        .questions {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 10px 20px;
-
-            .question {
-                padding: 20px 40px;
-                width: 100%;
-
-                h3 {
-                    font-size: 1.5em !important;
-                    font-weight: bold;
-                    color: #062f4a;
-                }
-            }
-        }
-    }
-}
-
-// NEW REFLECTION FORM END //
-
-// REFLECTION VIEW START //
-#page-local-dta-pages-experiences-reflection-view {
-    .question {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .section {
-        margin-bottom: 20px;
-    }
-
-    #section_what {
-        .card-header {
-            background-color: #cc62214d;
-            color: #cc6221;
-        }
-    }
-
-    #section_so_what {
-        .card-header {
-            background-color: #3962214d;
-            color: #396221;
-        }
-    }
-
-    #section_now_what {
-        .card-header {
-            background-color: #1382c54d;
-            color: #1382c5;
-        }
-    }
-}
-
-// REFLECTION VIEW END //
-// --- EXPERIENCES END --- //
 
 // --- CASES START --- //
 // CASES REPOSITORY START //
@@ -2399,6 +1901,7 @@ body:not(.login-page) {
         select {
             -webkit-appearance: none;
             -moz-appearance: none;
+            appearance: none;
             max-width: 300px;
             min-width: 300px;
 

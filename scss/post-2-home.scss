@@ -4,19 +4,19 @@
 
     // GENERAL ELEMENTS
     h2 {
-        font-weight: bold;
+        font-weight: 400;
     }
 
     h3 {
         color: $dta-primary-color;
         font-family: "Oswald", sans-serif;
         font-size: 1.3em;
+        font-weight: 300;
     }
 
-    // POST CONTAINER
-    .post-container {
-        input::placeholder {
-            font-size: 0.8em;
+    // ACTIONS
+    .actions {
+        .action {
         }
     }
 
@@ -25,6 +25,8 @@
         min-height: 250px;
         .theme {            
             cursor: pointer;
+            font-weight: 400;
+            text-shadow: 1px 1px 1px #000000;
             transition: all 0.3s ease-in-out;
             .theme-overlay {
                 background-color: rgba(0, 0, 0, 0.4);
@@ -81,7 +83,7 @@
 
             h5 {
                 font-family: "Oswald", sans-serif;
-                font-weight: bold;
+                font-weight: 400;
                 color: $dta-primary-color;
                 font-size: 18px;
                 position: relative;
@@ -192,6 +194,5 @@
                 color: $dta-tertiary-color !important;
             }
         }
-        
     }
 }
