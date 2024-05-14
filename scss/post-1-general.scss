@@ -1580,6 +1580,15 @@ body:not(.login-page) {
         overflow-x: hidden;
     }
 
+    #search-mentors-result {
+        position: absolute;
+        width: 80%;
+        z-index: 9999999;
+        background-color: $dta-white;
+        border: 1px solid $dta-soft-tertiary-color;
+        border-radius: 5px;
+    }
+
     .tutor-list img.profile-photo-lg {
         height: 80px;
         width: 80px;
