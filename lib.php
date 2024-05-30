@@ -183,6 +183,7 @@ function create_navigation_node($str_title, $redirect_url, $node_key, $pix_icon)
  */
 function get_sections_details()
 {
+    global $CFG;
     return [
         'home' => [
             'label' => get_string('navbar::teacheracademy', 'theme_dta'),
@@ -213,6 +214,12 @@ function get_sections_details()
             'icon' => 't/tags',
             'node_key' => 'themes',
             'link' => get_config('theme_dta', 'navbar_themes_url'),
+        ],
+        'chat' => [
+            'label' => "", 
+            'icon' => 't/messages',
+            'node_key' => 'themes',
+            'link' => "$CFG->wwwroot/local/dta/pages/chat/index.php"
         ],
     ];
 }
