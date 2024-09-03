@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_dta/secure
+    @template theme_digitalta/secure
 
     Boost secure layout template.
 
@@ -34,7 +34,7 @@
          }
     }
 }}
-{{> theme_dta/head }}
+{{> theme_digitalta/head }}
 
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
@@ -43,7 +43,7 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_dta/navbar-secure}}
+    {{>theme_digitalta/navbar-secure}}
 
     <div id="page" class="container-fluid">
         {{! Secured full header }}
@@ -87,8 +87,8 @@
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_dta/loader');
-require(['theme_dta/loader'], function() {
-    M.util.js_complete('theme_dta/loader');
+M.util.js_pending('theme_digitalta/loader');
+require(['theme_digitalta/loader'], function() {
+    M.util.js_complete('theme_digitalta/loader');
 });
 {{/js}}

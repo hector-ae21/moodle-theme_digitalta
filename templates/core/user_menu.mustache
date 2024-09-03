@@ -79,7 +79,7 @@
                             {{> core/user_action_menu_items }}
                         </div>
                         {{#submenus}}
-                            <div id="carousel-item-{{id}}" role="menu" class="carousel-item submenu" tabindex="-1" aria-label="{{title}}">
+                            <div id="carousel-item-{{id}}" role="menu" class="carousel-item submenu h-100" tabindex="-1" aria-label="{{title}}">
                                 <div class="d-flex flex-column h-100">
                                     <div class="header">
                                         <button type="button" class="btn btn-icon carousel-navigation-link text-decoration-none text-body" data-carousel-target-id="carousel-item-main" aria-label="{{#str}}usermenugoback{{/str}}">
@@ -89,7 +89,7 @@
                                         <span class="pl-2" id="carousel-item-title-{{id}}">{{title}}</span>
                                     </div>
                                     <div class="dropdown-divider"></div>
-                                    <div class="items h-100 overflow-auto" role="menu" aria-labelledby="carousel-item-title-{{id}}">
+                                    <div class="items" role="menu" aria-labelledby="carousel-item-title-{{id}}">
                                         {{> core/user_action_menu_submenu_items }}
                                     </div>
                                 </div>

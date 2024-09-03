@@ -36,5 +36,5 @@ $templatecontext = [
     'hasblocks' => $hasblocks
 ];
 
-echo $OUTPUT->render_from_template('theme_dta/secure', $templatecontext);
+echo $OUTPUT->render_from_template('theme_digitalta/secure', $templatecontext);
 

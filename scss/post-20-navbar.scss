@@ -1,0 +1,84 @@
+#page-wrapper > nav.navbar {
+    align-items: center;
+    background-color: transparent !important;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 20px;
+    position: relative;
+    transition: 0.5s;
+    width: fit-content;
+
+    .primary-navigation {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .navigation {
+        border-radius: 50px !important;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .navbar-brand {
+        :hover {
+            border-radius: 50px;
+        }
+        :focus {
+            border-radius: 50px;
+        }
+    }
+
+    li {
+        a {
+            --b: 0.1em;
+            --c: $primarycolor;
+            -webkit-background-clip: text, padding-box;
+            background: linear-gradient(var(--c) 50%, $secondarycolor 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
+                linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b) no-repeat;
+            background-clip: text, padding-box;
+            color: $secondarycolor;
+            padding-block: var(--b);
+            transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
+
+            :hover {
+                --_p: 100%;
+                --_s: 0.3s;
+            }
+
+            :focus {
+                color: $primarycolor !important;
+                border-radius: 10px;
+            }
+
+        }
+    }
+
+    .nav-lt-tab {
+        border-top: 1px solid var(--dashui-border-color);
+
+        .nav-item {
+            margin: -0.0625rem 1rem 0;
+        
+            .nav-link {
+                border-radius: 0;
+                border-top: 2px solid transparent;
+                color: var(--dashui-gray-600);
+                font-weight: 500;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    #usernavigation {
+        .usermenu {
+            .avatar.current {
+                align-content: center;
+            }
+        }
+    }
+}

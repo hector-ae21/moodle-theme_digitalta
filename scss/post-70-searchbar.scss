@@ -1,0 +1,96 @@
+.searchbar {
+    background-color: $digitalta-white;
+    padding: 16px;
+    border-radius: 10px;
+
+    .searchbar-input {
+        background: $digitalta-soft-tertiary-color;
+
+        ::placeholder {
+            color: $digitalta-tertiary-color;
+        }
+    }
+}
+
+.filter-chip {
+    border-radius: 50px;
+    width: fit-content;
+    background-color: $digitalta-secondary-color;
+    color: $digitalta-white;
+    gap: 16px;
+    padding: 2px 16px;
+    height: fit-content;
+}
+
+#filter-options {
+    top: 220px;
+    left: auto;
+    border: 1px solid $digitalta-secondary-color;
+    border-radius: var(--bubble-top-left);
+
+    .filter {
+        margin: 1rem 0;
+    }
+
+    label {
+        margin-right: 1rem;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        max-width: 300px;
+        min-width: 300px;
+        background-image:
+            linear-gradient(45deg, transparent 50%, $digitalta-black 50%),
+            linear-gradient(135deg, $digitalta-black 50%, transparent 50%);
+        background-position:
+            calc(100% - 20px) calc(1em + 2px),
+            calc(100% - 15px) calc(1em + 2px);
+        background-size:
+            5px 5px,
+            5px 5px;
+        background-repeat: no-repeat;
+        border-radius: var(--bubble-top-left);
+
+        option:checked {
+            background-color: $digitalta-soft-hover-color;
+            color: $digitalta-black;
+        }
+    }
+
+    select:focus {
+        background-image:
+            linear-gradient(45deg, $digitalta-black 50%, transparent 50%),
+            linear-gradient(135deg, transparent 50%, $digitalta-black 50%);
+        background-position:
+            calc(100% - 15px) 1em,
+            calc(100% - 20px) 1em;
+        background-size:
+            5px 5px,
+            5px 5px;
+        background-repeat: no-repeat;
+        border-color: $digitalta-primary-color;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    input {
+        border-radius: var(--bubble-top-left);
+        max-width: 300px;
+        min-width: 300px;
+    }
+
+    input::placeholder {
+        color: $digitalta-tertiary-color;
+        font-style: italic;
+    }
+
+    input:focus {
+        box-shadow: none;
+    }
+}

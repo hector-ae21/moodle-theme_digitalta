@@ -17,12 +17,12 @@
 /**
  * Renderers to align Moodle's navigation with that expected by Bootstrap
  *
- * @package    theme_dta
+ * @package    theme_digitalta
  * @copyright  2024 ADSDR-FUNIBER Scepter Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_dta\navigation\output;
+namespace theme_digitalta\navigation\output;
 
 use renderer_base;
 
@@ -165,7 +165,7 @@ class primary extends \core\navigation\output\primary
                 $value->pixicon = $value->pix;
                 unset($value->pix);
             }
-            if (get_config('theme_dta', 'enabled_custom_usermenu'))
+            if (get_config('theme_digitalta', 'enabled_custom_usermenu'))
                 return self::get_custom_usermenu($value);
 
             return $value;
@@ -187,11 +187,8 @@ class primary extends \core\navigation\output\primary
             return null;
 
         if (strpos($item->titleidentifier, 'profile') !== false) {
-            $custom_profileurl = get_config('theme_dta', 'profile_url');
-            if (!empty($custom_profileurl)) {
-                $item->titleidentifier = 'profile,custom';
-                $item->url = new \moodle_url($custom_profileurl, ['id' => $USER->id]);
-            }
+            $item->titleidentifier = 'profile,custom';
+            $item->url = new \moodle_url(THEME_DIGITALTA_NAVBAR_PROFILE, ['id' => $USER->id]);
         };
         $item->pixicon = self::get_custom_pixicon($item);
         if (strpos($item->titleidentifier, 'profile') !== false || strpos($item->titleidentifier, 'logout') !== false)

@@ -19,12 +19,12 @@
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_dta
+ * @package    theme_digitalta
  * @copyright  2024 ADSDR-FUNIBER Scepter Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_dta\output;
+namespace theme_digitalta\output;
 
 defined('MOODLE_INTERNAL') || die;
 

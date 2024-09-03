@@ -35,4 +35,4 @@ $templatecontext = [
     'fakeblocks' => $fakeblockshtml,
 ];
 
-echo $OUTPUT->render_from_template('theme_dta/embedded', $templatecontext);
+echo $OUTPUT->render_from_template('theme_digitalta/embedded', $templatecontext);

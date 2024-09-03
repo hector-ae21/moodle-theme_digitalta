@@ -16,7 +16,7 @@
 }}
 {{!
 
-    @template theme_dta/navbar
+    @template theme_digitalta/navbar
 
     This template renders the top navbar.
 
@@ -57,7 +57,7 @@
 }}
 <nav class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
 
-    <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_dta-drawers-primary">
+    <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_digitalta-drawers-primary">
         <span class="navbar-toggler-icon"></span>
         <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
     </button>
@@ -88,7 +88,7 @@
             <div class="divider border-left h-75 align-self-center mx-1"></div>
         {{/output.search_box}}
         {{#langmenu}}
-            {{> theme_dta/language_menu }}
+            {{> theme_digitalta/language_menu }}
             <div class="divider border-left h-75 align-self-center mx-1"></div>
         {{/langmenu}}
         <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
@@ -99,4 +99,4 @@
     </div>
 </nav>
 
-{{> theme_dta/primary-drawer-mobile }}
+{{> theme_digitalta/primary-drawer-mobile }}

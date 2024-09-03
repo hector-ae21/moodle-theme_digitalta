@@ -37,5 +37,5 @@ if (empty($PAGE->layout_options['noactivityheader'])) {
     $templatecontext['headercontent'] = $header->export_for_template($renderer);
 }
 
-echo $OUTPUT->render_from_template('theme_dta/columns1', $templatecontext);
+echo $OUTPUT->render_from_template('theme_digitalta/columns1', $templatecontext);
 

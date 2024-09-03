@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_dta/drawers
+    @template theme_digitalta/drawers
 
     Boost drawer template.
 
@@ -49,7 +49,7 @@
         "addblockbutton": ""
     }
 }}
-{{> theme_dta/head }}
+{{> theme_digitalta/head }}
 
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
@@ -57,10 +57,10 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{> theme_dta/navbar }}
+    {{> theme_digitalta/navbar }}
     {{#courseindex}}
-        {{< theme_dta/drawer }}
-            {{$id}}theme_dta-drawers-courseindex{{/id}}
+        {{< theme_digitalta/drawer }}
+            {{$id}}theme_digitalta-drawers-courseindex{{/id}}
             {{$drawerclasses}}drawer drawer-left {{#courseindexopen}}show{{/courseindexopen}}{{/drawerclasses}}
             {{$drawercontent}}
                 {{{courseindex}}}
@@ -69,11 +69,11 @@
             {{$drawerstate}}show-drawer-left{{/drawerstate}}
             {{$tooltipplacement}}right{{/tooltipplacement}}
             {{$closebuttontext}}{{#str}}closecourseindex, core{{/str}}{{/closebuttontext}}
-        {{/ theme_dta/drawer}}
+        {{/ theme_digitalta/drawer}}
     {{/courseindex}}
     {{#hasblocks}}
-        {{< theme_dta/drawer }}
-            {{$id}}theme_dta-drawers-blocks{{/id}}
+        {{< theme_digitalta/drawer }}
+            {{$id}}theme_digitalta-drawers-blocks{{/id}}
             {{$drawerclasses}}drawer drawer-right{{#blockdraweropen}} show{{/blockdraweropen}}{{/drawerclasses}}
             {{$drawercontent}}
                 <section class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
@@ -87,7 +87,7 @@
             {{$tooltipplacement}}left{{/tooltipplacement}}
             {{$drawercloseonresize}}1{{/drawercloseonresize}}
             {{$closebuttontext}}{{#str}}closeblockdrawer, core{{/str}}{{/closebuttontext}}
-        {{/ theme_dta/drawer}}
+        {{/ theme_digitalta/drawer}}
     {{/hasblocks}}
     <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
         <div id="topofscroll" class="main-inner">
@@ -98,7 +98,7 @@
                             class="btn icon-no-margin"
                             data-toggler="drawers"
                             data-action="toggle"
-                            data-target="theme_dta-drawers-courseindex"
+                            data-target="theme_digitalta-drawers-courseindex"
                             data-toggle="tooltip"
                             data-placement="right"
                             title="{{#str}}opendrawerindex, core{{/str}}"
@@ -114,7 +114,7 @@
                             class="btn icon-no-margin"
                             data-toggler="drawers"
                             data-action="toggle"
-                            data-target="theme_dta-drawers-blocks"
+                            data-target="theme_digitalta-drawers-blocks"
                             data-toggle="tooltip"
                             data-placement="right"
                             title="{{#str}}opendrawerblocks, core{{/str}}"
@@ -164,14 +164,14 @@
     </div>
     {{{ output.standard_after_main_region_html }}}
 </div>
-{{> theme_dta/footer }}
+{{> theme_digitalta/footer }}
 </body>
 
 </html>
 {{#js}}
-M.util.js_pending('theme_dta/loader');
-require(['theme_dta/loader', 'theme_dta/drawer'], function(Loader, Drawer) {
+M.util.js_pending('theme_digitalta/loader');
+require(['theme_digitalta/loader', 'theme_digitalta/drawer'], function(Loader, Drawer) {
     Drawer.init();
-    M.util.js_complete('theme_dta/loader');
+    M.util.js_complete('theme_digitalta/loader');
 });
 {{/js}}

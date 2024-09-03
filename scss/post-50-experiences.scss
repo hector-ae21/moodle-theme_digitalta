@@ -1,0 +1,17 @@
+#page-local-digitalta-pages-experiences-dashboard {
+    .experience-card-title {
+        color: $primarycolor !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .experience-description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: wrap;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+}

@@ -17,16 +17,16 @@
 /**
  * Theme version
  *
- * @package    theme_dta
+ * @package    theme_digitalta
  * @copyright  2024 ADSDR-FUNIBER Scepter Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = '2024050700';
-$plugin->component = 'theme_dta';
-$plugin->requires = '2016052300';
+$plugin->version = '2024060200';
+$plugin->component = 'theme_digitalta';
+$plugin->requires = '2022112800';
 $plugin->dependencies = [
-    'theme_boost' => '2016102100'
+    'theme_boost' => '2022112800'
 ];

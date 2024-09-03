@@ -1,19 +1,28 @@
-#page-local-dta-pages-tags-index {
+#page-local-digitalta-pages-tags-index {
 
     font-family: 'Raleway', sans-serif;
 
-    // GENERAL ELEMENTS
     h2 {
         font-weight: 400;
     }
 
     h3 {
-        color: $dta-primary-color;
+        color: $digitalta-primary-color;
         font-family: "Oswald", sans-serif;
         font-size: 1.3em;
     }
 
-    // THEMES
+    .theme-tag {
+        align-items: center;
+        background-color: $digitalta-accent-color;
+        border-radius: 50px;
+        color: $digitalta-white;
+        display: flex;
+        justify-content: center;
+        padding: 0px 8px;
+        width: fit-content;
+    }
+
     .themes {
         min-height: 250px;
         .theme {            
@@ -29,14 +38,12 @@
         }
     }
 
-    // TAGS
     .tags {
         .tag {
             cursor: pointer;
         }
     }
 
-    // EXPERIENCES
     .experiences {
         .experience {
             .experience-icon {

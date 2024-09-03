@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_dta/columns1
+    @template theme_digitalta/columns1
 
     Boost 1 column layout template.
 
@@ -36,7 +36,7 @@
          "bodyattributes":""
     }
 }}
-{{> theme_dta/head }}
+{{> theme_digitalta/head }}
 
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
@@ -68,8 +68,8 @@
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_dta/loader');
-require(['theme_dta/loader'], function() {
-    M.util.js_complete('theme_dta/loader');
+M.util.js_pending('theme_digitalta/loader');
+require(['theme_digitalta/loader'], function() {
+    M.util.js_complete('theme_digitalta/loader');
 });
 {{/js}}

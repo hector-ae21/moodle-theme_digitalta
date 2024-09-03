@@ -31,4 +31,4 @@ $templatecontext = [
     'output' => $OUTPUT
 ];
 
-echo $OUTPUT->render_from_template('theme_dta/maintenance', $templatecontext);
+echo $OUTPUT->render_from_template('theme_digitalta/maintenance', $templatecontext);

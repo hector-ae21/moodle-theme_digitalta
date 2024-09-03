@@ -1,26 +1,18 @@
-#page-local-dta-pages-teacheracademy-index {
+#page-local-digitalta-pages-teacheracademy-index {
 
     font-family: 'Raleway', sans-serif;
 
-    // GENERAL ELEMENTS
     h2 {
         font-weight: 400;
     }
 
     h3 {
-        color: $dta-primary-color;
+        color: $digitalta-primary-color;
         font-family: "Oswald", sans-serif;
         font-size: 1.3em;
         font-weight: 300;
     }
 
-    // ACTIONS
-    .actions {
-        .action {
-        }
-    }
-
-    // THEMES
     .themes {
         min-height: 250px;
         .theme {            
@@ -38,7 +30,6 @@
         }
     }
 
-    // EXPERIENCES
     .experiences {
         .experience {
             .experience-icon {
@@ -60,56 +51,53 @@
         }
     }
 
-    // CASES
-    .home-case-card {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 16px;
-        position: relative;
-        border-radius: 10px;
-        border: 1px solid;
-        border-color: #1382c533;
-    
-        .title-container {
-            display: flex;
+    .cases {
+        .case {
+            display: inline-flex;
+            flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
-            position: absolute;
-            top: -14px;
-            left: 14px;
-            background-color: $dta-white;
-
-            h5 {
-                font-family: "Oswald", sans-serif;
-                font-weight: 400;
-                color: $dta-primary-color;
-                font-size: 18px;
-                position: relative;
-                margin-top: -1px;
-                letter-spacing: 0;
-                line-height: normal;
+            gap: 10px;
+            padding: 16px;
+            position: relative;
+            border-radius: 10px;
+            border: 1px solid;
+            border-color: #1382c533;
+            .title-container {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                position: absolute;
+                top: -14px;
+                left: 14px;
+                background-color: $digitalta-white;
+                h5 {
+                    font-family: "Oswald", sans-serif;
+                    font-weight: 400;
+                    color: $digitalta-primary-color;
+                    font-size: 18px;
+                    position: relative;
+                    margin-top: -1px;
+                    letter-spacing: 0;
+                    line-height: normal;
+                }
+            }
+            .description-container {
+                font-family: "Inter", sans-serif;
+                color: $digitalta-secondary-color !important;
+                color: transparent;
+                font-size: 15px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
             }
         }
-
-        .description-container {
-            font-family: "Inter", sans-serif;
-            color: $dta-secondary-color !important;
-            color: transparent;
-            font-size: 15px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-        }
-    
     }
 
 
     //TODO: Pasar a otras vistas (todo menos el index)
-    .mentor-card-horizontal {
+    .tutor-card-horizontal {
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -117,28 +105,28 @@
         padding: 16px;
         border-radius: 10px;
         margin: 10px;
-        background-color: $dta-white;
+        background-color: $digitalta-white;
         max-width: 500px;
 
-        .mentor-data {
+        .tutor-data {
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 8px;
         }
 
-        .mentor-info {
+        .tutor-info {
             gap: 8px;
         }
         
     
         h3 {
-            color: $dta-secondary-color;
+            color: $digitalta-secondary-color;
             margin-right: 8px;
         }
     
         .text-tertiary {
-            color: $dta-tertiary-color !important;
+            color: $digitalta-tertiary-color !important;
         }
 
         img {
@@ -181,17 +169,17 @@
 
             a:focus-within, a:active, a:focus {
                 outline: none;
-                background-color: $dta-soft-hover-color;
+                background-color: $digitalta-soft-hover-color;
             }
     
             .btn-connect {
-                color: $dta-alt-accent-color !important;
+                color: $digitalta-alt-accent-color !important;
             }
             .btn-email {
-                color: $dta-secondary-color !important;
+                color: $digitalta-secondary-color !important;
             }
             .btn-profile {
-                color: $dta-tertiary-color !important;
+                color: $digitalta-tertiary-color !important;
             }
         }
     }

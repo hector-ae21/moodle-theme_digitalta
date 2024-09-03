@@ -17,79 +17,51 @@
 /**
  * Theme functions
  *
- * @package   local_dta
+ * @package   theme_digitalta
  * @copyright 2024 ADSDR-FUNIBER Scepter Team
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once($CFG->dirroot . '/theme/digitalta/locallib.php');
 
 /**
- * Returns the main SCSS content.
+ * Get SCSS to prepend.
  *
- * @param theme_config $theme
+ * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_dta_get_main_scss_content($theme)
-{
+function theme_digitalta_get_pre_scss($theme) {
     global $CFG;
-
-    $scss = '';
-    $filename = !empty($theme->settings->preset) ? $theme->settings->preset : null;
-    $fs = get_file_storage();
-
-    $context = context_system::instance();
-
-    // Get all colors from the settings
-    $colors = [
-        'primarycolor' => get_config('theme_dta', 'primarycolor'),
-        'secondarycolor' => get_config('theme_dta', 'secondarycolor'),
-        'tertiarycolor' => get_config('theme_dta', 'tertiarycolor'),
-        'accentcolor' => get_config('theme_dta', 'accentcolor'),
-        'accentcoloralt' => get_config('theme_dta', 'accentcoloralt'),
-    ];
-
-    if (!empty($colors)) {
-        foreach ($colors as $key => $color) {
-            if (!empty($color)) {
-                $scss .= '$' . $key . ': ' . $color . ";\n";
-            }
-        }
-    }
+    $pre = "";
+    $pre .= theme_boost_get_pre_scss(theme_config::load('boost'));
+    $pre .= file_get_contents($CFG->dirroot . '/theme/digitalta/scss/pre.scss');
+    return $pre;
+}
 
 
-    if ($filename == 'default.scss') {
-        // We still load the default preset files directly from the boost theme. No sense in duplicating them.                      
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
-    } else if ($filename == 'plain.scss') {
-        // We still load the default preset files directly from the boost theme. No sense in duplicating them.                      
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');
-    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_dta', 'preset', 0, '/', $filename))) {
-        // This preset file was fetched from the file area for theme_dta and not theme_dta (see the line above).                
-        $scss .= $presetfile->get_content();
-    } else {
-        // Safety fallback - maybe new installs etc.                                                                                
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
-    }
-
-    // Pre CSS - this is loaded AFTER any prescss from the setting but before the main scss.                                        
-    $pre = file_get_contents($CFG->dirroot . '/theme/dta/scss/pre.scss');
-    // Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.                                    
+/**
+ * Inject additional SCSS.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_digitalta_get_extra_scss($theme) {
+    global $CFG;
     $post = "";
-    $post_filenames = glob($CFG->dirroot . '/theme/dta/scss/post-*.scss');
+    $post .= theme_boost_get_extra_scss(theme_config::load('boost'));
+    $post_filenames = glob($CFG->dirroot . '/theme/digitalta/scss/post-*.scss');
     foreach ($post_filenames as $post_filename) {
         $post .= file_get_contents($post_filename);
     }
-
-    // Combine them together.                                                                                                       
-    return $pre . "\n" . $scss . "\n" . $post;
+    return $post;
 }
 
 /**
  * Initialises the theme.
  */
-function theme_dta_page_init()
+function theme_digitalta_page_init()
 {
     redirect_login_is_not_loggedin();
     redirect_is_not_allowed_page();
@@ -111,7 +83,7 @@ function set_default_primarynav_sections()
         $node = $PAGE->primarynav->get($section);
         if (!empty($node)) {
             $node->icon = new pix_icon($icon, '');
-            $node->text = get_string('navbar::siteadmin', 'theme_dta');
+            $node->text = get_string('navbar:siteadmin', 'theme_digitalta');
         }
     }
 }
@@ -124,7 +96,7 @@ function set_default_primarynav_usermenu()
     global $PAGE;
     $usermenu = $PAGE->primarynav->get('user');
     if (!empty($usermenu)) {
-        $usermenu->text = get_string('login::login', 'theme_dta');
+        $usermenu->text = get_string('login:login', 'theme_digitalta');
     }
 }
 
@@ -134,7 +106,7 @@ function set_default_primarynav_usermenu()
 function set_aditional_primarynav_sections()
 {
     global $PAGE;
-    if (isloggedin() && !isguestuser() && get_config('theme_dta', 'enabled_navbar')) {
+    if (isloggedin() && !isguestuser() && get_config('theme_digitalta', 'enabled_navbar')) {
         $payload = get_sections_details();
         foreach ($payload as $key => $content) {
             if (!empty($content['link'])) {
@@ -186,40 +158,46 @@ function get_sections_details()
     global $CFG;
     return [
         'home' => [
-            'label' => get_string('navbar::teacheracademy', 'theme_dta'),
+            'label' => get_string('navbar:home', 'theme_digitalta'),
             'icon' => 'i/home',
             'node_key' => 'home',
-            'link' => get_config('theme_dta', 'navbar_teacheracademy_url'),
+            'link' => THEME_DIGITALTA_NAVBAR_HOME,
         ],
         'experiences' => [
-            'label' => get_string('navbar::experiences', 'theme_dta'),
+            'label' => get_string('navbar:experiences', 'theme_digitalta'),
             'icon' => 'i/courseevent',
             'node_key' => 'experiences',
-            'link' => get_config('theme_dta', 'navbar_experiences_url'),
+            'link' => THEME_DIGITALTA_NAVBAR_EXPERIENCES,
         ],
         'cases' => [
-            'label' => get_string('navbar::cases', 'theme_dta'),
+            'label' => get_string('navbar:cases', 'theme_digitalta'),
             'icon' => null,
             'node_key' => 'cases',
-            'link' => get_config('theme_dta', 'navbar_cases_url'),
+            'link' => THEME_DIGITALTA_NAVBAR_CASES,
         ],
-        'resourcerepository' => [
-            'label' => get_string('navbar::resourcerepository', 'theme_dta'),
+        'resources' => [
+            'label' => get_string('navbar:resources', 'theme_digitalta'),
             'icon' => 'i/open',
-            'node_key' => 'resourcerepository',
-            'link' => get_config('theme_dta', 'navbar_resourcerepository_url'),
+            'node_key' => 'resources',
+            'link' => THEME_DIGITALTA_NAVBAR_RESOURCES,
         ],
-        'themes' => [
-            'label' => get_string('navbar::themes', 'theme_dta'),
+        'themestags' => [
+            'label' => get_string('navbar:themestags', 'theme_digitalta'),
             'icon' => 't/tags',
-            'node_key' => 'themes',
-            'link' => get_config('theme_dta', 'navbar_themes_url'),
+            'node_key' => 'themestags',
+            'link' => THEME_DIGITALTA_NAVBAR_THEMESTAGS,
+        ],
+        'tutorsmentors' => [
+            'label' => get_string('navbar:tutorsmentors', 'theme_digitalta'),
+            'icon' => 'i/user',
+            'node_key' => 'tutorsmentors',
+            'link' => THEME_DIGITALTA_NAVBAR_TUTORSMENTORS,
         ],
         'chat' => [
             'label' => "", 
             'icon' => 't/messages',
-            'node_key' => 'themes',
-            'link' => "$CFG->wwwroot/local/dta/pages/chat/index.php"
+            'node_key' => 'chat',
+            'link' => THEME_DIGITALTA_NAVBAR_CHAT
         ],
     ];
 }
@@ -258,7 +236,7 @@ function redirect_is_not_allowed_page()
 {
     global $PAGE;
 
-    $home_url = get_config('theme_dta', "navbar_teacheracademy_url");
+    $home_url = THEME_DIGITALTA_NAVBAR_HOME;
 
     if (empty($home_url) || !isloggedin() || isguestuser()) {
         return;
@@ -268,16 +246,14 @@ function redirect_is_not_allowed_page()
 
     $no_redirect_page_types = [
         'admin-',
-        'local-dta',
+        'local-digitalta',
         'edit',
         'editadvanced'
     ];
 
-    $profile_url = get_config('theme_dta', "profile_url");
-    if (!empty($profile_url) && strpos($PAGE->pagetype, 'profile') !== false) {
-        $redirect_url = new moodle_url($profile_url, ['id' => $PAGE->url->params()["id"]]);
+    if (strpos($PAGE->pagetype, 'profile') !== false) {
+        $redirect_url = new moodle_url(THEME_DIGITALTA_NAVBAR_PROFILE, ['id' => $PAGE->url->params()["id"]]);
     }
-
 
     foreach ($no_redirect_page_types as $type) {
         if (strpos($PAGE->pagetype, $type) !== false) {

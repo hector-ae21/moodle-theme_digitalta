@@ -47,7 +47,7 @@ if ($PAGE->has_secondary_navigation()) {
     }
 }
 
-$primary = new theme_dta\navigation\output\primary($PAGE);
+$primary = new theme_digitalta\navigation\output\primary($PAGE);
 $renderer = $PAGE->get_renderer('core');
 $primarymenu = $primary->export_for_template($renderer);
 $buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_actions()  && !$PAGE->has_secondary_navigation();
@@ -75,4 +75,4 @@ $templatecontext = [
     'addblockbutton' => $addblockbutton,
 ];
 
-echo $OUTPUT->render_from_template('theme_dta/columns2', $templatecontext);
+echo $OUTPUT->render_from_template('theme_digitalta/columns2', $templatecontext);

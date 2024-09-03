@@ -1,0 +1,32 @@
+.digitalta-experience {
+    #experience-reflection {
+        @media (max-width: 1200px) and (min-width: 480px) {
+            .tab-pane {
+                padding: 0 15px;
+                overflow-y: auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .tab-pane {
+                display: block !important;
+                opacity: 1 !important;
+            }
+        }
+        video {
+            max-width: 100% !important;
+        }
+
+        #experience-reflection-actions {
+            gap: 1em;
+            .btn.btn-primary {
+                flex: 1 1 0px;
+            }
+        }
+
+        #reflection-resources {
+            .reflection-resource {
+                border: 1px solid #e9ecef;
+            }
+        }
+    }
+}

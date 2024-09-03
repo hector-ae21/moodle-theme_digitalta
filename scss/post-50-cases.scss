@@ -1,0 +1,17 @@
+#page-local-digitalta-pages-cases-dashboard {
+    .case-card-title {
+        color: $primarycolor !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .case-description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: wrap;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+}
