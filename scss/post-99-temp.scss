@@ -242,6 +242,10 @@ input.search-field__input:focus {
     padding: 0 1.25rem;
 }
 
+#chat .chat-users span:not(:last-of-type)::after{
+    content: ", ";
+}
+
 
 /* Zoom Chat Button */
 .socialize-button .start-call-button{
