@@ -248,7 +248,8 @@ function redirect_is_not_allowed_page()
         'admin-',
         'local-digitalta',
         'edit',
-        'editadvanced'
+        'editadvanced',
+        'mod-scheduler'
     ];
 
     if (strpos($PAGE->pagetype, 'profile') !== false) {
