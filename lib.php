@@ -117,7 +117,7 @@ function set_aditional_primarynav_sections()
                     new pix_icon($content['icon'], ''),
                 );
                 $siteAdminNode = $PAGE->primarynav->get('siteadminnode');
-                if (isset($siteAdminNode)) {
+                if (isset($siteAdminNode) && !empty($siteAdminNode)) {
                     $PAGE->primarynav->add_node($node, 'siteadminnode');
                 } else {
                     $PAGE->primarynav->add_node($node);
@@ -248,7 +248,8 @@ function redirect_is_not_allowed_page()
         'admin-',
         'local-digitalta',
         'edit',
-        'editadvanced'
+        'editadvanced',
+        'mod-scheduler'
     ];
 
     if (strpos($PAGE->pagetype, 'profile') !== false) {
