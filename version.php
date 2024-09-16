@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = '2024090600';
+$plugin->version = '2024091601';
 $plugin->component = 'theme_digitalta';
 $plugin->requires = '2022112800';
 $plugin->dependencies = [

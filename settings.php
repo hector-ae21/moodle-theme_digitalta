@@ -44,5 +44,20 @@ if ($ADMIN->fulltree) {
         1
     ));
 
+    $page->add(new admin_setting_configcheckbox(
+        'theme_digitalta/survey_link_enabled',
+        get_string('config:survey_link_enabled', 'theme_digitalta'),
+        get_string('config:survey_link_enabled_desc', 'theme_digitalta'),
+        0
+    ));
+
+    $page->add(new admin_setting_configtext(
+        'theme_digitalta/survey_link_url',
+        get_string('config:survey_link_url', 'theme_digitalta'),
+        get_string('config:survey_link_url_desc', 'theme_digitalta'),
+        null,
+        PARAM_URL
+    ));
+
     $settings->add($page);
 }
