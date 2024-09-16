@@ -25,17 +25,17 @@
  defined('MOODLE_INTERNAL') || die();
 
 // General
-$string['pluginname'] = 'DigitalTA';
-$string['choosereadme'] = 'Theme DigitalTA is a child theme of Boost.';
+$string['pluginname']      = 'DigitalTA';
+$string['choosereadme']    = 'Theme DigitalTA is a child theme of Boost.';
 $string['region-side-pre'] = 'Right';
-$string['configtitle'] = 'DigitalTA settings';
+$string['configtitle']     = 'DigitalTA settings';
 
 // Login
-$string['login:username'] = 'Username';
-$string['login:usernameemail'] = 'Email';
-$string['login:forgotpassword'] = 'Forgot password?';
-$string['login:login'] = 'Login';
-$string['login:signup_link'] = 'Sign up';
+$string['login:username']            = 'Username';
+$string['login:usernameemail']       = 'Email';
+$string['login:forgotpassword']      = 'Forgot password?';
+$string['login:login']               = 'Login';
+$string['login:signup_link']         = 'Sign up';
 $string['login:signup_flavour_text'] = 'No account?';
 
 // Config
