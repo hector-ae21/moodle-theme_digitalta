@@ -58,3 +58,6 @@ $string['navbar:resources']     = 'Resources';
 $string['navbar:themestags']    = 'Themes & Tags';
 $string['navbar:tutorsmentors'] = 'Tutors & Mentors';
 $string['navbar:siteadmin']     = 'Administration';
+
+// Survey
+$string['survey:message'] = 'Fill out the satisfaction survey!';

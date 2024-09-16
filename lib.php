@@ -61,10 +61,16 @@ function theme_digitalta_get_extra_scss($theme) {
 /**
  * Initialises the theme.
  */
-function theme_digitalta_page_init()
+function theme_digitalta_page_init(moodle_page $page)
 {
     redirect_login_is_not_loggedin();
     redirect_is_not_allowed_page();
+    if (get_config('theme_digitalta', 'survey_link_enabled')
+            && ($survey_link = get_config('theme_digitalta', 'survey_link_url'))
+            && !isguestuser()
+            && isloggedin()) {
+        $page->requires->js_call_amd("theme_digitalta/survey", "init", [$survey_link]);
+    }
 }
 
 /**
