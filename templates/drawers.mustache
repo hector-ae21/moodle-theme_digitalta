@@ -90,6 +90,20 @@
         {{/ theme_digitalta/drawer}}
     {{/hasblocks}}
     <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
+        <div id="digitalta-toasts" class="position-fixed" aria-live="polite" aria-atomic="true">
+            <div class="toast-container position-relative p-3">
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="10000">
+                    <div class="toast-body d-flex">
+                        <div class="toast-body-image">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5569/5569615.png">
+                        </div>
+                        <div class="toast-body-text align-self-center">
+                            {{#str}}survey:message, theme_digitalta{{/str}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="topofscroll" class="main-inner">
             <div class="drawer-toggles d-flex">
                 {{#courseindex}}

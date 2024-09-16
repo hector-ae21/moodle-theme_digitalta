@@ -1,4 +1,3 @@
-<?php
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -15,18 +14,26 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme version
+ * Survey AMD module.
  *
- * @package    theme_digitalta
+ * @module     theme_boost/survey
  * @copyright  2024 ADSDR-FUNIBER Scepter Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+import Toast from "./bootstrap/toast";
 
-$plugin->version = '2024091602';
-$plugin->component = 'theme_digitalta';
-$plugin->requires = '2022112800';
-$plugin->dependencies = [
-    'theme_boost' => '2022112800'
-];
+const SELECTORS = {
+    SURVEYTOAST: "#digitalta-toasts .toast"
+};
+
+export const init = (survey_link) => {
+    const surveyToast = document.querySelector(SELECTORS.SURVEYTOAST);
+    if (surveyToast) {
+        surveyToast.addEventListener("click", () => {
+            window.open(survey_link, "_blank");
+        });
+        let toast = new Toast(surveyToast);
+        toast.show();
+    }
+};

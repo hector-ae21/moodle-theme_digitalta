@@ -39,12 +39,16 @@ $string['login:signup_link'] = 'Sign up';
 $string['login:signup_flavour_text'] = 'No account?';
 
 // Config
-$string['config:navbar_page']          = 'Custom navbar settings';
-$string['config:navbar_page_desc']     = 'Custom navbar settings';
-$string['config:custom_navbar']        = 'Active custom navigation';
-$string['config:custom_navbar_desc']   = 'Active custom navigation in main navbar';
-$string['config:custom_usermenu']      = 'Active custom user menu';
-$string['config:custom_usermenu_desc'] = 'Active custom dropdown user menu';
+$string['config:navbar_page']              = 'Custom navbar settings';
+$string['config:navbar_page_desc']         = 'Custom navbar settings';
+$string['config:custom_navbar']            = 'Active custom navigation';
+$string['config:custom_navbar_desc']       = 'Active custom navigation in main navbar';
+$string['config:custom_usermenu']          = 'Active custom user menu';
+$string['config:custom_usermenu_desc']     = 'Active custom dropdown user menu';
+$string['config:survey_link_enabled']      = 'Enable survey link';
+$string['config:survey_link_enabled_desc'] = 'Whether to show the survey link';
+$string['config:survey_link_url']          = 'Survey link';
+$string['config:survey_link_url_desc']     = 'Link to the satisfaction survey';
 
 // Navbar
 $string['navbar:home']          = 'Home';
@@ -54,3 +58,6 @@ $string['navbar:resources']     = 'Resources';
 $string['navbar:themestags']    = 'Themes & Tags';
 $string['navbar:tutorsmentors'] = 'Tutors & Mentors';
 $string['navbar:siteadmin']     = 'Administration';
+
+// Survey
+$string['survey:message'] = 'Fill out the satisfaction survey!';
