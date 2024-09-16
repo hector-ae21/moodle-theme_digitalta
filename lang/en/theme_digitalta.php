@@ -51,13 +51,9 @@ $string['config:survey_link_url']          = 'Survey link';
 $string['config:survey_link_url_desc']     = 'Link to the satisfaction survey';
 
 // Navbar
-$string['navbar:home']          = 'Home';
-$string['navbar:experiences']   = 'Experiences';
-$string['navbar:cases']         = 'Cases';
-$string['navbar:resources']     = 'Resources';
-$string['navbar:themestags']    = 'Themes & Tags';
-$string['navbar:tutorsmentors'] = 'Tutors & Mentors';
-$string['navbar:siteadmin']     = 'Administration';
+$string['navbar:home']      = 'Home';
+$string['navbar:chat']      = 'Chat';
+$string['navbar:siteadmin'] = 'Administration';
 
 // Survey
 $string['survey:message'] = 'Fill out the satisfaction survey!';
