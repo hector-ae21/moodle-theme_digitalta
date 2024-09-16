@@ -25,17 +25,17 @@
  defined('MOODLE_INTERNAL') || die();
 
 // General
-$string['pluginname'] = 'DigitalTA';
-$string['choosereadme'] = 'Theme DigitalTA is a child theme of Boost.';
+$string['pluginname']      = 'DigitalTA';
+$string['choosereadme']    = 'Theme DigitalTA is a child theme of Boost.';
 $string['region-side-pre'] = 'Right';
-$string['configtitle'] = 'DigitalTA settings';
+$string['configtitle']     = 'DigitalTA settings';
 
 // Login
-$string['login:username'] = 'Username';
-$string['login:usernameemail'] = 'Email';
-$string['login:forgotpassword'] = 'Forgot password?';
-$string['login:login'] = 'Login';
-$string['login:signup_link'] = 'Sign up';
+$string['login:username']            = 'Username';
+$string['login:usernameemail']       = 'Email';
+$string['login:forgotpassword']      = 'Forgot password?';
+$string['login:login']               = 'Login';
+$string['login:signup_link']         = 'Sign up';
 $string['login:signup_flavour_text'] = 'No account?';
 
 // Config
@@ -51,13 +51,9 @@ $string['config:survey_link_url']          = 'Survey link';
 $string['config:survey_link_url_desc']     = 'Link to the satisfaction survey';
 
 // Navbar
-$string['navbar:home']          = 'Home';
-$string['navbar:experiences']   = 'Experiences';
-$string['navbar:cases']         = 'Cases';
-$string['navbar:resources']     = 'Resources';
-$string['navbar:themestags']    = 'Themes & Tags';
-$string['navbar:tutorsmentors'] = 'Tutors & Mentors';
-$string['navbar:siteadmin']     = 'Administration';
+$string['navbar:home']      = 'Home';
+$string['navbar:chat']      = 'Chat';
+$string['navbar:siteadmin'] = 'Administration';
 
 // Survey
 $string['survey:message'] = 'Fill out the satisfaction survey!';

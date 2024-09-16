@@ -161,7 +161,6 @@ function create_navigation_node($str_title, $redirect_url, $node_key, $pix_icon)
  */
 function get_sections_details()
 {
-    global $CFG;
     return [
         'home' => [
             'label' => get_string('navbar:home', 'theme_digitalta'),
@@ -170,37 +169,37 @@ function get_sections_details()
             'link' => THEME_DIGITALTA_NAVBAR_HOME,
         ],
         'experiences' => [
-            'label' => get_string('navbar:experiences', 'theme_digitalta'),
+            'label' => get_string('concept:experiences', 'local_digitalta'),
             'icon' => 'i/courseevent',
             'node_key' => 'experiences',
             'link' => THEME_DIGITALTA_NAVBAR_EXPERIENCES,
         ],
         'cases' => [
-            'label' => get_string('navbar:cases', 'theme_digitalta'),
+            'label' => get_string('concept:cases', 'local_digitalta'),
             'icon' => null,
             'node_key' => 'cases',
             'link' => THEME_DIGITALTA_NAVBAR_CASES,
         ],
         'resources' => [
-            'label' => get_string('navbar:resources', 'theme_digitalta'),
+            'label' => get_string('concept:resources', 'local_digitalta'),
             'icon' => 'i/open',
             'node_key' => 'resources',
             'link' => THEME_DIGITALTA_NAVBAR_RESOURCES,
         ],
         'themestags' => [
-            'label' => get_string('navbar:themestags', 'theme_digitalta'),
+            'label' => get_string('concept:themestags', 'local_digitalta'),
             'icon' => 't/tags',
             'node_key' => 'themestags',
             'link' => THEME_DIGITALTA_NAVBAR_THEMESTAGS,
         ],
         'tutorsmentors' => [
-            'label' => get_string('navbar:tutorsmentors', 'theme_digitalta'),
+            'label' => get_string('concept:tutorsmentors', 'local_digitalta'),
             'icon' => 'i/user',
             'node_key' => 'tutorsmentors',
             'link' => THEME_DIGITALTA_NAVBAR_TUTORSMENTORS,
         ],
         'chat' => [
-            'label' => "", 
+            'label' => get_string('navbar:chat', 'theme_digitalta'), 
             'icon' => 't/messages',
             'node_key' => 'chat',
             'link' => THEME_DIGITALTA_NAVBAR_CHAT
