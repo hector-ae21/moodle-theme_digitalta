@@ -1,0 +1,8 @@
+body#page-user-edit {
+    div#fitem_id_moodlenetprofile,
+    fieldset#id_moodle_additional_names,
+    fieldset#id_moodle_interests,
+    fieldset#id_moodle_optional {
+        display: none;
+    }
+}

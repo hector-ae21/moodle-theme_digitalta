@@ -131,7 +131,6 @@
     }
 
     .login .container {
-        width: 505px;
         margin: 0 auto;
         position: relative;
     }
@@ -188,7 +187,7 @@
         position: relative;
         z-index: 2;
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 0.75rem;
     }
 
     .login .container .login-form form button[type="submit"]:hover::after {
@@ -572,9 +571,12 @@
         display: none;
     }
 
-    input {
-        max-height: 50px;
+    input,
+    select {
         margin: 0 !important;
+        max-height: 50px;
+        padding: 5px 10px !important;
+        width: 100% !important;
     }
 
     #id_submitbutton {
