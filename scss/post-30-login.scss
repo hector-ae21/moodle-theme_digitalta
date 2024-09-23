@@ -596,4 +596,13 @@
         margin-top: 0 !important;
         margin-bottom: 50px !important;
     }
+
+    form > fieldset > legend,
+    form > fieldset > div {
+        display: none !important;
+    }
+
+    form > fieldset > div.collapseable {
+        display: block !important;
+    }
 }
