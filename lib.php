@@ -254,7 +254,8 @@ function redirect_is_not_allowed_page()
         'local-digitalta',
         'edit',
         'editadvanced',
-        'mod-scheduler'
+        'mod-scheduler',
+        'login-change_password'
     ];
 
     if (strpos($PAGE->pagetype, 'profile') !== false) {
