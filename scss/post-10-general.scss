@@ -329,6 +329,9 @@ a.dropdown-toggle:focus {
     box-shadow: 3px 3px 2px 0px #e2e2e2;
     transition: 0.3s ease;
     padding-right: 0.5rem;
+    &.case-input .input{
+        margin-left: 1.5rem;
+    }
 
     .input {
         font-size: 18px;
