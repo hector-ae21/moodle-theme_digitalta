@@ -29,7 +29,8 @@ $bodyattributes = $OUTPUT->body_attributes();
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes
+    'bodyattributes' => $bodyattributes,
+    'mainvideourl' => $CFG->wwwroot . '/theme/digitalta/statics/main-video.mp4',
 ];
 
 echo $OUTPUT->render_from_template('theme_digitalta/login', $templatecontext);
