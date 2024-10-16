@@ -125,6 +125,7 @@ class primary extends \core\navigation\output\primary
                     'title' => get_string('language'),
                     'divider' => false,
                     'submenulink' => true,
+                    'pixicon' => 'i/language',
                 ];
 
                 // Place the link before the 'Log out' menu item which is either the last item in the menu or
