@@ -251,6 +251,7 @@ function redirect_is_not_allowed_page()
 
     $no_redirect_page_types = [
         'admin-',
+        'user-policy',
         'local-digitalta',
         'edit',
         'editadvanced',
