@@ -431,3 +431,23 @@ a.dropdown-toggle:focus {
 .help-video-icon:hover{
     cursor: pointer;
 }
+
+#id_policyagreementcontainer{
+
+    #id_policyagreed{
+        height: 100%;
+        max-height: none;
+        width: auto !important;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: .25em;
+    }
+
+    label[for="id_policyagreed"]{
+        margin-left: 2rem;
+    }
+
+    #fitem_id_policylink a{
+        font-size: 1rem !important;
+        box-shadow: none;
+    }
+}
