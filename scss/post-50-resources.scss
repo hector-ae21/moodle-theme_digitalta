@@ -1,53 +1,15 @@
 #page-local-digitalta-pages-resources-index {
 
-    .cards-repository {
-        display: flex;
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    .resource-card {
-        border-radius: 10px;
-        background-color: $digitalta-soft-tertiary-color;
-        padding: 16px !important;
-        max-width: 500px;
-        margin: 16px;
-
-        .resource-data {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        h4 {
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        p {
-            color: $digitalta-black;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-wrap: wrap;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-        .digitalta-tag-secondary {
-            font-size: 10px;
-        }
-    }
-
-    .resource-card:active, .resource-card:focus, .resource-card:hover {
-        background-color: $digitalta-white;
-        border: 1px solid $digitalta-secondary-color;
-    }
-
-    @media screen and (max-width: 500px) {
-        #filter-options {
-            top: 390px;
+    .card-list{
+        .resource{
+            video {
+                max-width: 100%;
+                height: auto;
+            }
+            img{
+                max-width: 100%;
+                height: auto;
+            }
         }
     }
 }
