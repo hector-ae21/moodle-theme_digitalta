@@ -43,6 +43,7 @@
     img {
         border: none;
         width: 80%;
+        max-width: 300px;
     }
 
     *:focus {
@@ -60,6 +61,7 @@
 
     input[name="submitbuttonusername"] {
         max-width: 50%;
+        margin: 1rem 0 !important;
         background: #1382c5 !important;
     }
 
@@ -73,6 +75,7 @@
 
     input[name="submitbuttonemail"] {
         max-width: 50%;
+        margin: 1rem 0 !important;
         background: #1382c5 !important;
     }
 
@@ -112,8 +115,9 @@
 
         video {
             min-width: 100%;
-            min-height: 100%;
-            object-fit: cover;
+            height: 64%;
+            width: 100%;
+            padding: 1rem;
         }
     }
 
@@ -121,13 +125,38 @@
         background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
     }
 
+    .signupform .form-group{
+        /* .form-control  {
+            position: relative;
+            height: 1.7em;
+          }
+          
+          label {
+            position: absolute;
+            left: 0.5em;
+            transform: translateY(116%);
+          }
+          
+          .form-control {
+            height: 100%;
+            padding: 0 .2em;
+          }
+          
+          .form-control:focus ~ label,
+          .form-control:not(:placeholder-shown) ~ label{
+            z-index: -1;
+          }*/
+    }
+
     .login {
         max-height: 100vh;
+        height: 100vh;
         overflow-y: auto;
         float: left;
         margin: 0 auto;
         width: calc(100% - 1194px);
         font-family: "Libre Franklin", sans-serif !important;
+        padding: 0 3rem;
     }
 
     .login .container {
@@ -173,13 +202,13 @@
         border: none;
         padding: 0 30px;
         border-radius: 10px;
+        
     }
 
     .login .container .login-form form button[type="submit"] {
         background: $primarycolor;
         border: none;
         margin-bottom: 5px;
-        width: 137px;
         height: auto;
         text-transform: uppercase;
         color: white;
@@ -187,7 +216,7 @@
         position: relative;
         z-index: 2;
         font-weight: bold;
-        font-size: 0.75rem;
+        font-size: 0.95rem;
     }
 
     .login .container .login-form form button[type="submit"]:hover::after {
@@ -299,7 +328,20 @@
     #partners {
         margin-top: 10px;
         margin-bottom: 10px;
-
+        padding: 3rem 1rem;
+        h2{
+            text-transform: uppercase;
+            text-align: center;
+            color: #7d7a7a;
+        }
+        h2::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 2px;
+            background: #1382c5;
+            margin: 1rem auto;
+        }
         img {
             width: 100%;
             max-width: 100px;
@@ -335,19 +377,20 @@
 
     @media only screen and (min-width: 1024px) and (max-width: 1680px) {
         .bg-illustration {
-            width: 50%;
+            width: 60%;
             -webkit-animation: none;
             animation: none;
         }
 
         .login {
-            width: 50%;
+            width: 40%;
         }
     }
 
     @media screen and (min-height: 768px) and (max-width: 1024px) {
         .bg-illustration video {
             height: 200px !important;
+            object-fit: cover;
         }
 
         .login .logo {
@@ -566,7 +609,7 @@
     }
 }
 
-.signupform {
+.login-page {
     h1 {
         display: none;
     }
@@ -597,8 +640,7 @@
         margin-bottom: 50px !important;
     }
 
-    form > fieldset > legend,
-    form > fieldset > div {
+    form > fieldset > legend {
         display: none !important;
     }
 
