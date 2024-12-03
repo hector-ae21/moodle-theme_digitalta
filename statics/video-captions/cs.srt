@@ -1,0 +1,179 @@
+﻿1
+00:00:05,560 --> 00:00:08,520
+"Vyučuji prvním rokem a cítím, že jsem přetížená. 
+
+2
+00:00:08,520 --> 00:00:12,800
+Přechod ze studia do praxe na plný úvazek byl 
+těžší 
+
+3
+00:00:12,920 --> 00:00:17,680
+, než jsem čekala. A nevím, koho bych 
+mohla požádat o pomoc. Co mám dělat?" 
+
+4
+00:00:17,920 --> 00:00:22,080
+"Jsem zkušený učitel a denně čelím novým 
+výzvám. 
+
+5
+00:00:22,240 --> 00:00:27,480
+Přála bych si vědět, jak to zvládají jiní 
+učitelé. Co mám dělat?" 
+
+6
+00:00:27,560 --> 00:00:33,880
+Abychom vyšli vstříc potřebám začínajících 
+učitelů v celé Evropě, vyvinuli jsme 
+platformu DigitalTA. 
+
+7
+00:00:33,880 --> 00:00:42,520
+Tato stránka je místem, kde se mohou začínající učitelé stát součástí komunity a usnadnit si tak přechod do praxe. 
+
+8
+00:00:42,600 --> 00:00:45,600
+K dispozici je 7 témat, která mohou 
+učitelé prozkoumat: 
+
+9
+00:00:45,800 --> 00:00:51,040
+digitální technologie, řízení třídy, 
+komunikace a budování vztahů 
+
+10
+00:00:51,040 --> 00:01:01,680
+, diverzita a inkluze, profesní rozvoj a spolupráce, kultura školy a 
+Plánování a vývoj kurikula. 
+
+
+11
+00:01:01,960 --> 00:01:06,280
+Na domovské stránce mohou uživatelé najít 
+různé aktivity. 
+
+12
+00:01:06,280 --> 00:01:11,240
+Tyto aktivity zahrnují možnost číst 
+zkušenosti jiných učitelů 
+
+13
+00:01:11,560 --> 00:01:14,560
+, klást otázky komunitě, sdílet vlastní 
+postřehy 
+
+14
+00:01:14,960 --> 00:01:17,960
+a oslovit odborníky na 
+jednotlivé oblasti. 
+
+15
+00:01:18,640 --> 00:01:23,400
+Uživatelé mohou také zveřejňovat otázky, 
+které se vztahují k jednotlivým tématům 
+
+16
+00:01:23,680 --> 00:01:28,000
+, nebo se podělit o postřehy z osobních 
+zkušeností. 
+
+17
+00:01:28,240 --> 00:01:32,600
+Každý příspěvek může spadat pod jedno ze sedmi témat
+
+18
+00:01:32,600 --> 00:01:37,080
+, nebo můžete použít "jiné", pokud se 
+jedná o zcela nový koncept. 
+
+19
+00:01:37,080 --> 00:01:42,360
+V části "zkušenosti" najdete každodenní 
+výzvy sdílené komunitou učitelů. 
+
+20
+00:01:42,360 --> 00:01:51,400
+Témata lze filtrovat podle tagů, což usnadňuje najít uživatele, kteří čelí podobným výzvám jako vy. 
+
+21
+00:01:51,400 --> 00:01:56,680
+Klíčovou funkcí této sekce je možnost 
+zamyslet se nad zkušeností, kterou 
+
+22
+00:01:56,680 --> 00:02:08,600
+jako uživatel sdílíte. Zkušenosti jsou 
+příležitostí podělit se o vlastní postřehy 
+k různým výzvám nebo případu. 
+
+23
+00:02:08,600 --> 00:02:13,960
+Pokud potřebujete jasnou oporu pro 
+sebereflexi, kterou chcete provádět se zkušenými učiteli, 
+
+24
+00:02:13,960 --> 00:02:24,760
+Případové studie jsou ideálním místem, kde ji 
+najdete. Tato sekce byla navržena proto, aby nabídla nově kvalifikovaným učitelům a studentům 
+
+25
+00:02:24,760 --> 00:02:33,240
+inspiraci, jak překonávat každodenní 
+výzvy a poskytla skutečnou podporu ze strany komunity. 
+
+26
+00:02:33,360 --> 00:02:41,880
+Někdy se zdá, že najít nástroje pro výuku 
+je nemožné. Záložka "zdroje" je místem, 
+kde najdete nové nástroje a odkazy, 
+
+27
+00:02:41,880 --> 00:02:45,160
+které mohou podpořit vaši učitelskou 
+praxi. 
+
+28
+00:02:45,160 --> 00:02:54,400
+Pro začínající učitele, kteří se potřebují zorientovat, 
+je určena sekce "Témata a tagy", kde 
+najdete zdroje 
+
+29
+00:02:54,400 --> 00:03:04,880
+související s tématem, které zkoumáte, ale 
+také nové koncepty a objevíte nové 
+perspektivy související s výzvami. 
+
+30
+00:03:04,880 --> 00:03:09,040
+Začínající učitelé, kteří chtějí poradit od 
+profesionálů a zkušených učitelů 
+
+31
+00:03:09,040 --> 00:03:16,240
+, mohou oslovit zkušenější kolegy v sekci 
+"Mentoři a tutoři". Tímto způsobem můžete požádat o
+
+32
+00:03:16,240 --> 00:03:22,760
+konzultaci, pokládat specifické otázky 
+a nalézt individuální podporu. 
+
+33
+00:03:23,680 --> 00:03:31,000
+DigitalTA je určena pro učitele v 
+období přechodu do praxe, ale také pro budování 
+nadnárodní komunity učitelů 
+
+34
+00:03:31,000 --> 00:03:40,560
+a rozvoj podpory pro kvalitnější výuku. Možnost 
+klást otázky a sdílet své pohledy je 
+zásadní. 
+
+35
+00:03:40,560 --> 00:03:51,320
+V kombinaci s přístupem k odborníkům a 
+mentorům tak posilujeme kompetence evropských pedagogů 
+více než dříve. 
