@@ -41,6 +41,7 @@ $string['login:signup_flavour_text'] = 'Geen account?';
 // Config
 $string['config:navbar_page']              = 'Aangepaste navigatiebalk instellingen';
 $string['config:navbar_page_desc']         = 'Aangepaste navigatiebalk instellingen';
+$string['config:colors_page']              = 'Aangepaste kleuren instellingen';
 $string['config:custom_navbar']            = 'Activeer aangepaste navigatie';
 $string['config:custom_navbar_desc']       = 'Activeer aangepaste navigatie in de hoofdnavigatiebalk';
 $string['config:custom_usermenu']          = 'Activeer aangepast gebruikersmenu';

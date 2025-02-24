@@ -60,4 +60,64 @@ if ($ADMIN->fulltree) {
     ));
 
     $settings->add($page);
+    $page = new admin_settingpage('theme_digitalta_colors', get_string('config:colors_page', 'theme_digitalta'));
+
+    $page->add(new admin_setting_configcolourpicker(
+        'theme_digitalta/color_theme_digital_technology',
+        get_string('theme:digital_technology', 'local_digitalta'),
+        '',
+        '#F95C5A'
+    ));
+
+    $page->add(new admin_setting_configcolourpicker(
+        'theme_digitalta/color_theme_classroom_management',
+        get_string('theme:classroom_management', 'local_digitalta'),
+        '',
+        '#FFB300'
+    ));
+
+    $page->add(new admin_setting_configcolourpicker(
+        'theme_digitalta/color_theme_communication_and_relationship_building',
+        get_string('theme:communication_and_relationship_building', 'local_digitalta'),
+        '',
+        '#9D90CD'
+    ));
+
+    $page->add(new admin_setting_configcolourpicker(
+        'theme_digitalta/color_theme_diversity_and_inclusion',
+        get_string('theme:diversity_and_inclusion', 'local_digitalta'),
+        '',
+        '#4074D7'
+    ));
+
+    $page->add(new admin_setting_configcolourpicker(
+        'theme_digitalta/color_theme_professional_collaboration_and_development',
+        get_string('theme:professional_collaboration_and_development', 'local_digitalta'),
+        '',
+        '#33C189'
+    ));
+
+    $page->add(new admin_setting_configcolourpicker(
+        'theme_digitalta/color_theme_school_culture',
+        get_string('theme:school_culture', 'local_digitalta'),
+        '',
+        '#2B6F03'
+    ));
+
+    $page->add(new admin_setting_configcolourpicker(
+        'theme_digitalta/color_theme_curriculum_planning_and_development',
+        get_string('theme:curriculum_planning_and_development', 'local_digitalta'),
+        '',
+        '#61DFD8'
+    ));
+
+    $page->add(new admin_setting_configcolourpicker(
+        'theme_digitalta/color_theme_others',
+        get_string('theme:others', 'local_digitalta'),
+        '',
+        '#B08217'
+    ));
+
+    $settings->add($page);
+
 }

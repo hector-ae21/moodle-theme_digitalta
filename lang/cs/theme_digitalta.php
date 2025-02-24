@@ -41,6 +41,7 @@ $string['login:signup_flavour_text'] = 'Nemáte účet?';
 // Config
 $string['config:navbar_page']              = 'Nastavení vlastního navigačního panelu';
 $string['config:navbar_page_desc']         = 'Nastavení vlastního navigačního panelu';
+$string['config:colors_page']              = 'Nastavení vlastních barev';
 $string['config:custom_navbar']            = 'Aktivovat vlastní navigaci';
 $string['config:custom_navbar_desc']       = 'Aktivovat vlastní navigaci v hlavním navigačním panelu';
 $string['config:custom_usermenu']          = 'Aktivovat vlastní uživatelské menu';
