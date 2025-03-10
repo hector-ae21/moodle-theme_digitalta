@@ -377,6 +377,38 @@ a.dropdown-toggle:focus {
     height: 18px;
 }
 
+.theme-digital_technology {
+    border-top: 3px solid $digitalta-theme-digital_technology;
+}
+
+.theme-classroom_management {
+    border-top: 3px solid $digitalta-theme-classroom_management;
+}
+
+.theme-communication_and_relationship_building {
+    border-top: 3px solid $digitalta-theme-communication_and_relationship_building;
+}
+
+.theme-diversity_and_inclusion {
+    border-top: 3px solid $digitalta-theme-diversity_and_inclusion;
+}
+
+.theme-professional_collaboration_and_development {
+    border-top: 3px solid $digitalta-theme-professional_collaboration_and_development;
+}
+
+.theme-school_culture {
+    border-top: 3px solid $digitalta-theme-school_culture;
+}
+
+.theme-curriculum_planning_and_development {
+    border-top: 3px solid $digitalta-theme-curriculum_planning_and_development;
+}
+
+.theme-others {
+    border-top: 3px solid $digitalta-theme-others;
+}
+
 @media screen and (max-width: 334px) {
     .input::placeholder {
         color: transparent;

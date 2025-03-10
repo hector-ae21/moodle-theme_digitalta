@@ -41,6 +41,8 @@ $string['login:signup_flavour_text'] = 'Nie masz konta?';
 // Config
 $string['config:navbar_page']              = 'Ustawienia niestandardowego paska nawigacyjnego';
 $string['config:navbar_page_desc']         = 'Ustawienia niestandardowego paska nawigacyjnego';
+$string['config:colors_page']              = 'Ustawienia niestandardowych kolorów';
+
 $string['config:custom_navbar']            = 'Aktywuj niestandardową nawigację';
 $string['config:custom_navbar_desc']       = 'Aktywuj niestandardową nawigację w głównym pasku nawigacyjnym';
 $string['config:custom_usermenu']          = 'Aktywuj niestandardowe menu użytkownika';

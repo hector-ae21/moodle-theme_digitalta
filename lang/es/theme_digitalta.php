@@ -41,6 +41,8 @@ $string['login:signup_flavour_text'] = '¿No tienes cuenta?';
 // Config
 $string['config:navbar_page']              = 'Configuración de la barra de navegación personalizada';
 $string['config:navbar_page_desc']         = 'Configuración de la barra de navegación personalizada';
+$string['config:colors_page']              = 'Configuración de colores personalizados';
+
 $string['config:custom_navbar']            = 'Activar navegación personalizada';
 $string['config:custom_navbar_desc']       = 'Activar navegación personalizada en la barra de navegación principal';
 $string['config:custom_usermenu']          = 'Activar menú de usuario personalizado';

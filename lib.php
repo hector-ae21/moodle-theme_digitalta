@@ -37,8 +37,30 @@ function theme_digitalta_get_pre_scss($theme)
     global $CFG;
     $pre = "";
     $pre .= theme_boost_get_pre_scss(theme_config::load('boost'));
+    $pre .= add_theme_colors();
     $pre .= file_get_contents($CFG->dirroot . '/theme/digitalta/scss/pre.scss');
     return $pre;
+}
+function add_theme_colors() {
+    $colors = [
+        'digital_technology' => get_config('theme_digitalta', 'color_theme_digital_technology'),
+        'classroom_management' => get_config('theme_digitalta', 'color_theme_classroom_management'),
+        'communication_and_relationship_building' => get_config('theme_digitalta', 'color_theme_communication_and_relationship_building'),
+        'diversity_and_inclusion' => get_config('theme_digitalta', 'color_theme_diversity_and_inclusion'),
+        'professional_collaboration_and_development' => get_config('theme_digitalta', 'color_theme_professional_collaboration_and_development'),
+        'school_culture' => get_config('theme_digitalta', 'color_theme_school_culture'),
+        'curriculum_planning_and_development' => get_config('theme_digitalta', 'color_theme_curriculum_planning_and_development'),
+        'others' => get_config('theme_digitalta', 'color_theme_others'),
+    ];
+
+    $scss = '';
+    foreach ($colors as $name => $value) {
+        if (!empty($value)) {
+            $scss .= "\$digitalta-theme-$name: $value;\n";
+        }
+    }
+
+    return $scss;
 }
 
 

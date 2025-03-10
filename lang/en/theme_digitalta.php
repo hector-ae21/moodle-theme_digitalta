@@ -41,6 +41,7 @@ $string['login:signup_flavour_text'] = 'No account?';
 // Config
 $string['config:navbar_page']              = 'Custom navbar settings';
 $string['config:navbar_page_desc']         = 'Custom navbar settings';
+$string['config:colors_page']              = 'Custom colors settings';
 $string['config:custom_navbar']            = 'Active custom navigation';
 $string['config:custom_navbar_desc']       = 'Active custom navigation in main navbar';
 $string['config:custom_usermenu']          = 'Active custom user menu';

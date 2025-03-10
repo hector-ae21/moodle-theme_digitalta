@@ -31,6 +31,7 @@ $templatecontext = [
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
     'mainvideourl' => $CFG->wwwroot . '/theme/digitalta/statics/main-video.mp4',
+    'wwwroot' => $CFG->wwwroot,
 ];
 
 echo $OUTPUT->render_from_template('theme_digitalta/login', $templatecontext);
