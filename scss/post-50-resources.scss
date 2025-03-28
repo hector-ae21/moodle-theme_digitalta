@@ -1,15 +1,12 @@
-#page-local-digitalta-pages-resources-index {
-
-    .card-list{
-        .resource{
-            video {
-                max-width: 100%;
-                height: auto;
-            }
-            img{
-                max-width: 100%;
-                height: auto;
-            }
-        }
+.resources-list {
+  .resource {
+    video {
+      max-width: 100%;
+      height: auto;
     }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }

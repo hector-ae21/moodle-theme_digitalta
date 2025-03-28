@@ -89,8 +89,14 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
+                margin-top: 16px;
+                max-height: 150px;
                 -webkit-line-clamp: 5;
                 -webkit-box-orient: vertical;
+            }
+            .description-container img{
+                max-width: 100%;
+                height: auto;
             }
         }
     }
